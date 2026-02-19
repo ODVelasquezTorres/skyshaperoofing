@@ -1,0 +1,94 @@
+.sticky-menu-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    /* Moved to right */
+    left: auto;
+    /* Reset left */
+    display: flex;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(14, 42, 53, 0.95));
+    /* Petrol Green Gradient */
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    /* Sky Blue Border Accent */
+    border-radius: 16px;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    /* Deeper shadow */
+    z-index: 999;
+    /* User requirement: Above footer */
+    overflow: hidden;
+    transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.sticky-menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    /* Adjusted padding */
+    width: 80px;
+    /* Fixed width for consistency */
+    height: 80px;
+    /* Ensure 48x48px min touch target (this is well above) */
+    color: rgba(255, 255, 255, 0.7);
+    /* Slightly muted initially */
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    gap: 8px;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.sticky-menu-item:last-child {
+    border-right: none;
+}
+
+.sticky-menu-item:hover {
+    background-color: rgba(56, 189, 248, 0.1);
+    /* Sky Blue Tint */
+    color: #38bdf8;
+    /* Sky Blue Text */
+    transform: translateY(-2px);
+}
+
+/* Subtle glow effect on hover */
+.sticky-menu-item:hover svg {
+    filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.6));
+    /* Blue Glow */
+    transform: scale(1.1);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.sticky-menu-item span {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.7rem;
+    opacity: 0.9;
+    font-weight: 600;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .sticky-menu-container {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 0;
+        justify-content: space-around;
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    .sticky-menu-item {
+        flex: 1;
+        width: auto;
+        height: auto;
+        padding: 16px 0;
+        border-right: none;
+        min-height: 48px;
+        /* Accessibility minimum */
+    }
+}

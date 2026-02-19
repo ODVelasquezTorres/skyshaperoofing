@@ -1,0 +1,133 @@
+/* Base Section */
+.repair-section {
+    background-color: #f8fafc;
+    /* Light gray background to contrast with cards */
+    padding: 100px 0;
+}
+
+.repair-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.repair-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+/* Card Styling */
+.repair-card {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.repair-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.1), 0 10px 10px -5px rgba(15, 23, 42, 0.04);
+    border-color: #38bdf8;
+    /* Sky Blue accent on hover */
+}
+
+/* Icon Styling */
+.repair-icon-wrapper {
+    width: 64px;
+    height: 64px;
+    background-color: #0f172a;
+    /* Petrol Green / Dark Slate */
+    color: #38bdf8;
+    /* Sky Blue Icon */
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    transition: all 0.3s ease;
+}
+
+.repair-card:hover .repair-icon-wrapper {
+    background-color: #38bdf8;
+    color: #ffffff;
+    transform: rotate(5deg) scale(1.1);
+}
+
+/* Text Content */
+.repair-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.repair-highlight {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    color: #64748b;
+    /* Slate 500 */
+}
+
+.repair-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    /* Dark Slate Title */
+    margin: 0;
+}
+
+.repair-description {
+    color: #475569;
+    /* Slate 600 */
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* CTA Card */
+.repair-card.cta-card {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: none;
+}
+
+.cta-content h3 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+.cta-content p {
+    color: #cbd5e1;
+    margin-bottom: 32px;
+}
+
+.btn-repair-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #38bdf8;
+    /* Sky Blue */
+    color: white;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-repair-cta:hover {
+    background-color: #0ea5e9;
+    /* Darker Sky Blue */
+    transform: scale(1.05);
+}

@@ -1,0 +1,537 @@
+.navbar-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    color: white;
+    padding: 24px 0;
+    /* Updated padding */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: transparent;
+    /* Ensure no solid color initially */
+}
+
+/* Scrolled State */
+/* Scrolled State */
+.navbar-wrapper.scrolled {
+    background-color: white;
+    color: black;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    padding-top: 12px;
+    /* Reduce padding on scroll for compact feel */
+    padding-bottom: 12px;
+}
+
+/* 
+   New Layout Structure:
+   .navbar-wrapper (Relative for logo)
+      -> .logo-container (Absolute, Left)
+      -> .navbar-inner-container (Centered Content)
+*/
+
+.navbar-inner-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* Old inner logo container hidden */
+.logo-container {
+    display: none;
+}
+
+/* ... existing code ... */
+
+/* Main Nav Row */
+.main-nav-row {
+    display: flex;
+    gap: var(--spacing-4);
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 32px;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 1rem;
+    letter-spacing: -0.01em;
+}
+
+.nav-links a {
+    position: relative;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+    color: white;
+    text-decoration: none;
+    opacity: 0.9;
+    display: inline-block;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Ensure links receive correct color on scroll */
+.navbar-wrapper.scrolled .nav-links a {
+    color: black;
+}
+
+.navbar-wrapper.scrolled .nav-links a::after {
+    background-color: var(--primary-blue);
+}
+
+/* Dropdown Styles */
+.nav-item-dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-link-text {
+    position: relative;
+    color: white;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+    font-weight: 500;
+    display: inline-flex;
+    /* Use flex for icon alignment */
+    align-items: center;
+    /* Center icon vertically */
+    gap: 4px;
+    /* Space between text and chevron */
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    cursor: pointer;
+}
+
+/* Scrolled State for Dropdown Text */
+.navbar-wrapper.scrolled .nav-link-text {
+    color: black;
+}
+
+.navbar-wrapper.scrolled .nav-link-text::after {
+    background-color: var(--primary-blue);
+}
+
+/* Chevron Rotation */
+.dropdown-chevron {
+    transition: transform 0.3s ease;
+}
+
+.nav-item-dropdown:hover .dropdown-chevron {
+    transform: rotate(180deg);
+}
+
+/* ... existing hover effects ... */
+
+/* Dropdown Menu Container */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+
+    /* Premium Box Styles */
+    width: 280px;
+    /* Fixed width */
+    background-color: rgba(255, 255, 255, 0.95);
+    /* White with slight transparency */
+    backdrop-filter: blur(5px);
+    border-radius: 0 0 12px 12px;
+    /* Rounded bottom corners */
+    border-top: 4px solid #007BFF;
+    /* Brand Blue Top Border */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    /* Deep shadow */
+
+    padding: 0.5rem 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    list-style: none;
+    z-index: 1000;
+    margin-top: 15px;
+    /* Spacing from nav item */
+}
+
+/* Show dropdown on hover */
+.nav-item-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-menu li {
+    display: block;
+}
+
+/* Atomic Menu Item */
+.dropdown-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 20px;
+    /* Base 8 scale */
+
+    color: #4b5563 !important;
+    /* Dark Gray text */
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: none;
+    text-decoration: none;
+
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-left: 2px solid transparent;
+    /* Highlight marker */
+}
+
+/* Icon Style */
+.dropdown-icon {
+    color: #007BFF;
+    /* Brand Blue */
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover State - Micro-interaction */
+.dropdown-menu li a:hover {
+    background-color: rgba(0, 123, 255, 0.06);
+    /* Ultra-light blue bg */
+    color: #007BFF !important;
+    /* Turn text blue */
+    transform: translateX(5px);
+    /* Slide right */
+}
+
+.dropdown-menu li a:hover .dropdown-icon {
+    transform: scale(1.1);
+    /* Subtle icon pop */
+}
+
+.dropdown-menu li a::after {
+    display: none;
+}
+
+
+/* Logo Section - Decoupled & Overhang */
+.logo-outer-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    /* Align logo to TOP of navbar */
+    padding-left: 32px;
+    padding-top: 8px;
+    /* Small offset from very top */
+    z-index: 1100;
+    /* Above everything including hero */
+    background: transparent;
+    overflow: visible;
+    /* CRITICAL: Allow logo to hang below navbar */
+    pointer-events: none;
+    /* Let clicks pass through empty space */
+}
+
+.logo-outer-container a {
+    display: block;
+    pointer-events: auto;
+    /* Re-enable clicks on the actual link */
+    line-height: 0;
+    /* Remove any line-height gaps */
+}
+
+/* Navbar Logo Style - OVERHANG TECHNIQUE */
+/* Using fixed pixel height instead of percentages to avoid
+   sizing issues with absolutely positioned parents */
+.navbar-logo {
+    display: block;
+    height: 400px;
+    /* Large overhang on desktop */
+    width: auto;
+    object-fit: contain;
+    filter: none;
+    transition: all 0.3s ease;
+    margin-top: -60px;
+    /* Pull logo up significantly */
+}
+
+/* Scrolled state - slightly smaller but still overhanging */
+.navbar-wrapper.scrolled .navbar-logo {
+    height: 200px;
+    margin-top: -10px;
+    /* Slight adjustment for scrolled state */
+}
+
+/* Scrolled Logo Style */
+
+
+
+/* Menu Column */
+.menu-column {
+    width: auto;
+    /* Let it shrink to content */
+    max-width: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+/* Top Bar Row */
+.top-bar-row {
+    display: flex;
+    justify-content: flex-end;
+    /* Align to right */
+    gap: 2rem;
+    align-items: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.75rem;
+    /* text-xs */
+    margin-bottom: 0.5rem;
+}
+
+.navbar-wrapper.scrolled .top-bar-row {
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+    /* Keep light border on blue bg */
+}
+
+.top-bar-links {
+    display: flex;
+    gap: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.top-bar-links a {
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.top-bar-links a:hover {
+    opacity: 1;
+}
+
+.top-bar-contact {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Duplicates removed */
+
+/* Contact Button */
+/* "El botón "Contact Us" debe ser Azul (#016CD6) con bordes redondeados mínimos (4px)" */
+.btn-login {
+    background-color: #016CD6;
+    /* Hardcoded for precision */
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    text-transform: none;
+    /* Architectual clean look */
+    letter-spacing: normal;
+    border-radius: 4px;
+    /* Minimal rounded */
+    transition: all 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 2px 4px rgba(1, 108, 214, 0.2);
+}
+
+.btn-login:hover {
+    background-color: #0056b3;
+    /* Darker blue */
+    box-shadow: 0 4px 8px rgba(1, 108, 214, 0.3);
+    /* "ligero box-shadow azul" */
+    transform: translateY(-1px);
+}
+
+.navbar-wrapper.scrolled .btn-login {
+    background-color: #016CD6;
+    color: white;
+}
+
+.navbar-wrapper.scrolled .btn-login:hover {
+    background-color: #0056b3;
+}
+
+/* ========================================
+   Hamburger Button
+   ======================================== */
+.hamburger-btn {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 30;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 8px;
+    line-height: 0;
+}
+
+.navbar-wrapper.scrolled .hamburger-btn,
+.navbar-wrapper.mobile-open .hamburger-btn {
+    color: #0f172a;
+}
+
+/* ========================================
+   Mobile Responsive
+   ======================================== */
+@media (max-width: 900px) {
+    .hamburger-btn {
+        display: block;
+    }
+
+    .navbar-wrapper {
+        padding: 14px 0;
+    }
+
+    .navbar-wrapper.mobile-open {
+        background-color: white;
+        color: #0f172a;
+    }
+
+    .logo-outer-container {
+        padding-left: 16px;
+    }
+
+    .navbar-logo {
+        height: 180px;
+        /* Tablets */
+    }
+
+    .navbar-wrapper.scrolled .navbar-logo {
+        height: 140px;
+    }
+
+    /* Hide nav by default, show when mobileOpen */
+    .navbar-inner-container {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: white;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+        padding: 16px 20px 24px;
+        border-top: 1px solid #e2e8f0;
+        z-index: 50;
+    }
+
+    .navbar-inner-container.mobile-show {
+        display: block;
+    }
+
+    .main-nav-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .nav-links a,
+    .nav-links .nav-link-text {
+        color: #0f172a !important;
+        opacity: 1;
+        padding: 14px 0;
+        border-bottom: 1px solid #f1f5f9;
+        display: block;
+        font-size: 1rem;
+    }
+
+    .nav-links a::after {
+        display: none;
+    }
+
+    /* Dropdown on mobile — static, no hover, always visible */
+    .nav-item-dropdown {
+        position: static;
+    }
+
+    .dropdown-menu {
+        position: static;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        width: 100%;
+        margin-top: 0;
+        border-top: none;
+        border-radius: 0;
+        box-shadow: none;
+        background-color: #f8fafc;
+        padding: 4px 0 8px 12px;
+    }
+
+    .dropdown-menu li a {
+        padding: 12px 16px;
+        font-size: 0.95rem;
+    }
+
+    .dropdown-chevron {
+        display: none;
+    }
+
+    .nav-cta {
+        margin-top: 16px;
+    }
+
+    .btn-login {
+        width: 100%;
+        justify-content: center;
+        padding: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-logo {
+        height: 120px;
+        /* Compact on small phones */
+    }
+
+    .navbar-wrapper.scrolled .navbar-logo {
+        height: 90px;
+    }
+}

@@ -1,0 +1,6 @@
+/* Projects Specific Styles */
+.kanban-column {
+    background-color: #f8fafc;
+    /* match dashboard bg for seamless look or slight contrast? prompt says "New | In Progress..." */
+    /* Actually columns usually sit on the dashboard background. We just need width. */
+}

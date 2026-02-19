@@ -1,0 +1,5 @@
+/* App specific styles can go here, overriding global defaults if necessary */
+#root {
+  width: 100%;
+  min-height: 100vh;
+}

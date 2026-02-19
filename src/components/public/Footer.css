@@ -1,0 +1,166 @@
+.site-footer {
+    background-color: #000000;
+    color: #94A3B8;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    font-family: 'Inter', sans-serif;
+    /* Ensuring consistency if defined globally */
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    margin-bottom: 60px;
+}
+
+/* Left Block: Information */
+.footer-info {
+    flex: 1;
+    min-width: 300px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+}
+
+.footer-heading {
+    font-size: 14px;
+    font-weight: 700;
+    /* Bold */
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    margin-bottom: 1.5rem;
+}
+
+.footer-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    max-width: 250px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    color: #94A3B8;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-link:hover {
+    color: var(--primary-blue, #016CD6);
+    transform: translateY(-2px);
+}
+
+/* Links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+    color: #94A3B8;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+    color: #FFFFFF;
+}
+
+/* Contact List */
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-list li {
+    margin-bottom: 1rem;
+}
+
+.contact-link {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: #94A3B8;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.contact-link:hover {
+    color: #FFFFFF;
+}
+
+.contact-icon {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* Right Block: Map */
+.footer-map {
+    flex: 1;
+    min-width: 300px;
+    height: 300px;
+    /* Reduced height visually, or match content */
+}
+
+.map-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    /* Map Filter: Dark Mode Effect */
+    filter: grayscale(1) invert(1) contrast(1.2);
+    /* Note: Inverting a map makes light roads dark, but also inverts branding colors. 
+       Usually this is the quick CSS way to get 'Dark Mode' maps without API styling. */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+@media (max-width: 768px) {
+    .site-footer {
+        padding-top: 60px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .footer-info {
+        min-width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .footer-description {
+        max-width: 100%;
+    }
+
+    .footer-map {
+        height: 220px;
+        min-width: 100%;
+    }
+
+    .footer-heading {
+        margin-bottom: 1rem;
+    }
+}

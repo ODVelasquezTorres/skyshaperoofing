@@ -1,0 +1,101 @@
+.financing-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+    display: block !important;
+    /* Force display */
+    min-height: 200px;
+    /* Force height */
+    overflow: visible;
+}
+
+.financing-banner {
+    display: flex;
+    background-color: #F8FAFC;
+    /* Lightest Gray */
+    border-radius: 16px;
+    overflow: hidden;
+    /* Ensures image corners match container */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid #E2E8F0;
+}
+
+/* Left: Image (40%) */
+.financing-image-wrapper {
+    flex: 0 0 40%;
+    position: relative;
+    min-height: 400px;
+    /* Ensure height for image cover */
+}
+
+.financing-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Right: Content (60%) */
+.financing-content {
+    flex: 1;
+    padding: 64px 48px;
+    /* Generous padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.financing-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    background-color: rgba(56, 189, 248, 0.1);
+    color: #0284C7;
+    /* SkyShape Blue */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.financing-headline {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0f172a;
+    /* Navy Blue */
+    margin-bottom: 16px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.financing-text {
+    font-size: 1.05rem;
+    color: #64748b;
+    /* Slate 500 */
+    line-height: 1.6;
+    margin-bottom: 24px;
+    max-width: 600px;
+}
+
+.financing-note {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    /* Slate 400 */
+    font-style: italic;
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .financing-banner {
+        flex-direction: column;
+    }
+
+    .financing-image-wrapper {
+        min-height: 250px;
+        flex: auto;
+    }
+
+    .financing-content {
+        padding: 40px 32px;
+    }
+}

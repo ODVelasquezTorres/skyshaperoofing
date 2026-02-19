@@ -1,0 +1,183 @@
+/* Page Base */
+.repair-page {
+    padding-top: 80px;
+    background-color: #ffffff;
+}
+
+/* Hero Section */
+/* Hero Section */
+.repair-hero {
+    background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('/roofrepairs.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0 120px;
+    position: relative;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(56, 189, 248, 0.2);
+    /* Sky Blue Tint */
+    color: #38bdf8;
+    /* Sky Blue */
+    border: 1px solid rgba(56, 189, 248, 0.4);
+    padding: 8px 16px;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin-bottom: 24px;
+    backdrop-filter: blur(4px);
+}
+
+.repair-headline {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+}
+
+.repair-subheadline {
+    font-size: 1.25rem;
+    color: #cbd5e1;
+    /* Slate 300 */
+    margin-bottom: 40px;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+.btn-repair-primary {
+    background-color: #38bdf8;
+    /* Sky Blue */
+    color: #0f172a;
+    /* Dark Text */
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.btn-repair-primary:hover {
+    background-color: #0ea5e9;
+    /* Darker Sky Blue */
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(56, 189, 248, 0.4);
+}
+
+/* Details Section */
+.repair-details-section {
+    padding: 80px 0;
+    background-color: #f1f5f9;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.detail-item {
+    background: white;
+    padding: 32px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.detail-item:hover {
+    transform: translateY(-5px);
+}
+
+.detail-icon {
+    color: #38bdf8;
+    margin-bottom: 20px;
+}
+
+.detail-item h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 12px;
+}
+
+.detail-item p {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* Responsive Font Sizes */
+@media (max-width: 768px) {
+    .repair-hero {
+        padding: 80px 0 80px;
+    }
+
+    .repair-headline {
+        font-size: 2rem;
+    }
+
+    .repair-subheadline {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .btn-repair-primary {
+        width: 100%;
+        max-width: 360px;
+        justify-content: center;
+    }
+
+    .repair-details-section {
+        padding: 60px 0;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .detail-item {
+        padding: 24px;
+    }
+
+    .detail-item h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .repair-headline {
+        font-size: 1.75rem;
+    }
+}

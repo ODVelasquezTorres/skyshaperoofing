@@ -1,0 +1,132 @@
+.ba-slider-container {
+    position: relative;
+    width: 100%;
+    /* Aspect Ratio handled via padding-bottom trick or flex height if flex item */
+    aspect-ratio: 21 / 9;
+    /* Panoramic Cinematic Feel */
+    background-color: #f1f5f9;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    user-select: none;
+    cursor: col-resize;
+    margin-bottom: 40px;
+    /* Space below */
+}
+
+/* Layers */
+.ba-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.ba-layer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    /* Prevent drag ghosting */
+}
+
+/* Badges */
+.ba-badge {
+    position: absolute;
+    top: 20px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: white;
+    z-index: 10;
+    pointer-events: none;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ba-badge-left {
+    left: 20px;
+    background-color: rgba(17, 24, 39, 0.85);
+    /* Dark */
+}
+
+.ba-badge-right {
+    right: 20px;
+    background-color: rgba(0, 123, 255, 0.85);
+    /* Brand Blue */
+}
+
+/* Handle */
+.ba-handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    /* Thin interaction area, visual line is child */
+    transform: translateX(-50%);
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Touch target enhancement could be done with pseudo element */
+}
+
+.ba-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.ba-circle {
+    width: 48px;
+    height: 48px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    /* Intense shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    z-index: 21;
+}
+
+.ba-handle:hover .ba-circle,
+.ba-slider-container:active .ba-circle {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .ba-slider-container {
+        aspect-ratio: 4 / 3;
+        /* More vertical real estate on mobile */
+    }
+
+    .ba-badge {
+        font-size: 11px;
+        padding: 6px 10px;
+        top: 15px;
+    }
+
+    .ba-badge-left {
+        left: 15px;
+    }
+
+    .ba-badge-right {
+        right: 15px;
+    }
+
+    .ba-circle {
+        width: 40px;
+        height: 40px;
+    }
+}

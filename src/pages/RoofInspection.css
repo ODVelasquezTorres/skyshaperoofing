@@ -1,0 +1,357 @@
+/* Page Structure */
+.roof-inspection-page {
+    padding-top: 80px;
+    /* Offset for fixed navbar */
+    background-color: #F8FAFC;
+    /* Lightest Gray */
+    min-height: 100vh;
+}
+
+/* Form Section with Pattern */
+.form-section {
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-image: url('/pattern-black.png');
+    background-size: 300px;
+    background-repeat: repeat;
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    border-top: 1px solid #e2e8f0;
+}
+
+.form-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.80);
+    /* 80% Opacity Overlay */
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Ensure form content is above overlay */
+.form-section>* {
+    position: relative;
+    z-index: 1;
+}
+
+.inspection-section {
+    padding: 100px 0;
+}
+
+.inspection-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    /* Generous spacing between columns */
+    align-items: center;
+}
+
+/* Typography */
+.inspection-title {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #0f172a;
+    /* Slate 900 */
+    margin-bottom: 60px;
+    letter-spacing: -0.02em;
+}
+
+/* Step List */
+.inspection-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    /* Base 8 Scale */
+    margin-bottom: 48px;
+}
+
+.step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.step-number {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    background-color: rgba(0, 123, 255, 0.1);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-family: monospace;
+    /* Technical feel */
+}
+
+.step-info {
+    max-width: 400px;
+}
+
+.step-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #1e293b;
+    /* Slate 800 */
+    margin-bottom: 4px;
+}
+
+.step-desc {
+    font-size: 0.95rem;
+    color: #64748B;
+    /* Slate 500 */
+    line-height: 1.5;
+}
+
+/* Diagnostic Checklist Card */
+.checklist-card {
+    background-color: #F1F5F9;
+    /* Slate 100 */
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 0;
+    /* Button has margin-top */
+    border: 1px solid #E2E8F0;
+    /* Slate 200 */
+}
+
+.checklist-header {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #475569;
+    /* Slate 600 */
+    margin-bottom: 20px;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid #CBD5E1;
+    padding-bottom: 10px;
+}
+
+.checklist-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    /* Base 8 Scale */
+}
+
+.checklist-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    /* Start hidden for animation */
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.check-icon-circle {
+    width: 24px;
+    height: 24px;
+    background-color: rgba(0, 123, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-blue);
+    flex-shrink: 0;
+}
+
+.checklist-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+    /* Slate 700 */
+}
+
+/* Button */
+.btn-primary-solid {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 123, 255, 0.2);
+}
+
+.btn-primary-solid:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 123, 255, 0.3);
+}
+
+/* Gallery Grid (Right Column) */
+.gallery-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    /* Portrait takes more width */
+    gap: 24px;
+    height: 600px;
+    /* Fixed height container for alignment */
+}
+
+.gallery-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    height: 100%;
+}
+
+.gallery-item {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    position: relative;
+    background-color: #cbd5e1;
+    /* Placeholder bg */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item.portrait {
+    height: 100%;
+}
+
+.gallery-item.square {
+    height: 50%;
+    /* Fill half the stack height each */
+}
+
+/* Animations */
+.fade-in-left {
+    animation: fadeInLeft 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.fade-in-right {
+    animation: fadeInRight 0.8s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.2s;
+    /* Slight delay */
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .inspection-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .gallery-layout {
+        height: auto;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gallery-item.portrait {
+        height: 400px;
+    }
+
+    .gallery-stack {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .inspection-section {
+        padding: 60px 0;
+    }
+
+    .inspection-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .gallery-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-stack {
+        display: none;
+    }
+
+    .gallery-item.portrait {
+        height: 250px;
+    }
+
+    .checklist-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .step-info {
+        max-width: 100%;
+    }
+
+    .inspection-steps {
+        gap: 24px;
+    }
+
+    .btn-primary-solid {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .form-section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .inspection-title {
+        font-size: 1.6rem;
+    }
+}

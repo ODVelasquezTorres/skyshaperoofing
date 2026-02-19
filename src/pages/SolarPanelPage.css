@@ -1,0 +1,775 @@
+/* ========================================
+   Solar Panel Page
+   ======================================== */
+
+/* Accent color token */
+.solar-page {
+    --electric-cyan: #00E5FF;
+    --electric-cyan-dim: rgba(0, 229, 255, 0.15);
+    --electric-cyan-border: rgba(0, 229, 255, 0.35);
+    --navy-dark: #0A1628;
+    padding-top: 80px;
+}
+
+
+/* ═══════════ HERO ═══════════ */
+.solar-hero {
+    position: relative;
+    background:
+        url('/Solar.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 100px 0 120px;
+}
+
+.solar-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+            rgba(10, 22, 40, 0.82) 0%,
+            rgba(10, 22, 40, 0.70) 60%,
+            rgba(0, 30, 60, 0.85) 100%);
+    z-index: 1;
+}
+
+.solar-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 840px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.solar-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--electric-cyan-dim);
+    color: var(--electric-cyan);
+    border: 1px solid var(--electric-cyan-border);
+    padding: 8px 18px;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin-bottom: 24px;
+    backdrop-filter: blur(4px);
+}
+
+.solar-hero-headline {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 1.08;
+    margin-bottom: 24px;
+    letter-spacing: -0.025em;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.solar-hero-subheadline {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.88);
+    margin-bottom: 40px;
+    max-width: 680px;
+    line-height: 1.65;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.solar-hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #007BFF 0%, #00C9DB 100%);
+    color: white;
+    padding: 16px 36px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    text-decoration: none;
+    transition: all 0.35s ease;
+    box-shadow: 0 0 24px rgba(0, 229, 255, 0.25), 0 4px 12px rgba(0, 123, 255, 0.25);
+}
+
+.solar-hero-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 36px rgba(0, 229, 255, 0.4), 0 12px 24px -4px rgba(0, 123, 255, 0.35);
+    color: white;
+}
+
+
+/* ═══════════ ROOF-FIRST ADVANTAGE (Split) ═══════════ */
+.solar-advantage-section {
+    background-color: #FFFFFF;
+    padding: 100px 0;
+}
+
+.advantage-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+
+/* Left copy */
+.advantage-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--electric-cyan);
+    background-color: var(--electric-cyan-dim);
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+}
+
+.advantage-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--navy-dark);
+    line-height: 1.15;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+.advantage-body {
+    font-size: 1.05rem;
+    color: #475569;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+.advantage-body strong {
+    color: var(--navy-dark);
+}
+
+.advantage-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.advantage-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.95rem;
+    color: #334155;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.advantage-check {
+    color: var(--electric-cyan);
+    min-width: 18px;
+    margin-top: 2px;
+}
+
+/* Right diagram */
+.diagram-card {
+    background: linear-gradient(180deg, #F8FAFC 0%, #F1F5F9 100%);
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 40px 32px;
+    overflow: hidden;
+}
+
+.diagram-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.diagram-layer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 24px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 340px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.diagram-layer:hover {
+    transform: scale(1.03);
+}
+
+.diagram-panel {
+    background-color: var(--navy-dark);
+    color: #FFFFFF;
+}
+
+.diagram-icon-panel {
+    color: var(--electric-cyan);
+}
+
+.diagram-mount {
+    background-color: #1e293b;
+    color: #cbd5e1;
+}
+
+.diagram-icon-mount {
+    color: #94a3b8;
+}
+
+.diagram-seal {
+    background: linear-gradient(135deg, rgba(0, 229, 255, 0.15) 0%, rgba(0, 229, 255, 0.08) 100%);
+    border: 2px solid var(--electric-cyan);
+    color: var(--navy-dark);
+    font-weight: 700;
+}
+
+.diagram-icon-seal {
+    color: var(--electric-cyan);
+}
+
+.seal-highlight {
+    position: absolute;
+    inset: -2px;
+    border-radius: 10px;
+    box-shadow: 0 0 16px rgba(0, 229, 255, 0.3);
+    pointer-events: none;
+    animation: sealPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes sealPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 8px rgba(0, 229, 255, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(0, 229, 255, 0.45);
+    }
+}
+
+.diagram-deck {
+    background-color: #e2e8f0;
+    color: #475569;
+}
+
+.diagram-icon-deck {
+    color: #64748b;
+}
+
+.diagram-connector {
+    width: 2px;
+    height: 16px;
+    background: linear-gradient(180deg, #94a3b8, #cbd5e1);
+    margin: 0 auto;
+}
+
+.diagram-caption {
+    margin-top: 24px;
+    font-size: 0.82rem;
+    color: #64748b;
+    line-height: 1.55;
+    text-align: center;
+    font-style: italic;
+}
+
+
+/* ═══════════ PROCESS FLOW ═══════════ */
+.solar-process-section {
+    background-color: #F8FAFC;
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+.process-section-title {
+    font-family: var(--font-heading);
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--navy-dark);
+    margin-bottom: 16px;
+}
+
+.process-section-subtitle {
+    font-size: 1.1rem;
+    color: #64748b;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.65;
+}
+
+.process-flow {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 64px;
+    position: relative;
+}
+
+/* Horizontal connecting line */
+.process-flow-line {
+    position: absolute;
+    top: 60px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--electric-cyan), #007BFF, var(--electric-cyan));
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.process-step-card {
+    position: relative;
+    z-index: 1;
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 28px 22px;
+    text-align: center;
+    transition: all 0.35s ease;
+}
+
+.process-step-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.1);
+    border-color: var(--electric-cyan-border);
+}
+
+.process-step-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #007BFF, var(--electric-cyan));
+    border-radius: 12px 12px 0 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+}
+
+.process-step-card:hover::after {
+    transform: scaleX(1);
+}
+
+.step-number {
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--electric-cyan);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.step-icon-wrapper {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--electric-cyan-dim), rgba(0, 123, 255, 0.08));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #007BFF;
+    margin: 0 auto 16px;
+    transition: all 0.35s ease;
+    border: 1px solid rgba(0, 123, 255, 0.12);
+}
+
+.process-step-card:hover .step-icon-wrapper {
+    background: linear-gradient(135deg, #007BFF, var(--electric-cyan));
+    color: #FFFFFF;
+    box-shadow: 0 8px 16px -4px rgba(0, 229, 255, 0.3);
+}
+
+.step-title {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--navy-dark);
+    margin-bottom: 10px;
+}
+
+.step-desc {
+    font-size: 0.88rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+/* ═══════════ NC INCENTIVES ═══════════ */
+.solar-incentives-section {
+    background-color: #FFFFFF;
+    padding: 100px 0;
+}
+
+.incentives-card {
+    background: linear-gradient(135deg, #F8FAFC 0%, #F0FDFA 100%);
+    border: 1px solid var(--electric-cyan-border);
+    border-radius: 16px;
+    padding: 56px 48px;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle glow accent */
+.incentives-card::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(0, 229, 255, 0.12) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.incentives-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 36px;
+}
+
+.incentives-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, var(--electric-cyan-dim), rgba(0, 229, 255, 0.06));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--electric-cyan);
+    border: 1px solid var(--electric-cyan-border);
+}
+
+.incentives-title {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--navy-dark);
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.incentives-subtitle {
+    font-size: 1rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.incentives-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 36px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.incentives-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 1rem;
+    color: #334155;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.incentive-check {
+    color: var(--electric-cyan);
+    min-width: 20px;
+    margin-top: 2px;
+}
+
+.incentives-cta-row {
+    text-align: center;
+}
+
+.btn-incentives-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #007BFF 0%, #00C9DB 100%);
+    color: white;
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 229, 255, 0.2);
+}
+
+.btn-incentives-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -4px rgba(0, 229, 255, 0.35);
+    color: white;
+}
+
+
+/* ═══════════ FINAL CTA ═══════════ */
+.solar-final-cta-section {
+    background: linear-gradient(135deg, var(--navy-dark) 0%, #0f2847 60%, #0d3868 100%);
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative glow */
+.solar-final-cta-section::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0, 229, 255, 0.08) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.final-cta-icon {
+    color: var(--electric-cyan);
+    margin-bottom: 20px;
+}
+
+.final-cta-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+
+.final-cta-subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.75);
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.65;
+}
+
+.solar-final-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #007BFF 0%, var(--electric-cyan) 100%);
+    color: white;
+    padding: 18px 48px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1.15rem;
+    text-decoration: none;
+    transition: all 0.35s ease;
+    box-shadow: 0 0 30px rgba(0, 229, 255, 0.25), 0 8px 20px rgba(0, 123, 255, 0.3);
+}
+
+.solar-final-cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 45px rgba(0, 229, 255, 0.4), 0 16px 32px -4px rgba(0, 123, 255, 0.4);
+    color: white;
+}
+
+
+/* ========================================
+   Responsive
+   ======================================== */
+@media (max-width: 1024px) {
+    .solar-hero-headline {
+        font-size: 2.75rem;
+    }
+
+    .advantage-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .advantage-title {
+        font-size: 2rem;
+    }
+
+    .process-flow {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process-flow-line {
+        display: none;
+    }
+
+    .final-cta-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .solar-page {
+        padding-top: 70px;
+    }
+
+    .solar-hero {
+        padding: 80px 0 80px;
+        min-height: auto;
+    }
+
+    .solar-hero-headline {
+        font-size: 1.85rem;
+        line-height: 1.12;
+    }
+
+    .solar-hero-subheadline {
+        font-size: 1rem;
+        margin-bottom: 32px;
+    }
+
+    .solar-hero-cta {
+        width: 100%;
+        max-width: 360px;
+        justify-content: center;
+        padding: 14px 24px;
+        font-size: 0.95rem;
+    }
+
+    /* Advantage */
+    .solar-advantage-section {
+        padding: 60px 0;
+    }
+
+    .advantage-title {
+        font-size: 1.65rem;
+    }
+
+    .advantage-body {
+        font-size: 0.95rem;
+    }
+
+    .advantage-list li {
+        font-size: 0.9rem;
+    }
+
+    .diagram-card {
+        padding: 28px 20px;
+    }
+
+    .diagram-layer {
+        padding: 12px 16px;
+        font-size: 0.82rem;
+        gap: 10px;
+    }
+
+    /* Process */
+    .solar-process-section {
+        padding: 60px 0;
+    }
+
+    .process-section-title {
+        font-size: 1.65rem;
+    }
+
+    .process-section-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .process-flow {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 40px;
+    }
+
+    .process-step-card {
+        padding: 24px 20px;
+    }
+
+    .step-icon-wrapper {
+        width: 48px;
+        height: 48px;
+    }
+
+    /* Incentives */
+    .solar-incentives-section {
+        padding: 60px 0;
+    }
+
+    .incentives-card {
+        padding: 32px 20px;
+    }
+
+    .incentives-header {
+        flex-direction: column;
+    }
+
+    .incentives-title {
+        font-size: 1.35rem;
+    }
+
+    .incentives-list li {
+        font-size: 0.92rem;
+    }
+
+    .btn-incentives-cta {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 24px;
+    }
+
+    /* Final CTA */
+    .solar-final-cta-section {
+        padding: 60px 0;
+    }
+
+    .final-cta-title {
+        font-size: 1.65rem;
+    }
+
+    .final-cta-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .solar-final-cta-btn {
+        width: 100%;
+        max-width: 360px;
+        padding: 16px 28px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .solar-hero-headline {
+        font-size: 1.55rem;
+    }
+
+    .solar-hero-badge {
+        font-size: 0.75rem;
+        padding: 6px 14px;
+    }
+
+    .advantage-title {
+        font-size: 1.45rem;
+    }
+
+    .process-section-title,
+    .final-cta-title {
+        font-size: 1.4rem;
+    }
+}

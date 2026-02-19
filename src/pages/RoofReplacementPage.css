@@ -1,0 +1,508 @@
+/* Page Base */
+.replacement-page {
+    padding-top: 80px;
+}
+
+/* Hero Section */
+.replacement-hero {
+    /* Increased overlay to 0.75 for better text legibility */
+    background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('https://images.unsplash.com/photo-1632759145351-1d592919f522?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0 120px;
+    position: relative;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.replacement-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(56, 189, 248, 0.2);
+    color: #FFFFFF;
+    /* White text for dark background consistency */
+    border: 1px solid rgba(56, 189, 248, 0.4);
+    padding: 8px 16px;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin-bottom: 24px;
+    backdrop-filter: blur(4px);
+}
+
+.replacement-headline {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    /* Pure white for maximum contrast */
+    line-height: 1.1;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    /* Subtle shadow for depth */
+}
+
+.replacement-subheadline {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.9);
+    /* Near-white for softer hierarchy */
+    margin-bottom: 40px;
+    max-width: 700px;
+    line-height: 1.6;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    /* Float text above background */
+}
+
+.btn-hero-primary {
+    background-color: #007BFF;
+    color: white;
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    /* Subtle blue glow on dark background */
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.35), 0 4px 12px rgba(0, 123, 255, 0.25);
+}
+
+.btn-hero-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    /* Intensified glow on hover */
+    box-shadow: 0 0 30px rgba(0, 123, 255, 0.5), 0 10px 20px -3px rgba(0, 123, 255, 0.4);
+}
+
+/* Standard Section (Visual Specs) */
+.standard-section {
+    background-color: #F1F5F9;
+    /* Gray soft professional */
+    padding: 120px 0;
+    /* Importance padding */
+}
+
+.standard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+
+.standard-image-wrapper {
+    position: relative;
+}
+
+.standard-image {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+    /* Wide subtle shadow */
+    display: block;
+    height: 500px;
+    object-fit: cover;
+    background-color: #cbd5e1;
+}
+
+.standard-headline {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #0f172a;
+    /* Navy Blue */
+    margin-bottom: 32px;
+}
+
+.pillars-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pillar-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 1.125rem;
+    color: #334155;
+    font-weight: 600;
+}
+
+.pillar-icon {
+    color: #007BFF;
+    /* Brand Blue */
+}
+
+.cta-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.btn-standard {
+    background-color: #0f172a;
+    /* Navy */
+    color: white;
+    padding: 18px 36px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.125rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-standard:hover {
+    background-color: #1e293b;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.2);
+}
+
+.warranty-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.875rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+/* Cost Section (Copy Strategy) */
+.cost-section {
+    background-color: #ffffff;
+    background-image: url('/pattern-black.png');
+    background-size: 300px;
+    /* Slightly smaller for better texture */
+    background-repeat: repeat;
+    background-blend-mode: multiply;
+    /* Stronger blend */
+    background-attachment: fixed;
+    padding: 100px 0;
+    position: relative;
+}
+
+/* Ensure content stays legible above pattern */
+.cost-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.88);
+    /* Adjusted opacity to 88% */
+    z-index: 0;
+    pointer-events: none;
+}
+
+.cost-section .container {
+    position: relative;
+    z-index: 1;
+    /* Bring content above overlay */
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.section-title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 16px;
+}
+
+.section-subtitle {
+    font-size: 1.125rem;
+    color: #64748b;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.cost-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+}
+
+.cost-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 32px;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.cost-card:hover {
+    border-color: #38bdf8;
+    /* Blue thin border */
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.cost-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    background-color: #F0F9FF;
+    color: #0284C7;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    /* Pop effect */
+}
+
+/* Icon Pop on Card Hover */
+.cost-card:hover .cost-icon-wrapper {
+    transform: scale(1.1);
+    background-color: #e0f2fe;
+}
+
+.cost-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 12px;
+}
+
+.cost-card p {
+    color: #64748b;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Bottom CTA Button */
+.pricing-cta-container {
+    margin-top: 64px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-pricing-cta {
+    background-color: #007BFF;
+    color: white;
+    padding: 16px 48px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.125rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 123, 255, 0.3);
+}
+
+.btn-pricing-cta:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 123, 255, 0.4);
+}
+
+/* ========================= */
+/* Financing Section (Inlined) */
+/* ========================= */
+.financing-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.financing-banner {
+    display: flex;
+    background-color: #F8FAFC;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid #E2E8F0;
+}
+
+.financing-image-wrapper {
+    flex: 0 0 40%;
+    position: relative;
+    min-height: 400px;
+}
+
+.financing-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.financing-content {
+    flex: 1;
+    padding: 64px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.financing-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    background-color: rgba(56, 189, 248, 0.1);
+    color: #0284C7;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.financing-headline {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 16px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.financing-text {
+    font-size: 1.05rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    max-width: 600px;
+}
+
+.financing-note {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    font-style: italic;
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .standard-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .standard-image {
+        height: 300px;
+    }
+
+    .replacement-headline {
+        font-size: 2.25rem;
+    }
+
+    .replacement-subheadline {
+        font-size: 1.05rem;
+    }
+
+    .financing-banner {
+        flex-direction: column;
+    }
+
+    .financing-image-wrapper {
+        min-height: 250px;
+        flex: auto;
+    }
+
+    .financing-content {
+        padding: 40px 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .replacement-hero {
+        padding: 80px 0 80px;
+    }
+
+    .replacement-headline {
+        font-size: 1.85rem;
+    }
+
+    .replacement-subheadline {
+        font-size: 0.95rem;
+        max-width: 100%;
+    }
+
+    .btn-hero-primary {
+        width: 100%;
+        max-width: 360px;
+        justify-content: center;
+        padding: 14px 24px;
+    }
+
+    .standard-section {
+        padding: 80px 0;
+    }
+
+    .standard-headline {
+        font-size: 1.75rem;
+    }
+
+    .standard-image {
+        height: 250px;
+    }
+
+    .standard-grid {
+        gap: 32px;
+    }
+
+    .pillar-item {
+        font-size: 1rem;
+    }
+
+    .btn-standard {
+        width: 100%;
+        justify-content: center;
+        padding: 16px 24px;
+        font-size: 1rem;
+    }
+
+    .cost-section {
+        padding: 60px 0;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .cost-card {
+        padding: 24px;
+    }
+
+    .btn-pricing-cta {
+        width: 100%;
+        max-width: 360px;
+        padding: 14px 32px;
+    }
+
+    .financing-section {
+        padding: 60px 0;
+    }
+
+    .financing-content {
+        padding: 32px 20px;
+    }
+
+    .financing-headline {
+        font-size: 1.5rem;
+    }
+}

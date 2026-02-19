@@ -1,0 +1,198 @@
+.hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+    background-color: #111827;
+    /* Fallback */
+    background-size: cover;
+    background-position: center;
+    /* You might want to move the actual image URL here or keep it inline if dynamic */
+}
+
+.hero-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: block;
+    /* Ensure it is visible */
+    /* background: linear-gradient(to right, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.8) 100%); */
+    background: none;
+}
+
+/* Main Container Layout */
+/* Main Container Layout */
+/* Main Container Layout */
+.hero-content {
+    position: relative;
+    z-index: 10;
+    padding: 0 var(--spacing-3);
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* Text Container */
+.hero-text-container {
+    max-width: 800px;
+}
+
+/* Logo Image - Standard Layout */
+.hero-logo-img {
+    max-width: 800px;
+    width: 100%;
+    margin-bottom: 16px;
+    /* Reduced from 24px */
+    display: block;
+    margin-top: -60px;
+    /* Pull the logo up */
+}
+
+.hero-label {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.875rem;
+    margin-bottom: var(--spacing-2);
+    color: var(--primary-blue);
+    font-weight: 600;
+}
+
+
+.hero-title {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    /* Reduced form 2.5rem - 4.5rem */
+    line-height: 1.1;
+    margin-bottom: 16px;
+    /* Reduced from var(--spacing-3) */
+    font-family: var(--font-heading);
+    font-weight: 700;
+    margin-top: 0;
+}
+
+.hero-highlight {
+    color: var(--primary-blue);
+}
+
+.hero-description {
+    font-size: 1rem;
+    /* Reduced from 1.125rem */
+    margin-bottom: 24px;
+    /* Reduced from var(--spacing-5) */
+    max-width: 600px;
+    color: #E5E7EB;
+    /* Light gray for readability */
+    line-height: 1.5;
+}
+
+.hero-actions {
+    display: flex;
+    gap: var(--spacing-2);
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    /* Reduced from 80px */
+}
+
+/* Trust Badges Styling */
+.hero-trust-badges {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--spacing-3);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.badge-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-1);
+    /* 8px */
+}
+
+.badge-icon {
+    color: var(--primary-blue);
+}
+
+.separator {
+    color: var(--primary-blue);
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+/* ===== Tablet & Mobile Responsive ===== */
+@media (max-width: 1024px) {
+    .hero-content {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding-top: 40px;
+        /* Reduced padding */
+    }
+
+    .hero-logo-img {
+        width: 80%;
+        max-width: 350px;
+        margin: 0 auto 24px auto;
+        margin-top: 0;
+        /* Reset negative margin on mobile */
+    }
+
+    .hero-text-container {
+        margin-left: 0;
+        max-width: 100%;
+        padding: 0 16px;
+    }
+
+    .hero-actions {
+        justify-content: center;
+        margin-bottom: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 0 16px;
+    }
+
+    .hero-content {
+        padding: 0 8px;
+    }
+
+    .hero-title {
+        font-size: clamp(1.8rem, 6vw, 2.5rem);
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        margin-bottom: 24px;
+    }
+
+    .hero-trust-badges {
+        flex-direction: column;
+        gap: 8px;
+        /* Stack badges */
+    }
+
+    .separator {
+        display: none;
+    }
+}
