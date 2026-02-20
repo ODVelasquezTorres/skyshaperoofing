@@ -4,7 +4,6 @@ import Specialties from '../components/public/Specialties';
 import { Star, ShieldCheck, Award } from 'lucide-react';
 import ReviewsSection from '../components/public/ReviewsSection';
 import AboutUs from '../components/public/AboutUs';
-import ProcessFlowchart from '../components/public/ProcessFlowchart';
 import './LandingPage.css';
 
 const LandingPage = () => {
@@ -43,9 +42,6 @@ const LandingPage = () => {
 
             {/* Our Specialties */}
             <Specialties />
-
-            {/* New Expert Process Flowchart Section */}
-            <ProcessFlowchart />
 
             {/* About Us */}
             <AboutUs />

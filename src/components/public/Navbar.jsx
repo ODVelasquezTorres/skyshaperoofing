@@ -65,7 +65,7 @@ const Navbar = () => {
                             <ul className="nav-links">
                                 <li><Link to="/" onClick={closeMobile}>Home</Link></li>
 
-                                <li><Link to="/#process" onClick={closeMobile}>Roofing</Link></li>
+                                <li><Link to="/roofing" onClick={closeMobile}>Roofing</Link></li>
 
                                 <li><Link to="/commercial-roofing" onClick={closeMobile}>Commercial Roofing</Link></li>
                                 <li><Link to="/solar-panel" onClick={closeMobile}>Solar Panel</Link></li>

@@ -1,0 +1,6 @@
+.roofing-page-container {
+    padding-top: 100px;
+    /* Accounts for the fixed navbar */
+    min-height: 100vh;
+    background-color: #f8fafc;
+}

@@ -6,7 +6,7 @@ import './App.css';
 
 // Lazy loading pages to drastically reduce initial bundle size and speed up page load
 const LandingPage = React.lazy(() => import('./pages/LandingPage'));
-
+const RoofingPage = React.lazy(() => import('./pages/RoofingPage'));
 const RoofInspectionPage = React.lazy(() => import('./pages/RoofInspectionPage'));
 const RoofRepairPage = React.lazy(() => import('./pages/RoofRepairPage'));
 const RoofReplacementPage = React.lazy(() => import('./pages/RoofReplacementPage'));
@@ -39,6 +39,7 @@ function App() {
         {/* Public Website Routes */}
         <Route element={<PublicLayout />}>
           <Route path="/" element={<LandingPage />} />
+          <Route path="/roofing" element={<RoofingPage />} />
 
           <Route path="/roof-inspection" element={<RoofInspectionPage />} />
           <Route path="/roof-repair" element={<RoofRepairPage />} />
