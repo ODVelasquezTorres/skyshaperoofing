@@ -43,17 +43,25 @@ const AboutUs = () => {
 
                         {/* Right: Content */}
                         <div className="about-content">
-                            <p className="about-pre-headline">BEYOND CONSTRUCTION</p>
+                            <p className="about-pre-headline">THE SKYSHAPE LEGACY</p>
                             <h2 className="about-headline">
-                                Everything you love lives under your roof.
+                                Beyond Construction: We Build Peace of Mind.
                             </h2>
+                            <p className="about-sub-headline" style={{ fontStyle: 'italic', fontSize: '1.2rem', color: '#64748b', marginBottom: '24px' }}>
+                                "Because a roof is more than a structure—it’s the guardian of your family’s history."
+                            </p>
+
+                            <h3 style={{ fontSize: '1.1rem', fontWeight: '700', color: '#0f172a', marginBottom: '8px' }}>🤝 Our Essence</h3>
                             <p className="about-body-text">
-                                <strong>Protect it with the best.</strong> At SkyShape, we understand that your home
-                                is your most valuable asset. With <strong>5 years of deep industry experience</strong> in
-                                North Carolina and over <strong>100+ projects completed</strong> in every specialty—from
-                                precision roofing to emergency restoration—we bring more than just tools to the job.
-                                We bring the <strong>best warranty in NC</strong> and a commitment to quality that
-                                covers what matters most.
+                                At SkyShape Roofing & Solutions, we don't just see shingles, gutters, or siding. We see the laughter in your living room, the safety of your children’s sleep, and the investment of a lifetime.
+                            </p>
+                            <p className="about-body-text">
+                                For the past 5 years, we’ve rooted ourselves in the North Carolina community, not as contractors, but as neighbors. With over 100+ projects successfully completed in every specialty, our experience isn't just a number—it’s a promise that we’ve seen it all and fixed it all with the same care we’d give our own homes.
+                            </p>
+
+                            <h3 style={{ fontSize: '1.1rem', fontWeight: '700', color: '#0f172a', marginTop: '24px', marginBottom: '8px' }}>Why We Do It</h3>
+                            <p className="about-body-text">
+                                We bring more than just tools to your driveway. We bring a commitment to quality that covers what matters most. Whether it’s a meticulous restoration or a precision installation, we work so that when the storm hits, the only thing you have to worry about is which movie to watch with your loved ones.
                             </p>
                         </div>
                     </div>
