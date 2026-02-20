@@ -87,8 +87,8 @@ const StickyMenu = () => {
                     {/* Center Logo */}
                     <div className="sticky-menu-logo-container">
                         <div className="sticky-logo-circle">
-                            <img src="/logo-icon.png" alt="SkyShape" className="sticky-logo-img"
-                                onError={(e) => { e.target.src = '/favicon.ico' }} /* Fallback if specific icon not found */
+                            <img src="/logo-scrolled.png" alt="SkyShape" className="sticky-logo-img"
+                                onError={(e) => { e.target.onerror = null; e.target.src = '/vite.svg' }}
                             />
                         </div>
                     </div>
