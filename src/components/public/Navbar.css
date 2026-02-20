@@ -295,8 +295,7 @@
 }
 
 .navbar-wrapper.scrolled .navbar-logo {
-    height: 65px;
-    /* Incremented to better fill the header */
+    height: 120px;
     margin-top: 0;
 }
 
