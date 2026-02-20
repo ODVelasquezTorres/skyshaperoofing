@@ -116,6 +116,26 @@
     font-weight: 800;
 }
 
+.schedule-action-btn {
+    background-color: white;
+    color: #016CD6;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-action-btn:hover {
+    background-color: #f1f5f9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
 .inspection-icon {
     color: #ffffff;
     margin-bottom: 8px;
@@ -190,8 +210,10 @@
 
 .line {
     position: absolute;
-    background-color: #cbd5e1;
-    width: 2px;
+    background-color: #94a3b8;
+    /* Light Grey-Blue */
+    width: 3px;
+    /* Thicker */
 }
 
 /* The Pulsing Animation */
@@ -206,8 +228,8 @@
 }
 
 .pulse-line {
-    /* Base grey line */
-    background: #e2e8f0;
+    /* Base grey-blue line */
+    background: #94a3b8;
     overflow: hidden;
 }
 
@@ -221,7 +243,7 @@
     background: linear-gradient(to bottom, transparent 0%, #016CD6 50%, transparent 100%);
     background-size: 100% 200%;
     animation: pulseDownward 3s infinite linear;
-    opacity: 0.6;
+    opacity: 0.8;
 }
 
 /* Specific Line Positions (Approximated for Flexbox centered layout) */
@@ -298,7 +320,6 @@
     transform: skewX(-15deg);
 }
 
-
 .simple-down {
     height: 50px;
     display: flex;
@@ -327,8 +348,8 @@
 }
 
 .closing-logo {
-    height: 60px;
-    margin-bottom: 16px;
+    height: 120px;
+    margin-bottom: 24px;
     object-fit: contain;
 }
 

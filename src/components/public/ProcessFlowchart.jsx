@@ -20,7 +20,7 @@ const ProcessFlowchart = () => {
                         </div>
                         <div className="flow-node entry-node tooltip-trigger">
                             <h3>Storm Damage</h3>
-                            <span className="tooltip-text">Immediate evaluation after extreme weather events.</span>
+                            <span className="tooltip-text">Immediate evaluation of Hail, Wind, or Tree damage to secure your property.</span>
                         </div>
                     </div>
 
@@ -69,10 +69,11 @@ const ProcessFlowchart = () => {
                     <div className="level level-3">
                         <div className="flow-node finance-node tooltip-trigger">
                             <h3>Insurance Claim</h3>
-                            <span className="tooltip-text">Expert guidance to maximize your coverage and document all damage.</span>
+                            <span className="tooltip-text">Professional assistance to document damage and maximize your policy coverage.</span>
                         </div>
-                        <div className="flow-node finance-node">
+                        <div className="flow-node finance-node tooltip-trigger">
                             <h3>Retail</h3>
+                            <span className="tooltip-text">Flexible payment and financing options for projects not covered by insurance.</span>
                         </div>
                     </div>
 
@@ -89,7 +90,11 @@ const ProcessFlowchart = () => {
                         <div className="flow-node inspection-node tooltip-trigger main-action">
                             <ShieldCheck size={32} className="inspection-icon" />
                             <h2>Professional Inspection</h2>
-                            <span className="tooltip-text">Our 50-point certified check to determine your home's exact health.</span>
+                            <span className="tooltip-text">Our comprehensive 50-point check. This is where we define the best path for your home.</span>
+
+                            <button className="schedule-action-btn" onClick={() => document.querySelector('.btn-login')?.click()}>
+                                Schedule Now
+                            </button>
                         </div>
                     </div>
 
