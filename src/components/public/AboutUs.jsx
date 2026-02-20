@@ -35,8 +35,8 @@ const AboutUs = () => {
                         {/* Left: Image */}
                         <div className="about-image-wrapper">
                             <img
-                                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop&q=80"
-                                alt="Beautiful home protected by SkyShape roofing"
+                                src="/tarjeta-presentacion.png"
+                                alt="SkyShape Roofing corporate mockup"
                                 loading="lazy"
                             />
                         </div>
