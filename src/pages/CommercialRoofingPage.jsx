@@ -157,7 +157,7 @@ const CommercialRoofingPage = () => {
                                 </div>
                                 <div className="system-image-wrapper">
                                     <img
-                                        src="https://images.unsplash.com/photo-1629806499878-5e48aa442439?q=80&w=2070&auto=format&fit=crop"
+                                        src="/flat-roof-systems.png"
                                         alt="Flat Roof Commercial Building"
                                         className="system-image"
                                     />
@@ -196,7 +196,7 @@ const CommercialRoofingPage = () => {
                                 </div>
                                 <div className="system-image-wrapper">
                                     <img
-                                        src="https://images.unsplash.com/photo-1632759145351-1d592919f522?q=80&w=2070&auto=format&fit=crop"
+                                        src="/tpo-roofing.png"
                                         alt="TPO White Roof"
                                         className="system-image"
                                     />
@@ -235,7 +235,7 @@ const CommercialRoofingPage = () => {
                                 </div>
                                 <div className="system-image-wrapper">
                                     <img
-                                        src="https://images.unsplash.com/photo-1599690940523-2cb039c32f84?q=80&w=2070&auto=format&fit=crop"
+                                        src="/pvc-roofing.png"
                                         alt="PVC Commercial Roof"
                                         className="system-image"
                                     />
@@ -274,7 +274,7 @@ const CommercialRoofingPage = () => {
                                 </div>
                                 <div className="system-image-wrapper">
                                     <img
-                                        src="https://images.unsplash.com/photo-1541334057889-183e8a7195e3?q=80&w=2070&auto=format&fit=crop"
+                                        src="/epdm-roofing.png"
                                         alt="EPDM Black Rubber Roof"
                                         className="system-image"
                                     />

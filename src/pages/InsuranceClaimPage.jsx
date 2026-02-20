@@ -103,11 +103,26 @@ const InsuranceClaimPage = () => {
                                     </p>
                                 </div>
                                 <div className="info-image-container">
-                                    <img
-                                        src="https://images.unsplash.com/photo-1595846519845-68e298c2edd8?q=80&w=2070&auto=format&fit=crop"
-                                        alt="Roofing Insurance Papers"
-                                        className="info-image"
-                                    />
+                                    <div className="insurance-logos-grid">
+                                        <div className="insurance-logo-item">
+                                            <img src="/state-farm.jpg" alt="State Farm" />
+                                        </div>
+                                        <div className="insurance-logo-item">
+                                            <img src="/allstate.png" alt="Allstate" />
+                                        </div>
+                                        <div className="insurance-logo-item">
+                                            <img src="/usaa.jpg" alt="USAA" />
+                                        </div>
+                                        <div className="insurance-logo-item">
+                                            <img src="/liberty-mutual.png" alt="Liberty Mutual" />
+                                        </div>
+                                        <div className="insurance-logo-item">
+                                            <img src="/farmers.png" alt="Farmers" />
+                                        </div>
+                                        <div className="insurance-logo-item">
+                                            <img src="/american-family.png" alt="American Family" />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -117,32 +132,44 @@ const InsuranceClaimPage = () => {
                     <section className="why-section">
                         <div className="container">
                             <div className="info-grid why-content">
-                                {/* Order swap on desktop for visual balance */}
+                                {/* Image Column (Left on Desktop) */}
                                 <div className="info-image-container order-2 lg:order-1">
                                     <img
-                                        src="https://images.unsplash.com/photo-1624623276722-e3d83896561f?q=80&w=2070&auto=format&fit=crop"
+                                        src="/storm-damage.png"
                                         alt="Storm Damage Repair"
                                         className="info-image"
                                     />
                                 </div>
+
+                                {/* Content Column (Right on Desktop) */}
                                 <div className="info-content order-1 lg:order-2">
-                                    <h2>Why File a Claim?</h2>
-                                    <p>
-                                        Neglecting storm damage can lead to severe structural issues, mold growth, and interior water damage over time.
-                                    </p>
-                                    <div className="flex gap-4 mb-4 items-start">
-                                        <div className="mt-1 text-blue-500"><Zap size={20} /></div>
-                                        <div>
-                                            <h4 className="font-bold text-gray-900">Protect Your Investment</h4>
-                                            <p className="text-sm text-gray-600 mb-0">Your home is likely your biggest asset. Filing a claim ensures it remains safe and valuable.</p>
+                                    <h2 className="section-title-navy">Why file a claim?</h2>
+
+                                    <div className="claim-reason-block">
+                                        <div className="reason-icon-wrapper">
+                                            <Home size={24} strokeWidth={1.5} />
                                         </div>
+                                        <p>
+                                            You may consider filing a claim when, after a storm, we identify that there may be damage to your property, whether to the roof, siding, gutters, or any other part of your home.
+                                        </p>
                                     </div>
-                                    <div className="flex gap-4 items-start">
-                                        <div className="mt-1 text-blue-500"><Award size={20} /></div>
-                                        <div>
-                                            <h4 className="font-bold text-gray-900">It's Your Right</h4>
-                                            <p className="text-sm text-gray-600 mb-0">You pay premiums for this exact purpose. Utilizing your coverage for legitimate damage is why you have insurance.</p>
+
+                                    <div className="claim-reason-block">
+                                        <div className="reason-icon-wrapper">
+                                            <FileSearch size={24} strokeWidth={1.5} />
                                         </div>
+                                        <p>
+                                            You can also file a claim when you authorize a company like ours to inspect your home and we find enough damage to consider that the insurance will cover some or all of the damage.
+                                        </p>
+                                    </div>
+
+                                    <div className="claim-reason-block">
+                                        <div className="reason-icon-wrapper">
+                                            <ShieldCheck size={24} strokeWidth={1.5} />
+                                        </div>
+                                        <p>
+                                            <strong>It is your right.</strong> You pay premiums precisely for this purpose. Using your coverage for legitimate damage is the reason you have insurance.
+                                        </p>
                                     </div>
                                 </div>
                             </div>

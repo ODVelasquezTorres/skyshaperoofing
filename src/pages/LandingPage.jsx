@@ -1,7 +1,9 @@
 import React from 'react';
-import Hero from '../components/public/Hero'; // Import the Hero component
+import Hero from '../components/public/Hero';
+import Specialties from '../components/public/Specialties';
 import { Star, ShieldCheck, Award } from 'lucide-react';
 import ReviewsSection from '../components/public/ReviewsSection';
+import AboutUs from '../components/public/AboutUs';
 import './LandingPage.css';
 
 const LandingPage = () => {
@@ -19,7 +21,7 @@ const LandingPage = () => {
                     </div>
                     <div className="vertical-divider"></div>
                     <div className="trust-item">
-                        <span>500+ Projects</span>
+                        <span>50+ Projects</span>
                     </div>
                     <div className="vertical-divider"></div>
                     <div className="trust-item flex items-center gap-sm">
@@ -37,6 +39,9 @@ const LandingPage = () => {
                     </div>
                 </div>
             </section>
+
+            {/* Our Specialties */}
+            <Specialties />
 
             {/* Process Section */}
             <section id="process" className="process-section section-padding bg-secondary">
@@ -59,6 +64,9 @@ const LandingPage = () => {
                     </div>
                 </div>
             </section>
+
+            {/* About Us */}
+            <AboutUs />
 
             {/* Testimonials */}
             <ReviewsSection />
