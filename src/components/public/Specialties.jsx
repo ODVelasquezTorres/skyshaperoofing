@@ -24,25 +24,25 @@ const specialties = [
         id: 2,
         title: "Roofing Systems",
         icon: Home,
-        image: "https://images.unsplash.com/photo-1632759145351-1d592919f522?w=400&h=300&fit=crop&q=80"
+        image: "/roof.jpg"
     },
     {
         id: 3,
         title: "Siding Installation",
         icon: PanelTop,
-        image: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=300&fit=crop&q=80"
+        image: "/siding.jpg"
     },
     {
         id: 4,
         title: "Soffit & Fascia",
         icon: LayoutTemplate,
-        image: "https://images.unsplash.com/photo-1513880989635-6eb491ce7f5b?w=400&h=300&fit=crop&q=80"
+        image: "/soffit-fascia.jpg"
     },
     {
         id: 5,
         title: "Gutter Systems",
         icon: CloudRain,
-        image: "https://images.unsplash.com/photo-1562259920-513a8f55d49b?w=400&h=300&fit=crop&q=80"
+        image: "/gutters.jpg"
     },
     {
         id: 6,
@@ -54,25 +54,25 @@ const specialties = [
         id: 7,
         title: "Full Restoration",
         icon: Wrench,
-        image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&h=300&fit=crop&q=80"
+        image: "/restauracion.jpg"
     },
     {
         id: 8,
         title: "Tree Removal",
         icon: Trees,
-        image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=400&h=300&fit=crop&q=80"
+        image: "/tree-damage.jpg"
     },
     {
         id: 9,
         title: "Fire Damage Repair",
         icon: Flame,
-        image: "https://images.unsplash.com/photo-1486551937199-baf066858de7?w=400&h=300&fit=crop&q=80"
+        image: "/fire-damage.jpg"
     },
     {
         id: 10,
         title: "Storm Damage",
         icon: CloudLightning,
-        image: "https://images.unsplash.com/photo-1527482797697-8795b05a13fe?w=400&h=300&fit=crop&q=80"
+        image: "/storm-damage.png"
     }
 ];
 
