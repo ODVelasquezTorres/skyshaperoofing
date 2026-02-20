@@ -61,7 +61,8 @@
     /* Big but symmetric */
     width: 100%;
     margin: 0 auto 32px auto;
-    display: block;
+    display: none;
+    /* Hidden by default on desktop */
     filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
     /* Premium drop shadow on transparent PNG */
 }
@@ -152,6 +153,8 @@
     }
 
     .hero-logo-img {
+        display: block;
+        /* Show on mobile/tablet */
         width: 80%;
         max-width: 350px;
         margin: 0 auto 24px auto;
