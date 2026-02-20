@@ -19,9 +19,9 @@
     background-color: white;
     color: black;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    padding-top: 12px;
-    /* Reduce padding on scroll for compact feel */
-    padding-bottom: 12px;
+    padding-top: 18px;
+    /* Incremented from 12px to give header more size */
+    padding-bottom: 18px;
 }
 
 /* 
@@ -444,7 +444,8 @@
     }
 
     .navbar-wrapper.scrolled .navbar-logo {
-        height: 55px;
+        height: 80px;
+        /* Incremented from 55px */
     }
 
     /* Hide nav by default, show when mobileOpen */
@@ -536,6 +537,7 @@
     }
 
     .navbar-wrapper.scrolled .navbar-logo {
-        height: 45px;
+        height: 70px;
+        /* Incremented from 45px */
     }
 }
