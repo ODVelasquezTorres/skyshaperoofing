@@ -340,12 +340,16 @@
     .grid-2-col,
     .grid-2-col.inverted {
         flex-direction: column;
-        gap: 40px;
+        gap: 24px;
+    }
+
+    .rp-section {
+        padding: 50px 0;
     }
 
     .rp-img {
         height: auto;
-        min-height: 300px;
+        min-height: 250px;
     }
 
     .rp-decision-actions {
@@ -357,15 +361,33 @@
 
     .rp-retail-grid {
         grid-template-columns: 1fr;
+        gap: 24px;
     }
 }
 
 @media (max-width: 600px) {
     .rp-title {
-        font-size: 2.2rem;
+        font-size: 2rem;
+    }
+
+    .rp-intro {
+        padding: 80px 16px 30px;
     }
 
     .rp-component-list {
         grid-template-columns: 1fr;
+    }
+
+    .rp-retail-card {
+        padding: 24px;
+    }
+
+    .pill {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+    }
+
+    .pill-list {
+        gap: 6px;
     }
 }
