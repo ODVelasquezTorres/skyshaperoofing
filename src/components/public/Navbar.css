@@ -295,7 +295,8 @@
 }
 
 .navbar-wrapper.scrolled .navbar-logo {
-    height: 55px;
+    height: 65px;
+    /* Incremented to better fill the header */
     margin-top: 0;
 }
 
@@ -444,7 +445,7 @@
     }
 
     .navbar-wrapper.scrolled .navbar-logo {
-        height: 40px;
+        height: 55px;
     }
 
     /* Hide nav by default, show when mobileOpen */
@@ -536,6 +537,6 @@
     }
 
     .navbar-wrapper.scrolled .navbar-logo {
-        height: 35px;
+        height: 45px;
     }
 }
