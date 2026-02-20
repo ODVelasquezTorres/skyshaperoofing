@@ -27,6 +27,7 @@ const Navbar = () => {
 
     // Close mobile menu on route change
     useEffect(() => {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setMobileOpen(false);
     }, [location.pathname]);
 
@@ -92,12 +93,6 @@ const Navbar = () => {
                                             <Link to="/roof-replacement" onClick={closeMobile}>
                                                 <Home size={18} className="dropdown-icon" />
                                                 <span>Roof Replacement</span>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/projects" onClick={closeMobile}>
-                                                <Image size={18} className="dropdown-icon" />
-                                                <span>Projects</span>
                                             </Link>
                                         </li>
                                     </ul>
