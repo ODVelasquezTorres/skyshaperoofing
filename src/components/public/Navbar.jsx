@@ -65,38 +65,7 @@ const Navbar = () => {
                             <ul className="nav-links">
                                 <li><Link to="/" onClick={closeMobile}>Home</Link></li>
 
-                                {/* Roofing Dropdown */}
-                                <li className="nav-item-dropdown">
-                                    <span className="nav-link-text">
-                                        Roofing <ChevronDown size={16} className="dropdown-chevron" />
-                                    </span>
-                                    <ul className="dropdown-menu">
-                                        <li>
-                                            <Link to="/roof-inspection" onClick={closeMobile}>
-                                                <Search size={18} className="dropdown-icon" />
-                                                <span>Roof Inspection</span>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/roof-repair" onClick={closeMobile}>
-                                                <Hammer size={18} className="dropdown-icon" />
-                                                <span>Roof Repair</span>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/storm-restoration" onClick={closeMobile}>
-                                                <CloudLightning size={18} className="dropdown-icon" />
-                                                <span>Storm Restoration</span>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/roof-replacement" onClick={closeMobile}>
-                                                <Home size={18} className="dropdown-icon" />
-                                                <span>Roof Replacement</span>
-                                            </Link>
-                                        </li>
-                                    </ul>
-                                </li>
+                                <li><Link to="/#process" onClick={closeMobile}>Roofing</Link></li>
 
                                 <li><Link to="/commercial-roofing" onClick={closeMobile}>Commercial Roofing</Link></li>
                                 <li><Link to="/solar-panel" onClick={closeMobile}>Solar Panel</Link></li>

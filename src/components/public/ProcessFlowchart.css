@@ -1,0 +1,390 @@
+.process-flowchart-section {
+    padding: 80px 20px;
+    background-color: #f8fafc;
+    /* Very light background for contrast */
+    font-family: 'Inter', sans-serif;
+}
+
+.process-flowchart-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.process-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.process-header h2 {
+    color: #0f172a;
+    /* Navy Blue */
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.process-header p {
+    color: #475569;
+    font-size: 1.1rem;
+}
+
+/* Base Flowchart Area */
+.flowchart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    gap: 0;
+    /* Gaps handled by connector lines */
+}
+
+.level {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Base Node Styling */
+.flow-node {
+    background: white;
+    padding: 24px 32px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    text-align: center;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    cursor: default;
+    position: relative;
+    min-width: 200px;
+}
+
+.flow-node h3 {
+    color: #0f172a;
+    /* Navy title */
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.flow-node h4 {
+    color: #334155;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Node Variants */
+.entry-node {
+    border-color: #cbd5e1;
+    background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+}
+
+.split-node {
+    padding: 16px 20px;
+    min-width: 150px;
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.finance-node {
+    border-color: rgba(1, 108, 214, 0.3);
+    /* Skyshape Blue tint */
+}
+
+/* Main Action Node (Professional Inspection) */
+.inspection-node {
+    background: #016CD6;
+    /* Skyshape Blue */
+    border-color: #005bb5;
+    color: white;
+    padding: 32px 48px;
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px -3px rgba(1, 108, 214, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.inspection-node h2 {
+    color: white;
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.inspection-icon {
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+/* Tooltips & Interaction */
+.tooltip-trigger:hover {
+    transform: translateY(-5px);
+    border-color: #016CD6;
+    box-shadow: 0 10px 15px -3px rgba(1, 108, 214, 0.2);
+}
+
+.inspection-node:hover {
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(1, 108, 214, 0.5);
+}
+
+.tooltip-trigger .tooltip-text {
+    visibility: hidden;
+    width: 250px;
+    background-color: #0f172a;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 12px 16px;
+    position: absolute;
+    z-index: 10;
+    bottom: 110%;
+    /* Place above the box */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.4;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+}
+
+/* Triangle for tooltip */
+.tooltip-trigger .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -6px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: #0f172a transparent transparent transparent;
+}
+
+.tooltip-trigger:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Branch Groups for Layout */
+.branch-group {
+    display: flex;
+    gap: 20px;
+}
+
+/* Connector Lines & Animations */
+.connector-level {
+    width: 100%;
+    height: 60px;
+    /* Space between levels */
+    position: relative;
+    z-index: 1;
+}
+
+.line {
+    position: absolute;
+    background-color: #cbd5e1;
+    width: 2px;
+}
+
+/* The Pulsing Animation */
+@keyframes pulseDownward {
+    0% {
+        background-position: 0% -100%;
+    }
+
+    100% {
+        background-position: 0% 200%;
+    }
+}
+
+.pulse-line {
+    /* Base grey line */
+    background: #e2e8f0;
+    overflow: hidden;
+}
+
+.pulse-line::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 0%, #016CD6 50%, transparent 100%);
+    background-size: 100% 200%;
+    animation: pulseDownward 3s infinite linear;
+    opacity: 0.6;
+}
+
+/* Specific Line Positions (Approximated for Flexbox centered layout) */
+/* This requires specific positioning based on standard Flex gaps. */
+/* A safer approach for complex flowcharts in pure CSS is SVG, but we will use styled divs matched to the flex structure */
+
+.split-4 {
+    height: 40px;
+}
+
+.split-4 .line:nth-child(1) {
+    left: 25%;
+    height: 100%;
+}
+
+/* Repair */
+.split-4 .line:nth-child(2) {
+    left: 35%;
+    height: 100%;
+}
+
+/* Replacement */
+.split-4 .line:nth-child(3) {
+    left: 60%;
+    height: 100%;
+}
+
+/* Hail */
+.split-4 .line:nth-child(4) {
+    left: 70%;
+    height: 100%;
+}
+
+/* Wind */
+
+.storm-to-finance {
+    height: 40px;
+}
+
+.storm-to-finance .line {
+    height: 100%;
+}
+
+.storm-to-finance .merge-left {
+    left: 60%;
+    height: 100%;
+}
+
+.storm-to-finance .merge-center {
+    left: 70%;
+    height: 100%;
+}
+
+.storm-to-finance .merge-right {
+    left: 80%;
+    height: 100%;
+}
+
+.converge-to-center {
+    height: 60px;
+}
+
+.converge-to-center .line {
+    height: 100%;
+}
+
+.converge-to-center .converge-left {
+    left: 30%;
+    transform: skewX(15deg);
+}
+
+.converge-to-center .converge-right {
+    left: 70%;
+    transform: skewX(-15deg);
+}
+
+
+.simple-down {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.simple-down .main-pulse {
+    position: relative;
+    height: 100%;
+    width: 3px;
+    background: #94a3b8;
+}
+
+.simple-down .main-pulse::after {
+    background: linear-gradient(to bottom, transparent 0%, #016CD6 50%, transparent 100%);
+    background-size: 100% 200%;
+    animation: pulseDownward 2s infinite linear;
+    opacity: 1;
+}
+
+/* Closing Block */
+.closing-node {
+    margin-top: 20px;
+    text-align: center;
+    padding: 30px;
+}
+
+.closing-logo {
+    height: 60px;
+    margin-bottom: 16px;
+    object-fit: contain;
+}
+
+.closing-slogan {
+    color: #475569;
+    font-size: 1.2rem;
+}
+
+.closing-slogan strong {
+    color: #0f172a;
+    font-weight: 800;
+}
+
+/* SVG Line Alternative for better rendering (Adding this to override the manual divs if needed) */
+/* Since we are using standard divs, the manual absolute positioning is fragile responsively. */
+/* Let's simplify the connector lines for mobile to be straight down. */
+
+@media (max-width: 768px) {
+    .level {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .branch-group {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .flow-node {
+        width: 90%;
+        min-width: unset;
+    }
+
+    .tooltip-trigger .tooltip-text {
+        width: 280px;
+        white-space: normal;
+    }
+
+    /* Hide complex lines on mobile, just use simple vertical ones */
+    .connector-level .line {
+        display: none;
+    }
+
+    .connector-level {
+        height: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .connector-level::after {
+        content: '';
+        width: 2px;
+        height: 100%;
+        background: #cbd5e1;
+        position: absolute;
+    }
+}
