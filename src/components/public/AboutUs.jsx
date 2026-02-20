@@ -60,24 +60,6 @@ const AboutUs = () => {
                 </div>
             </section>
 
-            {/* ===== BLOCK 2: IMPACT STATS ===== */}
-            <section className="about-stats">
-                <div className="about-stats-inner">
-                    <div className="about-stats-divider"></div>
-                    <div className="about-stats-grid">
-                        <div className="about-stat-item">
-                            <div className="about-stat-number">5+</div>
-                            <div className="about-stat-label">Years of Local Expertise</div>
-                        </div>
-                        <div className="about-stats-vertical-divider"></div>
-                        <div className="about-stat-item">
-                            <div className="about-stat-number">1,000+</div>
-                            <div className="about-stat-label">Total Projects — Delivering Excellence</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             {/* ===== BLOCK 3: THE EXECUTIVE TEAM ===== */}
             <section className="about-team">
                 <div className="about-team-container">
