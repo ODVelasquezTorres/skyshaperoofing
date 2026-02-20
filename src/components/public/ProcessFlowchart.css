@@ -342,9 +342,10 @@
 
 /* Closing Block */
 .closing-node {
-    margin-top: 20px;
+    margin-top: 0;
     text-align: center;
-    padding: 30px;
+    padding: 0 30px 30px 30px;
+    /* Reduced top padding to move logo closer */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -353,10 +354,11 @@
 }
 
 .closing-logo {
-    height: 250px;
+    height: 400px;
     width: auto;
     max-width: 100%;
-    margin: 0 auto 24px auto;
+    margin: -40px auto 16px auto;
+    /* Negative top margin to bring it further up if the image has inherent space */
     object-fit: contain;
     display: block;
 }

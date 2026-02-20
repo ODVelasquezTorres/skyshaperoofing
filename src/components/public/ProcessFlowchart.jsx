@@ -106,7 +106,7 @@ const ProcessFlowchart = () => {
                     {/* LEVEL 5: Closing */}
                     <div className="level level-5">
                         <div className="closing-node">
-                            <img src="/logo-scrolled.png" alt="Skyshape Roofing & Solutions" className="closing-logo" />
+                            <img src="/logo-flowchart.png" alt="Skyshape Roofing & Solutions" className="closing-logo" />
                             <p className="closing-slogan">Specialists in protecting what you love most: <strong>Your Home!</strong></p>
                         </div>
                     </div>
