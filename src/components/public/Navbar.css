@@ -288,11 +288,15 @@
     /* Pull logo up significantly */
 }
 
-/* Scrolled state - slightly smaller but still overhanging */
+/* Scrolled state - fits inside the header box perfectly */
+.navbar-wrapper.scrolled .logo-outer-container {
+    align-items: center;
+    padding-top: 0;
+}
+
 .navbar-wrapper.scrolled .navbar-logo {
-    height: 200px;
-    margin-top: -10px;
-    /* Slight adjustment for scrolled state */
+    height: 55px;
+    margin-top: 0;
 }
 
 /* Scrolled Logo Style */
@@ -440,7 +444,7 @@
     }
 
     .navbar-wrapper.scrolled .navbar-logo {
-        height: 140px;
+        height: 40px;
     }
 
     /* Hide nav by default, show when mobileOpen */
@@ -532,6 +536,6 @@
     }
 
     .navbar-wrapper.scrolled .navbar-logo {
-        height: 90px;
+        height: 35px;
     }
 }
