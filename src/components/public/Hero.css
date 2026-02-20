@@ -157,9 +157,8 @@
         /* Show on mobile/tablet */
         width: 80%;
         max-width: 350px;
-        margin: 0 auto 24px auto;
-        margin-top: 0;
-        /* Reset negative margin on mobile */
+        margin: -40px auto -30px auto;
+        /* Using negative margins to cut transparent space */
     }
 
     .hero-text-container {
