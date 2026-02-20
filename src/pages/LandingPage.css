@@ -8,10 +8,10 @@
     background-size: cover;
     background-position: center;
     color: white;
-    padding-top: 180px;
-    /* 120px + Navbar offset (approx 60-90) */
-    padding-bottom: 120px;
-    /* Requested 120px */
+    padding-top: 100px;
+    /* Reducido de 180px para acercar al menu */
+    padding-bottom: 80px;
+    /* Reducido de 120px */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -507,8 +507,9 @@
    ======================================== */
 @media (max-width: 768px) {
     .hero-section {
-        padding-top: 120px;
-        padding-bottom: 80px;
+        padding-top: 70px;
+        /* Reducido de 120px */
+        padding-bottom: 60px;
         min-height: auto;
     }
 
@@ -537,7 +538,25 @@
     }
 
     .trust-bar {
-        padding: 1rem 0;
+        padding: 1.5rem 0;
+    }
+
+    .trust-bar .container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px 8px;
+        /* Vertical, Horizontal gap */
+    }
+
+    .trust-bar .vertical-divider {
+        display: none;
+        /* Hide dividers to make a clean grid */
+    }
+
+    .trust-item {
+        width: 45%;
+        justify-content: center;
+        text-align: center;
     }
 
     .services-section .section-title {

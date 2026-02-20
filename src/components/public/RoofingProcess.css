@@ -16,7 +16,8 @@
 }
 
 .rp-intro {
-    padding: 100px 20px 40px;
+    padding: 85px 20px 40px;
+    /* Reducido para acercarlo al nav */
     background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     color: white;
 }
@@ -371,7 +372,8 @@
     }
 
     .rp-intro {
-        padding: 80px 16px 30px;
+        padding: 70px 16px 30px;
+        /* Reducido para móvil */
     }
 
     .rp-component-list {
