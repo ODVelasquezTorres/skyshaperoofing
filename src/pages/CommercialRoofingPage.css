@@ -2,11 +2,6 @@
    Commercial Roofing Page
    ======================================== */
 
-/* Page Base */
-.commercial-page {
-    
-}
-
 /* ===== HERO ===== */
 .commercial-hero {
     background: linear-gradient(rgba(10, 22, 40, 0.78), rgba(10, 22, 40, 0.78)),
@@ -588,10 +583,6 @@
 
 
 @media (max-width: 768px) {
-    .commercial-page {
-        padding-top: 70px;
-    }
-
     .commercial-systems-content {
         padding: 40px 0;
     }

@@ -8,7 +8,7 @@
     --electric-cyan-dim: rgba(0, 229, 255, 0.15);
     --electric-cyan-border: rgba(0, 229, 255, 0.35);
     --navy-dark: #0A1628;
-    
+
 }
 
 
@@ -624,10 +624,6 @@
 }
 
 @media (max-width: 768px) {
-    .solar-page {
-        padding-top: 70px;
-    }
-
     .solar-hero {
         padding: 80px 0 80px;
         min-height: auto;
