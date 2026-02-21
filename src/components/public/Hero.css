@@ -61,10 +61,18 @@
     /* Big but symmetric */
     width: 100%;
     margin: 0 auto 32px auto;
-    display: none;
-    /* Hidden by default on desktop */
     filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
     /* Premium drop shadow on transparent PNG */
+}
+
+.desktop-only-logo {
+    display: none;
+    /* Hide on desktop by default as before */
+}
+
+.mobile-only-logo {
+    display: none;
+    /* Hide mobile logo on desktop */
 }
 
 .hero-label {
@@ -152,12 +160,18 @@
         /* Reducido de 40px */
     }
 
-    .hero-logo-img {
+    .desktop-only-logo {
+        display: none;
+        /* Keep desktop logo hidden on mobile */
+    }
+
+    .mobile-only-logo {
         display: block;
-        /* Show on mobile/tablet */
+        /* Show specialized mobile logo */
         width: 80%;
         max-width: 350px;
-        margin: 0 auto 24px auto;
+        margin: 0 auto 16px auto;
+        /* Reduced margin to stick closer to text */
     }
 
     .hero-text-container {
