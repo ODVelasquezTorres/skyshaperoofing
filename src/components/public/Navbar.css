@@ -425,8 +425,8 @@
     }
 
     .navbar-wrapper {
-        padding: 20px 0;
-        /* Incremented from 14px */
+        padding: 5px 0;
+        /* Minimal padding to let logo dominate */
     }
 
     .navbar-wrapper.mobile-open {
@@ -439,14 +439,13 @@
     }
 
     .navbar-logo {
-        height: 220px;
-        /* Incremented from 180px */
+        height: 240px;
+        /* Even bigger for tablets */
         /* Tablets */
     }
 
     .navbar-wrapper.scrolled .navbar-logo {
-        height: 110px;
-        /* Incremented from 80px */
+        height: 125px;
     }
 
     /* Hide nav by default, show when mobileOpen */
@@ -533,13 +532,12 @@
 
 @media (max-width: 480px) {
     .navbar-logo {
-        height: 160px;
-        /* Incremented from 120px */
+        height: 220px;
+        /* Very large, touching borders */
         /* Compact on small phones */
     }
 
     .navbar-wrapper.scrolled .navbar-logo {
-        height: 95px;
-        /* Incremented from 70px */
+        height: 110px;
     }
 }
