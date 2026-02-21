@@ -436,13 +436,16 @@
 
     .logo-outer-container {
         padding-left: 16px;
+        padding-top: 0;
+        align-items: center;
+        /* Center logo vertically */
     }
 
     .navbar-logo {
-        height: 140px;
-        /* Scaled down slightly to fit 25px bar */
-        margin-top: -20px;
-        /* Center with 25px padding */
+        height: 110px;
+        /* Balanced size */
+        margin-top: 0;
+        /* Reset margin */
         /* Tablets */
     }
 
@@ -535,10 +538,9 @@
 
 @media (max-width: 480px) {
     .navbar-logo {
-        height: 120px;
-        /* Original size */
-        margin-top: -15px;
-        /* Centered in the 25px padding bar */
+        height: 100px;
+        /* Fits better in 25px padded bar */
+        margin-top: 0;
         /* Compact on small phones */
     }
 
