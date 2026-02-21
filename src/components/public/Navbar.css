@@ -6,20 +6,22 @@
     z-index: 1000;
     transition: all 0.3s ease;
     color: white;
-    padding: 32px 0;
-    /* Incremented from 24px */
+    padding: 24px 0;
+    /* Updated padding */
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     background: transparent;
+    /* Ensure no solid color initially */
 }
 
+/* Scrolled State */
 /* Scrolled State */
 .navbar-wrapper.scrolled {
     background-color: white;
     color: black;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    padding-top: 24px;
-    /* Incremented from 18px */
-    padding-bottom: 24px;
+    padding-top: 18px;
+    /* Incremented from 12px to give header more size */
+    padding-bottom: 18px;
 }
 
 /* 
@@ -293,8 +295,7 @@
 }
 
 .navbar-wrapper.scrolled .navbar-logo {
-    height: 320px;
-    /* Incremented from 250px */
+    height: 250px;
     margin-top: 0;
 }
 
@@ -425,8 +426,7 @@
     }
 
     .navbar-wrapper {
-        padding: 20px 0;
-        /* Incremented from 14px */
+        padding: 14px 0;
     }
 
     .navbar-wrapper.mobile-open {
@@ -439,14 +439,13 @@
     }
 
     .navbar-logo {
-        height: 220px;
-        /* Incremented from 180px */
+        height: 180px;
         /* Tablets */
     }
 
     .navbar-wrapper.scrolled .navbar-logo {
-        height: 110px;
-        /* Incremented from 80px */
+        height: 80px;
+        /* Incremented from 55px */
     }
 
     /* Hide nav by default, show when mobileOpen */
@@ -533,13 +532,12 @@
 
 @media (max-width: 480px) {
     .navbar-logo {
-        height: 160px;
-        /* Incremented from 120px */
+        height: 120px;
         /* Compact on small phones */
     }
 
     .navbar-wrapper.scrolled .navbar-logo {
-        height: 95px;
-        /* Incremented from 70px */
+        height: 70px;
+        /* Incremented from 45px */
     }
 }
