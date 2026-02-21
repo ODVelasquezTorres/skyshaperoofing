@@ -64,12 +64,12 @@ const Navbar = () => {
                         <div className="main-nav-row">
                             <ul className="nav-links">
                                 <li><Link to="/" onClick={closeMobile}>Home</Link></li>
+                                <li><Link to="/insurance-claim" onClick={closeMobile}>Insurance Claim</Link></li>
 
                                 <li><Link to="/roofing" onClick={closeMobile}>Roofing</Link></li>
 
                                 <li><Link to="/commercial-roofing" onClick={closeMobile}>Commercial Roofing</Link></li>
                                 <li><Link to="/solar-panel" onClick={closeMobile}>Solar Panel</Link></li>
-                                <li><Link to="/insurance-claim" onClick={closeMobile}>Insurance Claim</Link></li>
                                 <li><Link to="/financing" onClick={closeMobile}>Financing</Link></li>
                             </ul>
 
