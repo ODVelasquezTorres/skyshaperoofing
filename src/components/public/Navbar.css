@@ -6,11 +6,10 @@
     z-index: 1000;
     transition: all 0.3s ease;
     color: white;
-    padding: 24px 0;
-    /* Updated padding */
+    padding: 40px 0;
+    /* Taller bar to accommodate larger logo */
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     background: transparent;
-    /* Ensure no solid color initially */
 }
 
 /* Scrolled State */
@@ -278,14 +277,14 @@
    sizing issues with absolutely positioned parents */
 .navbar-logo {
     display: block;
-    height: 400px;
-    /* Large overhang on desktop */
+    height: 380px;
+    /* Refined size */
     width: auto;
     object-fit: contain;
     filter: none;
     transition: all 0.3s ease;
-    margin-top: -60px;
-    /* Pull logo up significantly */
+    margin-top: -85px;
+    /* Better vertical alignment for taller bar */
 }
 
 /* Scrolled state - fits inside the header box perfectly */
@@ -426,7 +425,8 @@
     }
 
     .navbar-wrapper {
-        padding: 14px 0;
+        padding: 32px 0;
+        /* Taller header */
     }
 
     .navbar-wrapper.mobile-open {
@@ -439,7 +439,10 @@
     }
 
     .navbar-logo {
-        height: 180px;
+        height: 200px;
+        /* Larger logo */
+        margin-top: -40px;
+        /* Sit higher but not out of bounds */
         /* Tablets */
     }
 
@@ -532,7 +535,9 @@
 
 @media (max-width: 480px) {
     .navbar-logo {
-        height: 120px;
+        height: 160px;
+        /* Larger for small phones */
+        margin-top: -35px;
         /* Compact on small phones */
     }
 
