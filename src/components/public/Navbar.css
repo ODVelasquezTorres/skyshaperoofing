@@ -439,6 +439,17 @@
         padding-top: 0;
         align-items: center;
         /* Center logo vertically */
+        opacity: 0;
+        /* Hide by default on mobile */
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+
+    /* Show logo on scroll or when mobile menu is open */
+    .navbar-wrapper.scrolled .logo-outer-container,
+    .navbar-wrapper.mobile-open .logo-outer-container {
+        opacity: 1;
+        pointer-events: auto;
     }
 
     .navbar-logo {
