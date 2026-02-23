@@ -1,6 +1,7 @@
 .process-flow-section {
-    background-color: #FAFAFA;
-    padding: 100px 0;
+    background-color: #F4F7F9;
+    /* High-level light blue-grey background */
+    padding: 120px 0;
     position: relative;
     overflow: hidden;
 }
@@ -11,15 +12,16 @@
 }
 
 .process-main-title {
-    color: #0A1628;
-    font-size: 2.5rem;
+    color: #0A2E5B;
+    /* Elegant Navy */
+    font-size: 2.8rem;
     font-weight: 800;
     margin-bottom: 16px;
-    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
 }
 
 .title-underline {
-    width: 80px;
+    width: 60px;
     height: 4px;
     background-color: var(--primary-blue);
     margin: 0 auto;
@@ -28,61 +30,83 @@
 
 .process-steps-container {
     position: relative;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
+    padding: 0 40px;
 }
 
-/* Desktop Horizontal Line */
+/* Connection Line (Dashed) */
 .process-line-desktop {
     position: absolute;
-    top: 60px;
-    left: 50px;
-    right: 50px;
+    top: 72px;
+    /* Center of the 64px icon box */
+    left: 10%;
+    right: 10%;
     height: 2px;
     background: repeating-linear-gradient(to right,
-            var(--primary-blue),
-            var(--primary-blue) 10px,
-            transparent 10px,
-            transparent 20px);
-    opacity: 0.3;
+            #B0C4DE 0,
+            #B0C4DE 8px,
+            transparent 8px,
+            transparent 16px);
+    opacity: 0.5;
     z-index: 1;
 }
 
 .process-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
+    gap: 24px;
     position: relative;
     z-index: 2;
 }
 
 .process-step-card {
     background: white;
-    padding: 40px 24px;
-    border-radius: 16px;
-    border: 1px solid #E2E8F0;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    padding: 48px 24px;
+    border-radius: 20px;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
 }
 
+/* Hover Effect Upgrade */
 .process-step-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-12px);
     border-color: var(--primary-blue);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 30px 45px -12px rgba(10, 46, 91, 0.15);
+}
+
+/* Badge (Completely Free) */
+.step-badge {
+    position: absolute;
+    top: -12px;
+    right: 12px;
+    background: #EBFCF5;
+    /* Soft Mint */
+    color: #059669;
+    /* Deep Emerald */
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 6px -1px rgba(5, 150, 105, 0.1);
+    z-index: 10;
+    border: 1px solid #D1FAE5;
 }
 
 .step-number-bg {
     position: absolute;
-    top: 10px;
-    right: 16px;
-    font-size: 4rem;
+    top: 20px;
+    right: 24px;
+    font-size: 5rem;
     font-weight: 900;
-    color: rgba(1, 108, 214, 0.05);
+    color: rgba(10, 46, 91, 0.03);
     line-height: 1;
     pointer-events: none;
     user-select: none;
@@ -92,28 +116,73 @@
     width: 64px;
     height: 64px;
     background-color: white;
-    border: 2px solid #F1F5F9;
-    border-radius: 14px;
+    border: 1px solid #F1F5F9;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--primary-blue);
-    margin-bottom: 24px;
+    margin-bottom: 32px;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+    position: relative;
 }
 
 .process-step-card:hover .step-icon-box {
-    border-color: var(--primary-blue);
-    background-color: var(--primary-blue);
     color: white;
-    transform: rotate(5deg);
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Insurance Miniature */
+.step-miniature {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    background: white;
+    padding: 6px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #E2E8F0;
+    z-index: 5;
+}
+
+.mini-cert {
+    width: 24px;
+    height: 32px;
+    background: #F8FAFC;
+    border: 1.5px solid #CBD5E1;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4px;
+}
+
+.mini-logo {
+    color: var(--primary-shadow);
+    font-size: 8px;
+    font-weight: 900;
+    margin-bottom: 2px;
+}
+
+.mini-line {
+    width: 70%;
+    height: 1px;
+    background: #E2E8F0;
+    margin: 1px 0;
+}
+
+.mini-line.short {
+    width: 40%;
 }
 
 .step-title {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     font-weight: 700;
-    color: #0A1628;
-    margin-bottom: 12px;
+    color: #0A2E5B;
+    margin-bottom: 16px;
     line-height: 1.3;
 }
 
@@ -123,17 +192,32 @@
 }
 
 .step-description {
-    font-size: 0.92rem;
+    font-size: 0.95rem;
     color: #64748B;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
-.mobile-connector {
-    display: none;
+/* Staggered Scroll Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    animation: fadeInUp 0.8s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+    animation-delay: calc(var(--delay) * 0.15s);
 }
 
 /* Responsive */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
     .process-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 30px;
@@ -148,7 +232,6 @@
     .process-grid {
         grid-template-columns: 1fr;
         gap: 40px;
-        padding: 0 20px;
     }
 
     .process-step-card {
@@ -156,37 +239,6 @@
     }
 
     .process-main-title {
-        font-size: 1.85rem;
-        padding: 0 20px;
-    }
-
-    .mobile-connector {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: absolute;
-        bottom: -40px;
-        left: 50%;
-        transform: translateX(-50%);
-        height: 40px;
-    }
-
-    .connector-dot {
-        width: 8px;
-        height: 8px;
-        background-color: var(--primary-blue);
-        border-radius: 50%;
-        margin: 4px 0;
-    }
-
-    .connector-line {
-        width: 2px;
-        flex-grow: 1;
-        background: repeating-linear-gradient(to bottom,
-                var(--primary-blue),
-                var(--primary-blue) 4px,
-                transparent 4px,
-                transparent 8px);
-        opacity: 0.4;
+        font-size: 2rem;
     }
 }

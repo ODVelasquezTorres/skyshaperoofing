@@ -8,7 +8,8 @@ const ProcessFlow = () => {
             id: '01',
             title: 'Professional Inspection',
             description: 'A thorough assessment of roof conditions based on visual evidence, honesty, and ethics.',
-            icon: <Search size={32} strokeWidth={1.5} />
+            icon: <Search size={32} strokeWidth={1.5} />,
+            badge: 'COMPLETELY FREE'
         },
         {
             id: '02',
@@ -26,7 +27,8 @@ const ProcessFlow = () => {
             id: '04',
             title: 'Documentation Delivery',
             description: 'Provision of all work details and a formal warranty certificate upon completion.',
-            icon: <ClipboardCheck size={32} strokeWidth={1.5} />
+            icon: <ClipboardCheck size={32} strokeWidth={1.5} />,
+            showMiniature: true
         },
         {
             id: '05',
@@ -50,11 +52,25 @@ const ProcessFlow = () => {
 
                     <div className="process-grid">
                         {steps.map((step, index) => (
-                            <div key={step.id} className="process-step-card" style={{ '--delay': `${index * 0.1}s` }}>
+                            <div
+                                key={step.id}
+                                className="process-step-card animate-on-scroll"
+                                style={{ '--delay': index }}
+                            >
+                                {step.badge && <div className="step-badge">{step.badge}</div>}
                                 <div className="step-number-bg">{step.id}</div>
 
                                 <div className="step-icon-box">
                                     {step.icon}
+                                    {step.showMiniature && (
+                                        <div className="step-miniature">
+                                            <div className="mini-cert">
+                                                <div className="mini-logo">S</div>
+                                                <div className="mini-line"></div>
+                                                <div className="mini-line short"></div>
+                                            </div>
+                                        </div>
+                                    )}
                                 </div>
 
                                 <div className="step-content">
