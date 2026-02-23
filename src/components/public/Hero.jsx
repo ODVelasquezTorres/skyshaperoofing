@@ -1,9 +1,11 @@
 import React from 'react';
 import { ArrowRight, Shield, Search, Award } from 'lucide-react';
+import { useContact } from '../../context/ContactContext';
 import './Hero.css';
 // import heroBg from '../../assets/hero-bg-final.png';
 
 const Hero = () => {
+    const { openEmailModal } = useContact();
     return (
         <section
             className="hero-section"
@@ -28,7 +30,7 @@ const Hero = () => {
                     </p>
 
                     <div className="hero-actions">
-                        <button className="btn btn-primary">
+                        <button className="btn btn-primary" onClick={openEmailModal}>
                             Get Free Estimate
                         </button>
                         <button className="btn btn-secondary">

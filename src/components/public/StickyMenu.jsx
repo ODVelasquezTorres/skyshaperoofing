@@ -1,24 +1,29 @@
 import React, { useRef, useEffect } from 'react';
 import { MessageCircle, Phone, Smartphone, Mail, X } from 'lucide-react';
+import { useContact } from '../../context/ContactContext';
 import TextUsModal from './TextUsModal';
 import EmailUsModal from './EmailUsModal';
 import './StickyMenu.css';
 
 const StickyMenu = () => {
-    const [isTextModalOpen, setIsTextModalOpen] = React.useState(false);
-    const [isEmailModalOpen, setIsEmailModalOpen] = React.useState(false);
+    const {
+        isTextModalOpen,
+        isEmailModalOpen,
+        toggleTextModal,
+        toggleEmailModal,
+        setIsTextModalOpen,
+        setIsEmailModalOpen
+    } = useContact();
     const menuRef = useRef(null);
 
     const openTextModal = (e) => {
         e.preventDefault();
-        setIsEmailModalOpen(false); // Close other if open
-        setIsTextModalOpen(!isTextModalOpen); // Toggle
+        toggleTextModal();
     };
 
     const openEmailModal = (e) => {
         e.preventDefault();
-        setIsTextModalOpen(false); // Close other if open
-        setIsEmailModalOpen(!isEmailModalOpen); // Toggle
+        toggleEmailModal();
     };
 
     // Close on click outside if needed, though they cover the interaction area

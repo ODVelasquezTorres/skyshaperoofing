@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ShieldCheck, CloudLightning, Home, Wrench, CheckCircle2 } from 'lucide-react';
+import { useContact } from '../../context/ContactContext';
 import './RoofingProcess.css';
 
 const RoofingProcess = () => {
+    const { openEmailModal } = useContact();
     const [showRetail, setShowRetail] = useState(false);
 
     const handleScheduleClick = () => {
-        document.querySelector('.btn-login')?.click();
+        openEmailModal();
     };
 
     const componentsList = [

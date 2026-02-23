@@ -2,6 +2,7 @@ import React, { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import DashboardLayout from './layouts/DashboardLayout';
 import PublicLayout from './layouts/PublicLayout';
+import { ContactProvider } from './context/ContactContext';
 import './App.css';
 
 // Lazy loading pages to drastically reduce initial bundle size and speed up page load
@@ -34,40 +35,42 @@ const PageLoader = () => (
 
 function App() {
   return (
-    <Suspense fallback={<PageLoader />}>
-      <Routes>
-        {/* Public Website Routes */}
-        <Route element={<PublicLayout />}>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/roofing" element={<RoofingPage />} />
+    <ContactProvider>
+      <Suspense fallback={<PageLoader />}>
+        <Routes>
+          {/* Public Website Routes */}
+          <Route element={<PublicLayout />}>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/roofing" element={<RoofingPage />} />
 
-          <Route path="/roof-inspection" element={<RoofInspectionPage />} />
-          <Route path="/roof-repair" element={<RoofRepairPage />} />
-          <Route path="/roof-replacement" element={<RoofReplacementPage />} />
-          <Route path="/storm-restoration" element={<StormRestorationPage />} />
-          <Route path="/financing" element={<FinancingPage />} />
-          <Route path="/commercial-roofing" element={<CommercialRoofingPage />} />
-          <Route path="/solar-panel" element={<SolarPanelPage />} />
-          <Route path="/insurance-claim" element={<InsuranceClaimPage />} />
-          <Route path="/thank-you" element={<ThankYouPage />} />
-        </Route>
+            <Route path="/roof-inspection" element={<RoofInspectionPage />} />
+            <Route path="/roof-repair" element={<RoofRepairPage />} />
+            <Route path="/roof-replacement" element={<RoofReplacementPage />} />
+            <Route path="/storm-restoration" element={<StormRestorationPage />} />
+            <Route path="/financing" element={<FinancingPage />} />
+            <Route path="/commercial-roofing" element={<CommercialRoofingPage />} />
+            <Route path="/solar-panel" element={<SolarPanelPage />} />
+            <Route path="/insurance-claim" element={<InsuranceClaimPage />} />
+            <Route path="/thank-you" element={<ThankYouPage />} />
+          </Route>
 
-        {/* Dashboard Routes */}
-        <Route path="/dashboard" element={<DashboardLayout />}>
-          <Route index element={<Overview />} />
-          <Route path="leads" element={<Leads />} />
-          <Route path="projects" element={<Projects />} />
-          <Route path="estimates" element={<Estimates />} />
+          {/* Dashboard Routes */}
+          <Route path="/dashboard" element={<DashboardLayout />}>
+            <Route index element={<Overview />} />
+            <Route path="leads" element={<Leads />} />
+            <Route path="projects" element={<Projects />} />
+            <Route path="estimates" element={<Estimates />} />
 
-          {/* Placeholder Routes */}
-          <Route path="clients" element={<ComingSoon title="Clients Management" />} />
-          <Route path="calendar" element={<ComingSoon title="Calendar" />} />
-          <Route path="invoices" element={<ComingSoon title="Invoices" />} />
-          <Route path="team" element={<ComingSoon title="Team Management" />} />
-          <Route path="settings" element={<ComingSoon title="Settings" />} />
-        </Route>
-      </Routes>
-    </Suspense>
+            {/* Placeholder Routes */}
+            <Route path="clients" element={<ComingSoon title="Clients Management" />} />
+            <Route path="calendar" element={<ComingSoon title="Calendar" />} />
+            <Route path="invoices" element={<ComingSoon title="Invoices" />} />
+            <Route path="team" element={<ComingSoon title="Team Management" />} />
+            <Route path="settings" element={<ComingSoon title="Settings" />} />
+          </Route>
+        </Routes>
+      </Suspense>
+    </ContactProvider>
   );
 }
 
