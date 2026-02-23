@@ -4,6 +4,7 @@ import { ArrowRight, ChevronDown, Search, Hammer, CloudLightning, Home, Image, M
 import LoginModal from '../auth/LoginModal';
 import './Navbar.css';
 
+// Deployment trigger - reset vercel queue
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const [isLoginOpen, setIsLoginOpen] = useState(false);
