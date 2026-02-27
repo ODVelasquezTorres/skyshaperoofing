@@ -19,7 +19,6 @@ const Hero = () => {
 
             <div className="hero-content">
                 <div className="hero-text-container">
-                    <img src="/cambiologo.png" alt="SkyShape Roofing" className="hero-logo-img" />
                     <h1 className="hero-title">
                         Everything you love lives under your roof. <br />
                         <span className="hero-highlight">Protect it with the best.</span>
