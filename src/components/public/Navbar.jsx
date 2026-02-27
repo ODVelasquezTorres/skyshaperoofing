@@ -46,7 +46,7 @@ const Navbar = () => {
                 <div className="logo-outer-container">
                     <Link to="/" onClick={closeMobile}>
                         <img
-                            src="/logocambio.png"
+                            src={isScrolledState ? "/logo-scrolled.png" : "/logocambio.png"}
                             alt="Skyshape Roofing"
                             className="navbar-logo"
                         />
