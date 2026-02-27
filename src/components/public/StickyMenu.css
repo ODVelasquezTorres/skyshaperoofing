@@ -241,3 +241,15 @@
         /* Adjusted to match new bar height */
     }
 }
+
+/* ===== Desktop Position: Right Side ===== */
+@media (min-width: 769px) {
+    .sticky-menu-wrapper {
+        left: auto;
+        right: 32px;
+        transform: none;
+        width: 480px;
+        /* Slightly more compact on right */
+        max-width: 80vw;
+    }
+}
