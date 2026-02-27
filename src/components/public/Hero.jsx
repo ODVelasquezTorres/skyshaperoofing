@@ -20,8 +20,8 @@ const Hero = () => {
             <div className="hero-content">
                 <div className="hero-text-container">
                     <h1 className="hero-title">
-                        Everything you love lives under your roof. <br />
-                        <span className="hero-highlight">Protect it with the best.</span>
+                        <span className="hero-highlight">Everything you love lives under your roof.</span> <br />
+                        Protect it with the best.
                     </h1>
                     <p className="hero-description">
                         Experience matters. Quality covers. The best warranty in NC.
