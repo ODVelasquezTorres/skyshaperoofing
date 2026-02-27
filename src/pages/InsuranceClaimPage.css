@@ -402,9 +402,14 @@
 .tab-button.active {
     background-color: #E3F2FD;
     /* Soft light-blue background */
-    color: #016CD6;
-    /* Brand Blue */
+    color: #0D223F;
+    /* Authoritative Navy */
     font-weight: 700;
+    box-shadow: 0 4px 12px rgba(13, 34, 63, 0.1);
+}
+
+.tab-button.active .tab-icon {
+    color: #0D223F;
 }
 
 /* Specialty Tab Content Styles */
@@ -422,8 +427,7 @@
     line-height: 1.2;
 }
 
-.tab-button.active .specialty-tab-icon,
-.tab-button.active .tab-icon {
+.tab-button.active .specialty-tab-icon {
     color: #016CD6;
 }
 
@@ -469,7 +473,7 @@
 
 .educational-grid {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
+    grid-template-columns: 1.1fr 1.2fr;
     gap: 80px;
     align-items: center;
 }
@@ -477,7 +481,7 @@
 .educational-headline {
     font-size: 36px !important;
     font-weight: 800 !important;
-    color: #0f172a;
+    color: #0D223F;
     margin-bottom: 32px;
     line-height: 1.2;
     font-family: 'Montserrat', sans-serif;
@@ -488,6 +492,7 @@
     line-height: 1.6 !important;
     color: #475569;
     font-family: 'Inter', sans-serif;
+    margin-bottom: 24px;
 }
 
 .educational-media {
@@ -495,27 +500,34 @@
     width: 100%;
 }
 
+.educational-media-16-9 {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 .media-placeholder-wrapper {
-    border-radius: 20px;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.2);
-    background-color: #f1f5f9;
+    box-shadow: 0 20px 40px -10px rgba(13, 34, 63, 0.25);
+    background-color: #f8fafc;
+    border: 1px solid rgba(13, 34, 63, 0.05);
 }
 
 .educational-img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
-    aspect-ratio: 4/3;
     object-fit: cover;
 }
 
 .media-caption {
-    padding: 12px 20px;
+    padding: 14px 24px;
     background-color: #f8fafc;
     color: #64748b;
-    font-size: 0.9rem;
-    font-style: italic;
+    font-size: 0.95rem;
+    font-weight: 500;
     border-top: 1px solid #e2e8f0;
 }
 
@@ -573,6 +585,22 @@
     .educational-service-section {
         padding: 60px 0;
     }
+}
+
+/* Insurance Logos Grid Enhancements */
+.insurance-logos-grid-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.insurance-logos-grid.compact {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    width: 100%;
 }
 
 /* Fade In Animation for Tabs */
