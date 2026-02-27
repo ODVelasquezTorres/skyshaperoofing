@@ -277,14 +277,14 @@
    sizing issues with absolutely positioned parents */
 .navbar-logo {
     display: block;
-    height: 400px;
-    /* Large overhang on desktop */
+    height: 140px;
+    /* Balanced overhang on desktop */
     width: auto;
     object-fit: contain;
     filter: none;
     transition: all 0.3s ease;
-    margin-top: -60px;
-    /* Reverted to original desktop margin */
+    margin-top: -30px;
+    /* Adjusted for cleaner overhang */
 }
 
 /* Scrolled state - fits inside the header box perfectly */
@@ -294,7 +294,7 @@
 }
 
 .navbar-wrapper.scrolled .navbar-logo {
-    height: 250px;
+    height: 90px;
     margin-top: 0;
 }
 
