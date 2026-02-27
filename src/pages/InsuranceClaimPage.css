@@ -465,7 +465,7 @@
     display: inline-block;
 }
 
-/* Educational Service Section Styles */
+/* Educational Service Section Overhaul */
 .educational-service-section {
     padding: 100px 0;
     background-color: #FFFFFF;
@@ -475,7 +475,7 @@
     display: grid;
     grid-template-columns: 1.1fr 1.2fr;
     gap: 80px;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .educational-headline {
@@ -489,8 +489,9 @@
 
 .educational-body {
     font-size: 20px !important;
-    line-height: 1.6 !important;
-    color: #475569;
+    line-height: 1.7 !important;
+    color: #4A4A4A;
+    /* Professional Dark Gray */
     font-family: 'Inter', sans-serif;
     margin-bottom: 24px;
 }
@@ -508,9 +509,9 @@
 }
 
 .media-placeholder-wrapper {
-    border-radius: 16px;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 20px 40px -10px rgba(13, 34, 63, 0.25);
+    box-shadow: 0 25px 50px -12px rgba(13, 34, 63, 0.2);
     background-color: #f8fafc;
     border: 1px solid rgba(13, 34, 63, 0.05);
 }
@@ -523,23 +524,25 @@
 }
 
 .media-caption {
-    padding: 14px 24px;
+    padding: 16px 24px;
     background-color: #f8fafc;
     color: #64748b;
     font-size: 0.95rem;
-    font-weight: 500;
+    font-weight: 600;
     border-top: 1px solid #e2e8f0;
+    text-align: center;
 }
 
-/* Services Footer Banner - Clean White Version */
+/* Services Footer Banner - High Authority Reversion */
 .services-footer-banner {
-    background-color: #FFFFFF;
-    padding: 60px 0;
+    background-color: #0A192F;
+    /* Dark Navy Blue */
+    padding: 80px 0;
     width: 100%;
-    color: #475569;
+    color: #FFFFFF;
     text-align: center;
-    border-top: 1px solid #e2e8f0;
-    border-bottom: 1px solid #e2e8f0;
+    border-top: 1px solid #D4AF37;
+    /* Thin Gold Border */
 }
 
 .footer-banner-content {
@@ -549,21 +552,21 @@
 }
 
 .footer-banner-content p {
-    font-size: 20px !important;
+    font-size: 22px !important;
     line-height: 1.6;
-    font-weight: 400;
-    color: #475569 !important;
+    font-weight: 600;
+    color: #FFFFFF !important;
 }
 
 .footer-banner-content strong {
-    color: #0D223F;
-    /* Authoritative Navy for focus */
+    color: #38bdf8;
+    /* Sky Blue accent for 'Note:' */
     font-weight: 800;
     display: block;
-    margin-bottom: 12px;
-    font-size: 1.25rem;
+    margin-bottom: 16px;
+    font-size: 1.3rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 /* Responsive adjustments for Educational Grid */
