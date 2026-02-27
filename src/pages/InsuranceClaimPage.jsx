@@ -38,7 +38,7 @@ const claimsData = [
 
 const InsuranceClaimPage = () => {
     const tabs = [
-        { id: 'what-is', label: 'Overview', icon: <FileText size={18} /> },
+        { id: 'what-is', label: 'What is it?', icon: <FileText size={18} /> },
         { id: 'mitigation', label: 'Mitigation & Restoration', icon: <Umbrella size={18} /> },
         { id: 'tree-removal', label: 'Tree Removal', icon: <TreeDeciduous size={18} /> },
         { id: 'replacement', label: 'Replacement', icon: <Home size={18} /> }
