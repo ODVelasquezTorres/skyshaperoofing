@@ -461,6 +461,120 @@
     display: inline-block;
 }
 
+/* Educational Service Section Styles */
+.educational-service-section {
+    padding: 100px 0;
+    background-color: #FFFFFF;
+}
+
+.educational-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.educational-headline {
+    font-size: 36px !important;
+    font-weight: 800 !important;
+    color: #0f172a;
+    margin-bottom: 32px;
+    line-height: 1.2;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.educational-body {
+    font-size: 20px !important;
+    line-height: 1.6 !important;
+    color: #475569;
+    font-family: 'Inter', sans-serif;
+}
+
+.educational-media {
+    position: relative;
+    width: 100%;
+}
+
+.media-placeholder-wrapper {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.2);
+    background-color: #f1f5f9;
+}
+
+.educational-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+}
+
+.media-caption {
+    padding: 12px 20px;
+    background-color: #f8fafc;
+    color: #64748b;
+    font-size: 0.9rem;
+    font-style: italic;
+    border-top: 1px solid #e2e8f0;
+}
+
+/* Services Footer Banner - High Contrast Case */
+.services-footer-banner {
+    background-color: #0A192F;
+    /* Dark Navy Blue */
+    padding: 60px 0;
+    width: 100%;
+    color: #FFFFFF;
+    text-align: center;
+    border-top: 4px solid #D4AF37;
+    /* Subtle Gold Accent Border */
+}
+
+.footer-banner-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-banner-content p {
+    font-size: 20px !important;
+    line-height: 1.5;
+    font-weight: 500;
+    color: #FFFFFF !important;
+}
+
+.footer-banner-content strong {
+    color: #38bdf8;
+    /* Sky Blue for 'Note:' */
+    font-weight: 800;
+    display: block;
+    margin-bottom: 12px;
+    font-size: 1.25rem;
+}
+
+/* Responsive adjustments for Educational Grid */
+@media (max-width: 1024px) {
+    .educational-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .educational-headline {
+        font-size: 28px !important;
+    }
+
+    .educational-body {
+        font-size: 18px !important;
+    }
+
+    .educational-service-section {
+        padding: 60px 0;
+    }
+}
+
 /* Fade In Animation for Tabs */
 .fade-in {
     animation: fadeIn 0.4s ease-out forwards;

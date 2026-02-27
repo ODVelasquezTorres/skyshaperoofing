@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Star, ShieldCheck, Award, FileSearch, FileText, Users, Scale, CloudLightning, BadgeCheck, Zap, Umbrella, TreeDeciduous, Home } from 'lucide-react';
+import { Star, ShieldCheck, Award, FileSearch, FileText, Users, Scale, CloudLightning, BadgeCheck, Zap, Umbrella, TreeDeciduous, Home, Wrench } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import './InsuranceClaimPage.css';
 
@@ -39,9 +39,9 @@ const claimsData = [
 const InsuranceClaimPage = () => {
     const tabs = [
         { id: 'what-is', label: 'What is it?', icon: <FileText size={18} /> },
-        { id: 'mitigation', label: 'Mitigation & Restoration', icon: <Umbrella size={18} /> },
-        { id: 'tree-removal', label: 'Tree Removal', icon: <TreeDeciduous size={18} /> },
-        { id: 'replacement', label: 'Replacement', icon: <Home size={18} /> }
+        { id: 'mitigation', label: 'Mitigation', icon: <Umbrella size={18} /> },
+        { id: 'restoration', label: 'Restoration', icon: <Wrench size={18} /> },
+        { id: 'tree-removal', label: 'Tree Removal', icon: <TreeDeciduous size={18} /> }
     ];
 
     const [activeTab, setActiveTab] = useState('what-is');
@@ -216,24 +216,45 @@ const InsuranceClaimPage = () => {
             {/* Tab Content: Mitigation */}
             {activeTab === 'mitigation' && (
                 <div className="tab-content fade-in">
-                    <section className="info-section">
-                        <div className="container text-center">
-                            <div className="max-w-4xl mx-auto">
-                                <Umbrella size={64} strokeWidth={2} className="text-blue-500 mx-auto mb-8 specialty-tab-icon" />
-                                <h2 className="specialty-tab-title">Protección Inmediata Post-Tormenta</h2>
-                                <p className="specialty-tab-text">
-                                    Ante daños críticos, cada minuto cuenta. Aplicamos lonas de emergencia y mitigación de humedad para frenar el deterioro mientras gestionamos tu reclamo.
-                                </p>
-
-                                <div className="emergency-banner-wrapper">
-                                    <div className="emergency-badge-banner">
-                                        EMERGENCY SERVICES AVAILABLE 24/7
+                    <section className="educational-service-section">
+                        <div className="container">
+                            <div className="educational-grid">
+                                <div className="educational-content">
+                                    <h2 className="educational-headline">Mitigation: Your Legal Obligation as a Policyholder</h2>
+                                    <p className="educational-body">
+                                        Water damage is a time-critical emergency. Once moisture penetrates porous materials like drywall and wood, mold can begin to grow in less than 48 hours. Mitigation consists of emergency measures to stop active damage: standing water extraction, structural drying with industrial-grade equipment, and emergency roof sealing (tarping). It is your contractual obligation: most insurance policies include a "Property Preservation" clause requiring the owner to take reasonable steps to prevent further damage. Failing to mitigate gives the insurance company legal grounds to deny your claim or cancel your coverage due to negligence.
+                                    </p>
+                                </div>
+                                <div className="educational-media">
+                                    <div className="media-placeholder-wrapper">
+                                        <img src="/emergency-mitigation.png" alt="On-site Emergency Mitigation & Tarping" className="educational-img" />
+                                        <div className="media-caption">On-site Emergency Mitigation & Tarping</div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            )}
 
-                                <button className="cursor-pointer bg-blue-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors mt-8">
-                                    Request Emergency Service
-                                </button>
+            {/* Tab Content: Restoration */}
+            {activeTab === 'restoration' && (
+                <div className="tab-content fade-in">
+                    <section className="educational-service-section">
+                        <div className="container">
+                            <div className="educational-grid">
+                                <div className="educational-content">
+                                    <h2 className="educational-headline">Restoration: Recovering Your Home’s Integrity and Beauty</h2>
+                                    <p className="educational-body">
+                                        Restoration is the comprehensive process of returning your property to its pre-loss condition—or better. While mitigation stops the damage, restoration fixes the consequences. This phase involves everything from structural repairs and interior reconstruction (drywall, flooring, professional painting) to the installation of high-performance roofing and siding systems. Our goal is to ensure your home is not only aesthetically restored but structurally superior. We work under the strictest quality standards, ensuring every material installed enhances your home’s value and protection against future weather events.
+                                    </p>
+                                </div>
+                                <div className="educational-media">
+                                    <div className="media-placeholder-wrapper">
+                                        <img src="/restoration-final.png" alt="Final Restoration Result / Completed Roof" className="educational-img" />
+                                        <div className="media-caption">Final Restoration Result / Completed Roof</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </section>
@@ -243,29 +264,19 @@ const InsuranceClaimPage = () => {
             {/* Tab Content: Tree Removal */}
             {activeTab === 'tree-removal' && (
                 <div className="tab-content fade-in">
-                    <section className="info-section">
-                        <div className="container text-center">
-                            <div className="max-w-4xl mx-auto">
-                                <TreeDeciduous size={64} strokeWidth={2} className="text-green-600 mx-auto mb-8 specialty-tab-icon" />
-                                <h2 className="specialty-tab-title">Retiro Seguro de Escombros y Árboles</h2>
-                                <p className="specialty-tab-text">
-                                    Eliminamos árboles caídos y escombros que comprometan la estructura de tu hogar, garantizando un área de trabajo segura para la reconstrucción.
-                                </p>
-
-                                <div className="emergency-banner-wrapper">
-                                    <div className="emergency-badge-banner">
-                                        EMERGENCY SERVICES AVAILABLE 24/7
-                                    </div>
+                    <section className="educational-service-section">
+                        <div className="container">
+                            <div className="educational-grid">
+                                <div className="educational-content">
+                                    <h2 className="educational-headline">Retiro Seguro de Escombros y Árboles</h2>
+                                    <p className="educational-body">
+                                        Eliminamos árboles caídos y escombros que comprometan la estructura de tu hogar, garantizando un área de trabajo segura para la reconstrucción. Fallen trees on your roof pose a severe structural threat; our team safely removes debris using specialized equipment to ensure no further damage occurs.
+                                    </p>
                                 </div>
-
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left mt-12">
-                                    <div className="p-6 bg-white shadow-md rounded-lg border border-gray-100">
-                                        <h3 className="font-bold text-lg mb-2">Safe Extraction</h3>
-                                        <p className="text-gray-600">Specialized equipment to lift trees without crushing your structure.</p>
-                                    </div>
-                                    <div className="p-6 bg-white shadow-md rounded-lg border border-gray-100">
-                                        <h3 className="font-bold text-lg mb-2">Debris Cleanup</h3>
-                                        <p className="text-gray-600">We haul away all wood and debris, leaving your property clean.</p>
+                                <div className="educational-media">
+                                    <div className="media-placeholder-wrapper">
+                                        <img src="/emergency-tree-removal.png" alt="Emergency Tree Removal Service" className="educational-img" />
+                                        <div className="media-caption">Emergency Tree Removal & Cleanup</div>
                                     </div>
                                 </div>
                             </div>
@@ -274,31 +285,17 @@ const InsuranceClaimPage = () => {
                 </div>
             )}
 
-            {/* Tab Content: Replacement */}
-            {activeTab === 'replacement' && (
-                <div className="tab-content fade-in">
-                    <section className="info-section">
-                        <div className="container text-center">
-                            <div className="max-w-4xl mx-auto">
-                                <Home size={64} strokeWidth={2} className="text-orange-500 mx-auto mb-8 specialty-tab-icon" />
-                                <h2 className="specialty-tab-title">Instalación de Techo de Alto Rendimiento</h2>
-                                <p className="specialty-tab-text">
-                                    No solo reemplazamos; mejoramos tu hogar con materiales de última generación y la garantía más sólida de Carolina del Norte.
-                                </p>
-
-                                <div className="emergency-banner-wrapper">
-                                    <div className="emergency-badge-banner">
-                                        EMERGENCY SERVICES AVAILABLE 24/7
-                                    </div>
-                                </div>
-
-                                <Link to="/roof-replacement" className="inline-block bg-primary text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors mt-8">
-                                    View Roof Replacement Details
-                                </Link>
-                            </div>
+            {/* Footer Note Section (Always Visible at bottom of services) */}
+            {(activeTab === 'mitigation' || activeTab === 'restoration' || activeTab === 'tree-removal' || activeTab === 'replacement' || activeTab === 'solar') && (
+                <section className="services-footer-banner">
+                    <div className="container">
+                        <div className="footer-banner-content">
+                            <p>
+                                <strong>Note:</strong> We are seasoned restoration professionals. You are not alone; our team will guide and support you through every single step of the process, from the initial inspection to the final delivery of your renovated home.
+                            </p>
                         </div>
-                    </section>
-                </div>
+                    </div>
+                </section>
             )}
 
         </div>
