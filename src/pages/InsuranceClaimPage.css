@@ -531,16 +531,15 @@
     border-top: 1px solid #e2e8f0;
 }
 
-/* Services Footer Banner - High Contrast Case */
+/* Services Footer Banner - Clean White Version */
 .services-footer-banner {
-    background-color: #0A192F;
-    /* Dark Navy Blue */
+    background-color: #FFFFFF;
     padding: 60px 0;
     width: 100%;
-    color: #FFFFFF;
+    color: #475569;
     text-align: center;
-    border-top: 4px solid #D4AF37;
-    /* Subtle Gold Accent Border */
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .footer-banner-content {
@@ -551,18 +550,20 @@
 
 .footer-banner-content p {
     font-size: 20px !important;
-    line-height: 1.5;
-    font-weight: 500;
-    color: #FFFFFF !important;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #475569 !important;
 }
 
 .footer-banner-content strong {
-    color: #38bdf8;
-    /* Sky Blue for 'Note:' */
+    color: #0D223F;
+    /* Authoritative Navy for focus */
     font-weight: 800;
     display: block;
     margin-bottom: 12px;
     font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 /* Responsive adjustments for Educational Grid */
