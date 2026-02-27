@@ -218,17 +218,20 @@ const InsuranceClaimPage = () => {
                 <div className="tab-content fade-in">
                     <section className="info-section">
                         <div className="container text-center">
-                            <div className="max-w-3xl mx-auto">
-                                <Umbrella size={64} className="text-blue-500 mx-auto mb-6" />
-                                <h2 className="text-4xl font-bold mb-6">Mitigation & Restoration</h2>
-                                <p className="text-xl text-gray-600 mb-8">
-                                    Immediate action to prevent further damage is critical. We provide emergency tarping, water damage mitigation, and full restoration services to secure your property while the claim is processed.
+                            <div className="max-w-4xl mx-auto">
+                                <Umbrella size={64} strokeWidth={2} className="text-blue-500 mx-auto mb-8 specialty-tab-icon" />
+                                <h2 className="specialty-tab-title">Protección Inmediata Post-Tormenta</h2>
+                                <p className="specialty-tab-text">
+                                    Ante daños críticos, cada minuto cuenta. Aplicamos lonas de emergencia y mitigación de humedad para frenar el deterioro mientras gestionamos tu reclamo.
                                 </p>
-                                <div className="bg-blue-50 p-8 rounded-xl border border-blue-100 mb-8">
-                                    <h3 className="text-2xl font-bold mb-4">Emergency Services Available 24/7</h3>
-                                    <p className="mb-0">For urgent tarping or leak stops, contact us immediately.</p>
+
+                                <div className="emergency-banner-wrapper">
+                                    <div className="emergency-badge-banner">
+                                        EMERGENCY SERVICES AVAILABLE 24/7
+                                    </div>
                                 </div>
-                                <button className="cursor-pointer bg-blue-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors">
+
+                                <button className="cursor-pointer bg-blue-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors mt-8">
                                     Request Emergency Service
                                 </button>
                             </div>
@@ -242,13 +245,20 @@ const InsuranceClaimPage = () => {
                 <div className="tab-content fade-in">
                     <section className="info-section">
                         <div className="container text-center">
-                            <div className="max-w-3xl mx-auto">
-                                <TreeDeciduous size={64} className="text-green-600 mx-auto mb-6" />
-                                <h2 className="text-4xl font-bold mb-6">Emergency Tree Removal</h2>
-                                <p className="text-xl text-gray-600 mb-8">
-                                    Fallen trees on your roof pose a severe structural threat. Our team safely removes debris and trees caused by storms, ensuring no further damage occurs to your home during the process.
+                            <div className="max-w-4xl mx-auto">
+                                <TreeDeciduous size={64} strokeWidth={2} className="text-green-600 mx-auto mb-8 specialty-tab-icon" />
+                                <h2 className="specialty-tab-title">Retiro Seguro de Escombros y Árboles</h2>
+                                <p className="specialty-tab-text">
+                                    Eliminamos árboles caídos y escombros que comprometan la estructura de tu hogar, garantizando un área de trabajo segura para la reconstrucción.
                                 </p>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+
+                                <div className="emergency-banner-wrapper">
+                                    <div className="emergency-badge-banner">
+                                        EMERGENCY SERVICES AVAILABLE 24/7
+                                    </div>
+                                </div>
+
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left mt-12">
                                     <div className="p-6 bg-white shadow-md rounded-lg border border-gray-100">
                                         <h3 className="font-bold text-lg mb-2">Safe Extraction</h3>
                                         <p className="text-gray-600">Specialized equipment to lift trees without crushing your structure.</p>
@@ -269,13 +279,20 @@ const InsuranceClaimPage = () => {
                 <div className="tab-content fade-in">
                     <section className="info-section">
                         <div className="container text-center">
-                            <div className="max-w-3xl mx-auto">
-                                <Home size={64} className="text-orange-500 mx-auto mb-6" />
-                                <h2 className="text-4xl font-bold mb-6">Full Roof Replacement</h2>
-                                <p className="text-xl text-gray-600 mb-8">
-                                    When damage is extensive, a full replacement is often the only viable option. We work with your insurance to ensure the full value of the replacement is covered, upgrading you to modern, durable materials.
+                            <div className="max-w-4xl mx-auto">
+                                <Home size={64} strokeWidth={2} className="text-orange-500 mx-auto mb-8 specialty-tab-icon" />
+                                <h2 className="specialty-tab-title">Instalación de Techo de Alto Rendimiento</h2>
+                                <p className="specialty-tab-text">
+                                    No solo reemplazamos; mejoramos tu hogar con materiales de última generación y la garantía más sólida de Carolina del Norte.
                                 </p>
-                                <Link to="/roof-replacement" className="inline-block bg-primary text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors">
+
+                                <div className="emergency-banner-wrapper">
+                                    <div className="emergency-badge-banner">
+                                        EMERGENCY SERVICES AVAILABLE 24/7
+                                    </div>
+                                </div>
+
+                                <Link to="/roof-replacement" className="inline-block bg-primary text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors mt-8">
                                     View Roof Replacement Details
                                 </Link>
                             </div>

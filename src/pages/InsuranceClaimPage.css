@@ -1,6 +1,6 @@
 /* Page Base */
 .insurance-page {
-    
+
     background-color: #F8FAFC;
     min-height: 100vh;
 }
@@ -400,10 +400,65 @@
 }
 
 .tab-button.active {
-    background-color: #eff6ff;
-    color: #0284c7;
-    /* Sky 600 */
-    box-shadow: 0 0 0 1px #bae6fd;
+    background-color: #E3F2FD;
+    /* Soft light-blue background */
+    color: #016CD6;
+    /* Brand Blue */
+    font-weight: 700;
+}
+
+/* Specialty Tab Content Styles */
+.specialty-tab-icon {
+    /* Color handled via inline classes, size 64px via SVG prop, stroke 2px via prop */
+    filter: drop-shadow(0 4px 6px rgba(1, 108, 214, 0.2));
+}
+
+.specialty-tab-title {
+    font-family: 'Montserrat', 'Inter', sans-serif;
+    font-size: 32px !important;
+    font-weight: 700 !important;
+    color: #0f172a;
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+
+.tab-button.active .specialty-tab-icon,
+.tab-button.active .tab-icon {
+    color: #016CD6;
+}
+
+.specialty-tab-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px !important;
+    line-height: 1.6 !important;
+    color: #475569;
+    margin-bottom: 48px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Emergency Banner Styles */
+.emergency-banner-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.emergency-badge-banner {
+    background-color: #0f172a;
+    /* Dark Navy Background */
+    color: #FFFFFF;
+    /* White Text */
+    padding: 10px 24px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: inline-block;
 }
 
 /* Fade In Animation for Tabs */
