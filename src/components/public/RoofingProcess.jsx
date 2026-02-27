@@ -33,7 +33,7 @@ const RoofingProcess = () => {
             </section>
 
             {/* 2. Storm Damage Section */}
-            <section className="rp-section rp-storm">
+            <section className="rp-section rp-storm" id="storm-damage">
                 <div className="rp-container grid-2-col">
                     <div className="rp-content">
                         <div className="rp-icon-wrapper blue-icon">

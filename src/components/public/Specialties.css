@@ -76,6 +76,8 @@
     cursor: pointer;
     overflow: hidden;
     min-height: 160px;
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Hover Image */

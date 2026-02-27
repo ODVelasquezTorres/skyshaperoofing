@@ -37,19 +37,32 @@ const claimsData = [
 ];
 
 const InsuranceClaimPage = () => {
-    const [activeTab, setActiveTab] = useState('what-is');
-
-    // Scroll to top on mount
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
-
     const tabs = [
         { id: 'what-is', label: '¿Qué es?', icon: <FileText size={18} /> },
         { id: 'mitigation', label: 'Mitigación y Restauración', icon: <Umbrella size={18} /> },
         { id: 'tree-removal', label: 'Tree Removal', icon: <TreeDeciduous size={18} /> },
         { id: 'replacement', label: 'Replacement', icon: <Home size={18} /> }
     ];
+
+    const [activeTab, setActiveTab] = useState('what-is');
+
+    // Handle hash route for deep linking
+    useEffect(() => {
+        const hash = window.location.hash.replace('#', '');
+        if (hash && tabs.some(t => t.id === hash)) {
+            setActiveTab(hash);
+            // Optional: scroll to the tabs section if needed
+            const element = document.getElementById('claim-tabs-top');
+            if (element) element.scrollIntoView({ behavior: 'smooth' });
+        }
+    }, [window.location.hash]);
+
+    // Scroll to top on mount
+    useEffect(() => {
+        if (!window.location.hash) {
+            window.scrollTo(0, 0);
+        }
+    }, []);
 
     return (
         <div className="insurance-page">
@@ -69,7 +82,7 @@ const InsuranceClaimPage = () => {
             </section>
 
             {/* Tab Navigation */}
-            <section className="tabs-navigation-section">
+            <section className="tabs-navigation-section" id="claim-tabs-top">
                 <div className="container">
                     <div className="tabs-wrapper">
                         {tabs.map((tab) => (
