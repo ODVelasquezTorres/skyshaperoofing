@@ -283,8 +283,8 @@
     object-fit: contain;
     filter: none;
     transition: all 0.3s ease;
-    margin-top: 60px;
-    /* Positive margin to push it DOWN, below the header */
+    margin-top: 95px;
+    /* Positive margin to push it DOWN, clearing the header and overhang */
 }
 
 /* Scrolled state - fits inside the header box perfectly */
