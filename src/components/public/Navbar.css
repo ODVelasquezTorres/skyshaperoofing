@@ -277,14 +277,14 @@
    sizing issues with absolutely positioned parents */
 .navbar-logo {
     display: block;
-    height: 380px;
-    /* Incremented back to allow the "hanging" effect */
+    height: 140px;
+    /* Decent size restored */
     width: auto;
     object-fit: contain;
     filter: none;
     transition: all 0.3s ease;
-    margin-top: -65px;
-    /* Negative margin to pull it UP, allowing more to hang DOWN */
+    margin-top: 60px;
+    /* Positive margin to push it DOWN, below the header */
 }
 
 /* Scrolled state - fits inside the header box perfectly */
@@ -294,8 +294,8 @@
 }
 
 .navbar-wrapper.scrolled .navbar-logo {
-    height: 220px;
-    margin-top: -10px;
+    height: 90px;
+    margin-top: 0;
 }
 
 /* Scrolled Logo Style */
