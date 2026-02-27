@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Star, ShieldCheck, Award, FileSearch, FileText, Users, Scale, CloudLightning, BadgeCheck, Zap, Umbrella, TreeDeciduous, Home, Wrench, Flame, Crane, TrendingUp } from 'lucide-react';
+import { Star, ShieldCheck, Award, FileSearch, FileText, Users, Scale, CloudLightning, BadgeCheck, Zap, Umbrella, TreeDeciduous, Home, Wrench, Flame, Construction, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import './InsuranceClaimPage.css';
 
@@ -38,13 +38,15 @@ const claimsData = [
 
 const InsuranceClaimPage = () => {
     const tabs = [
-        { id: 'mitigation-restoration', label: 'Mitigation & Restoration', icon: <ShieldCheck size={18} strokeWidth={2.5} color="#0D223F" /> },
-        { id: 'tree-removal', label: 'Tree Removal', icon: <Crane size={18} strokeWidth={2.5} color="#0D223F" /> },
+        { id: 'what-is', label: 'What is it?', icon: <FileText size={18} strokeWidth={2.5} color="#0D223F" /> },
+        { id: 'mitigation', label: 'Mitigation', icon: <Home size={18} strokeWidth={2.5} color="#0D223F" /> },
+        { id: 'restoration', label: 'Restoration', icon: <ShieldCheck size={18} strokeWidth={2.5} color="#0D223F" /> },
+        { id: 'tree-removal', label: 'Tree Removal', icon: <Construction size={18} strokeWidth={2.5} color="#0D223F" /> },
         { id: 'replacement', label: 'Replacement', icon: <TrendingUp size={18} strokeWidth={2.5} color="#0D223F" /> },
         { id: 'fire-damage', label: 'Fire Damage', icon: <Flame size={18} strokeWidth={2.5} color="#0D223F" /> }
     ];
 
-    const [activeTab, setActiveTab] = useState('mitigation-restoration');
+    const [activeTab, setActiveTab] = useState('what-is');
 
     // Handle hash route for deep linking
     useEffect(() => {
@@ -99,8 +101,44 @@ const InsuranceClaimPage = () => {
                 </div>
             </section>
 
-            {/* Tab Content: Mitigation & Restoration (Combined) */}
-            {activeTab === 'mitigation-restoration' && (
+            {/* Tab Content: What Is */}
+            {activeTab === 'what-is' && (
+                <div className="tab-content fade-in">
+                    <section className="educational-service-section">
+                        <div className="container">
+                            <div className="educational-grid">
+                                <div className="educational-content">
+                                    <h2 className="educational-headline">What is an Insurance Claim?</h2>
+                                    <p className="educational-body">
+                                        An insurance claim is a formal request by a policyholder to an insurance company for coverage or compensation for a covered loss or policy event.
+                                    </p>
+                                    <p className="educational-body">
+                                        In the roofing industry, this typically involves damage caused by unforeseen events such as <strong>hail storms, high winds, fallen trees, or severe weather</strong>. Instead of paying out-of-pocket for expensive repairs, your homeowner's insurance policy is designed to cover these restoration costs, minus your deductible.
+                                    </p>
+                                </div>
+                                <div className="educational-media">
+                                    <div className="media-placeholder-wrapper educational-media-16-9">
+                                        <div className="insurance-logos-grid-wrapper" style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '40px' }}>
+                                            <div className="insurance-logos-grid compact" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px', width: '100%' }}>
+                                                <div className="insurance-logo-item"><img src="/state-farm.jpg" alt="State Farm" /></div>
+                                                <div className="insurance-logo-item"><img src="/allstate.png" alt="Allstate" /></div>
+                                                <div className="insurance-logo-item"><img src="/usaa.jpg" alt="USAA" /></div>
+                                                <div className="insurance-logo-item"><img src="/liberty-mutual.png" alt="Liberty Mutual" /></div>
+                                                <div className="insurance-logo-item"><img src="/farmers.png" alt="Farmers" /></div>
+                                                <div className="insurance-logo-item"><img src="/american-family.png" alt="American Family" /></div>
+                                            </div>
+                                        </div>
+                                        <div className="media-caption">Working with all major insurance carriers</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            )}
+
+            {/* Tab Content: Mitigation */}
+            {activeTab === 'mitigation' && (
                 <div className="tab-content fade-in">
                     <section className="educational-service-section">
                         <div className="container">
@@ -110,16 +148,32 @@ const InsuranceClaimPage = () => {
                                     <p className="educational-body">
                                         Water damage is a time-critical emergency. Once moisture penetrates porous materials like drywall and wood, mold can begin to grow in less than 48 hours. Mitigation consists of emergency measures to stop active damage: standing water extraction, structural drying with industrial-grade equipment, and emergency roof sealing (tarping). It is your contractual obligation: most insurance policies include a "Property Preservation" clause requiring the owner to take reasonable steps to prevent further damage. Failing to mitigate gives the insurance company legal grounds to deny your claim or cancel your coverage due to negligence.
                                     </p>
-                                    <h2 className="educational-headline mt-12">Restoration: Recovering Your Home’s Integrity and Beauty</h2>
+                                </div>
+                                <div className="educational-media">
+                                    <div className="media-placeholder-wrapper educational-media-16-9">
+                                        <img src="/emergency-mitigation.png" alt="On-site Emergency Mitigation & Tarping" className="educational-img" />
+                                        <div className="media-caption">Upload Professional Mitigation Image</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            )}
+
+            {/* Tab Content: Restoration */}
+            {activeTab === 'restoration' && (
+                <div className="tab-content fade-in">
+                    <section className="educational-service-section">
+                        <div className="container">
+                            <div className="educational-grid">
+                                <div className="educational-content">
+                                    <h2 className="educational-headline">Restoration: Recovering Your Home’s Integrity and Beauty</h2>
                                     <p className="educational-body">
                                         Restoration is the comprehensive process of returning your property to its pre-loss condition—or better. While mitigation stops the damage, restoration fixes the consequences. Our goal is to ensure your home is not only aesthetically restored but structurally superior. We work under the strictest quality standards, ensuring every material installed enhances your home’s value and protection against future weather events.
                                     </p>
                                 </div>
                                 <div className="educational-media">
-                                    <div className="media-placeholder-wrapper educational-media-16-9 mb-8">
-                                        <img src="/emergency-mitigation.png" alt="On-site Emergency Mitigation & Tarping" className="educational-img" />
-                                        <div className="media-caption">Upload Professional Mitigation / Restoration Image</div>
-                                    </div>
                                     <div className="media-placeholder-wrapper educational-media-16-9">
                                         <img src="/restoration-final.png" alt="Final Restoration Result / Completed Roof" className="educational-img" />
                                         <div className="media-caption">Upload Final Restored Property Image</div>
@@ -203,8 +257,79 @@ const InsuranceClaimPage = () => {
                 </div>
             )}
 
+            {/* Why File a Claim? Section (Only visible on Overview) */}
+            {activeTab === 'what-is' && (
+                <>
+                    <section className="why-section">
+                        <div className="container">
+                            <div className="info-grid why-content">
+                                <div className="info-image-container order-2 lg:order-1">
+                                    <img
+                                        src="/storm-damage.png"
+                                        alt="Storm Damage Repair"
+                                        className="info-image"
+                                    />
+                                </div>
+
+                                <div className="info-content order-1 lg:order-2">
+                                    <h2 className="educational-headline">Why file a claim?</h2>
+
+                                    <div className="claim-reason-block">
+                                        <div className="reason-icon-wrapper" style={{ backgroundColor: '#E3F2FD', padding: '12px', borderRadius: '12px', marginBottom: '16px', display: 'inline-block' }}>
+                                            <Home size={24} strokeWidth={2.5} color="#0D223F" />
+                                        </div>
+                                        <p className="educational-body">
+                                            You may consider filing a claim when, after a storm, we identify that there may be damage to your property, whether to the roof, siding, gutters, or any other part of your home.
+                                        </p>
+                                    </div>
+
+                                    <div className="claim-reason-block">
+                                        <div className="reason-icon-wrapper" style={{ backgroundColor: '#E3F2FD', padding: '12px', borderRadius: '12px', marginBottom: '16px', display: 'inline-block' }}>
+                                            <FileSearch size={24} strokeWidth={2.5} color="#0D223F" />
+                                        </div>
+                                        <p className="educational-body">
+                                            You can also file a claim when you authorize a company like ours to inspect your home and we find enough damage to consider that the insurance will cover some or all of the damage.
+                                        </p>
+                                    </div>
+
+                                    <div className="claim-reason-block">
+                                        <div className="reason-icon-wrapper" style={{ backgroundColor: '#E3F2FD', padding: '12px', borderRadius: '12px', marginBottom: '16px', display: 'inline-block' }}>
+                                            <ShieldCheck size={24} strokeWidth={2.5} color="#0D223F" />
+                                        </div>
+                                        <p className="educational-body">
+                                            <strong>It is your right.</strong> You pay premiums precisely for this purpose. Using your coverage for legitimate damage is the reason you have insurance.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section className="process-grid-section" style={{ backgroundColor: '#f8fafc', padding: '100px 0' }}>
+                        <div className="container">
+                            <div className="text-center mb-16">
+                                <h2 className="educational-headline">The Roofing Insurance Claims Process</h2>
+                                <p className="educational-body">Handling claims can be daunting, but we make it straightforward.</p>
+                            </div>
+
+                            <div className="claims-grid-styled">
+                                {claimsData.map((claim, index) => (
+                                    <div key={index} className="claim-card-styled" style={{ backgroundColor: '#FFFFFF', padding: '40px', borderRadius: '24px', boxShadow: '0 10px 30px rgba(13, 34, 63, 0.05)', border: '1px solid #e2e8f0' }}>
+                                        <div className="icon-wrapper-styled" style={{ marginBottom: '24px', color: '#0D223F' }}>
+                                            {React.cloneElement(claim.icon, { strokeWidth: 2.5 })}
+                                        </div>
+                                        <h3 style={{ fontSize: '22px', fontWeight: '800', color: '#0D223F', marginBottom: '16px' }}>{claim.title}</h3>
+                                        <p style={{ color: '#4A4A4A', fontSize: '18px', lineHeight: '1.6' }}>{claim.description}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </section>
+                </>
+            )}
+
             {/* Footer Note Section */}
-            {(activeTab === 'mitigation-restoration' || activeTab === 'tree-removal' || activeTab === 'replacement' || activeTab === 'fire-damage') && (
+            {(activeTab !== 'what-is') && (
                 <section className="services-footer-banner">
                     <div className="container">
                         <div className="footer-banner-content">
