@@ -42,7 +42,7 @@ const InsuranceClaimPage = () => {
         { id: 'mitigation', label: 'Mitigation', icon: <Home size={18} strokeWidth={2.5} color="#0D223F" /> },
         { id: 'restoration', label: 'Restoration', icon: <ShieldCheck size={18} strokeWidth={2.5} color="#0D223F" /> },
         { id: 'tree-removal', label: 'Tree Removal', icon: <Construction size={18} strokeWidth={2.5} color="#0D223F" /> },
-        { id: 'replacement', label: 'Replacement', icon: <TrendingUp size={18} strokeWidth={2.5} color="#0D223F" /> },
+        { id: 'replacement', label: 'Replacement', icon: <Home size={18} strokeWidth={2.5} fill="#0A192F" color="#0A192F" /> },
         { id: 'fire-damage', label: 'Fire Damage', icon: <Flame size={18} strokeWidth={2.5} color="#0D223F" /> }
     ];
 
@@ -192,9 +192,12 @@ const InsuranceClaimPage = () => {
                         <div className="container">
                             <div className="educational-grid">
                                 <div className="educational-content">
-                                    <h2 className="educational-headline">Retiro Seguro de Escombros y Árboles</h2>
+                                    <h2 className="educational-headline">Emergency Tree Removal & Structural Stabilization</h2>
                                     <p className="educational-body">
-                                        Eliminamos árboles caídos y escombros que comprometetan la estructura de tu hogar, garantizando un área de trabajo segura para la reconstrucción. Fallen trees on your roof pose a severe structural threat; our team safely removes debris using specialized equipment to ensure no further damage occurs. We specialize in complex removals where precision is required to protect the remaining property value.
+                                        When a storm brings a tree down on your home, the clock is ticking against structural failure and water intrusion. Our specialized Emergency Tree Removal team does more than just clear debris; we perform precision crane operations to lift weight off your roof without causing secondary impact damage.
+                                    </p>
+                                    <p className="educational-body">
+                                        We understand that a fallen tree is a "Major Peril" in insurance terms. Our process includes full photographic documentation of the damage for your adjuster, followed by immediate structural shoring and tarping once the tree is cleared. By using heavy-duty specialized equipment, we ensure that the removal process itself doesn't compromise the remaining integrity of your property, protecting your investment and your family’s safety.
                                     </p>
                                 </div>
                                 <div className="educational-media">
@@ -216,9 +219,12 @@ const InsuranceClaimPage = () => {
                         <div className="container">
                             <div className="educational-grid">
                                 <div className="educational-content">
-                                    <h2 className="educational-headline">High-Performance Roof Replacement</h2>
+                                    <h2 className="educational-headline">Full Roof Replacement: Architectural Excellence & Durability</h2>
                                     <p className="educational-body">
-                                        When damage is extensive, a full replacement is often the only viable option. We upgrade your home with materials of the latest generation, ensuring a roof that is not just a replacement, but a significant improvement in performance and longevity. Our replacements come with the strongest warranties in North Carolina.
+                                        A roof replacement is the most significant investment you will make in your property’s protection. We don’t just install shingles; we engineer a complete roofing system designed to exceed North Carolina’s building codes. Our replacement process integrates high-grade synthetic underlayments, advanced ventilation systems to regulate attic temperature, and ice/water shields in critical leak-prone areas.
+                                    </p>
+                                    <p className="educational-body">
+                                        Whether you are upgrading due to age or as the final phase of an insurance restoration, we provide architectural-grade materials that enhance your home’s curb appeal while significantly increasing its market value. Every replacement is backed by our industry-leading warranty, ensuring that your home remains the safest place for your family for decades to come.
                                     </p>
                                 </div>
                                 <div className="educational-media">
@@ -240,15 +246,15 @@ const InsuranceClaimPage = () => {
                         <div className="container">
                             <div className="educational-grid">
                                 <div className="educational-content">
-                                    <h2 className="educational-headline">Comprehensive Fire Damage & Smoke Restoration</h2>
+                                    <h2 className="educational-headline">Comprehensive Fire & Smoke Damage Restoration</h2>
                                     <p className="educational-body">
-                                        Fire leaves a complex path of destruction that requires specialized expertise. We provide total fire restoration services, starting with immediate structural stabilization and smoke deodorization. Our process eliminates hazardous soot and ash from surfaces and air systems, cleanses deeply embedded smoke odors, and rebuilds charred framing or roof structures. We manage the entire rebuild, from replacing drywall and insulation to installing new high-performance roofing and siding, ensuring your home is fully restored to a safe, healthy, and pristine condition.
+                                        Fire damage requires a specialized scientific approach to restoration. Beyond the visible charring, we address the invisible threats: toxic soot, corrosive ash, and deeply embedded smoke odors. Our team handles the entire recovery—from structural stabilization and air quality remediation to the full architectural rebuild. We ensure that every trace of the fire is erased, restoring your home to a condition that is not only beautiful but safe and healthy to inhabit once again.
                                     </p>
                                 </div>
                                 <div className="educational-media">
                                     <div className="media-placeholder-wrapper educational-media-16-9">
                                         <img src="/fire-damage-restoration.png" alt="Fire Damage Restoration Before & After" className="educational-img" />
-                                        <div className="media-caption">Upload Fire Damage Restoration Image here</div>
+                                        <div className="media-caption">Upload Fire Restoration Before/After Image</div>
                                     </div>
                                 </div>
                             </div>

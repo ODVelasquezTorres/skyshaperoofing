@@ -479,16 +479,16 @@
 }
 
 .educational-headline {
-    font-size: 36px !important;
+    font-size: 32px !important;
     font-weight: 800 !important;
-    color: #0D223F;
+    color: #0A192F;
     margin-bottom: 32px;
     line-height: 1.2;
     font-family: 'Montserrat', sans-serif;
 }
 
 .educational-body {
-    font-size: 20px !important;
+    font-size: 18px !important;
     line-height: 1.7 !important;
     color: #4A4A4A;
     /* Professional Dark Gray */
@@ -509,9 +509,9 @@
 }
 
 .media-placeholder-wrapper {
-    border-radius: 20px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 25px 50px -12px rgba(13, 34, 63, 0.2);
+    box-shadow: 0 25px 50px -12px rgba(10, 25, 47, 0.2);
     background-color: #f8fafc;
     border: 1px solid rgba(13, 34, 63, 0.05);
 }

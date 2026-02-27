@@ -62,7 +62,7 @@ const specialties = [
         title: "Full Restoration",
         icon: Wrench,
         image: "/restauracion.jpg",
-        link: "/insurance-claim#mitigation"
+        link: "/insurance-claim#restoration"
     },
     {
         id: 8,
@@ -76,7 +76,7 @@ const specialties = [
         title: "Fire Damage Repair",
         icon: Flame,
         image: "/fire-damage.jpg",
-        link: "#"
+        link: "/insurance-claim#fire-damage"
     },
     {
         id: 10,
