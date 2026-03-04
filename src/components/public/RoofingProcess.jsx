@@ -150,7 +150,7 @@ const RoofingProcess = () => {
                             </div>
                         </div>
 
-                        <div className="text-center mt-12">
+                        <div className="rp-quote-container">
                             <button className="btn btn-quote-action" onClick={handleScheduleClick}>
                                 Get a Free Quote
                             </button>

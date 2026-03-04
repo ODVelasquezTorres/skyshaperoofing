@@ -234,16 +234,29 @@
 .rp-retail-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 60px;
+    align-items: stretch;
+    margin-bottom: 40px;
 }
 
 .rp-retail-card {
     background: #ffffff;
     border: 1px solid #e2e8f0;
-    padding: 40px;
-    border-radius: 16px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    padding: 48px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.rp-quote-container {
+    text-align: center;
+    margin-top: 60px;
+    width: 100%;
+    position: relative;
+    z-index: 10;
 }
 
 .rp-retail-card:hover {
@@ -286,6 +299,12 @@
     color: #475569;
     line-height: 1.6;
     margin-bottom: 30px;
+    flex-grow: 1;
+    /* Pushes the card-components down */
+}
+
+.card-components {
+    margin-top: auto;
 }
 
 .card-components strong {

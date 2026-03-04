@@ -1,4 +1,5 @@
 import React from 'react';
+import { useContact } from '../../context/ContactContext';
 import {
     Sun, Search, Settings, ShieldCheck, Zap,
     CheckCircle, ArrowRight, DollarSign, Home,
@@ -53,6 +54,8 @@ const roofAdvantages = [
 ];
 
 const SolarPanelPage = () => {
+    const { openEmailModal } = useContact();
+
     return (
         <div className="solar-page">
 
@@ -71,9 +74,9 @@ const SolarPanelPage = () => {
                         SkyShape delivers integrated solar systems designed to protect your
                         roof while powering your life. Premium installation. Zero leaks. Guaranteed.
                     </p>
-                    <a href="/roof-inspection" className="solar-hero-cta">
+                    <button onClick={openEmailModal} className="solar-hero-cta" style={{ border: 'none', cursor: 'pointer' }}>
                         Get My Free Solar + Roof Analysis <ArrowRight size={20} />
-                    </a>
+                    </button>
                 </div>
             </section>
 
@@ -198,9 +201,9 @@ const SolarPanelPage = () => {
                         </ul>
 
                         <div className="incentives-cta-row">
-                            <a href="/roof-inspection" className="btn-incentives-cta">
+                            <button onClick={openEmailModal} className="btn-incentives-cta" style={{ border: 'none', cursor: 'pointer' }}>
                                 Learn About Your Savings <ArrowRight size={18} />
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -215,9 +218,9 @@ const SolarPanelPage = () => {
                     <p className="final-cta-subtitle">
                         Get a comprehensive Solar + Roof Analysis from North Carolina's most trusted roofing engineers. Free. No obligation.
                     </p>
-                    <a href="/roof-inspection" className="solar-final-cta-btn">
+                    <button onClick={openEmailModal} className="solar-final-cta-btn" style={{ border: 'none', cursor: 'pointer' }}>
                         Get My Free Solar + Roof Analysis <ArrowRight size={20} />
-                    </a>
+                    </button>
                 </div>
             </section>
 
