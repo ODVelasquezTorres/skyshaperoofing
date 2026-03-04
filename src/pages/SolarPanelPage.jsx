@@ -1,5 +1,5 @@
 import React from 'react';
-import { useContact } from '../../context/ContactContext';
+import { useContact } from '../context/ContactContext';
 import {
     Sun, Search, Settings, ShieldCheck, Zap,
     CheckCircle, ArrowRight, DollarSign, Home,
