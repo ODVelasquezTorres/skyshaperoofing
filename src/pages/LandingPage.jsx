@@ -4,6 +4,7 @@ import Specialties from '../components/public/Specialties';
 import { Star, ShieldCheck, Award } from 'lucide-react';
 import ReviewsSection from '../components/public/ReviewsSection';
 import AboutUs from '../components/public/AboutUs';
+import FAQSection from '../components/public/FAQSection';
 import ProcessFlow from '../components/public/ProcessFlow';
 import './LandingPage.css';
 
@@ -49,6 +50,9 @@ const LandingPage = () => {
 
             {/* About Us */}
             <AboutUs />
+
+            {/* FAQs */}
+            <FAQSection />
 
             {/* Testimonials */}
             <ReviewsSection />
