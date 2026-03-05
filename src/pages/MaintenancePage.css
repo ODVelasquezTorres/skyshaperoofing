@@ -1,0 +1,213 @@
+.maintenance-page {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    padding-top: 80px;
+    /* Offset for sticky header */
+}
+
+/* Hero Section */
+.maintenance-hero {
+    background: linear-gradient(135deg, rgba(1, 30, 65, 0.85) 0%, rgba(1, 30, 65, 0.9) 100%), url('/gutters.jpg') no-repeat center center / cover;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.maintenance-headline {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.maintenance-subheadline {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.bg-white {
+    background-color: #ffffff;
+}
+
+.bg-light {
+    background-color: var(--bg-secondary);
+    /* Light grey from global theme */
+}
+
+.maintenance-service-section {
+    padding: 80px 0;
+}
+
+.service-card {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+/* For image left, change flex direction on mobile if needed, but on desktop it's natural */
+/* For image right, we swap order */
+.service-card.image-left .service-image-container {
+    order: 1;
+}
+
+.service-card.image-left .service-content {
+    order: 2;
+}
+
+.service-card.image-right .service-content {
+    order: 1;
+}
+
+.service-card.image-right .service-image-container {
+    order: 2;
+}
+
+@media (max-width: 992px) {
+    .service-card {
+        flex-direction: column !important;
+        gap: 30px;
+    }
+
+    .service-card.image-left .service-image-container,
+    .service-card.image-right .service-image-container {
+        order: 1 !important;
+    }
+
+    .service-card.image-left .service-content,
+    .service-card.image-right .service-content {
+        order: 2 !important;
+    }
+}
+
+.service-image-container {
+    flex: 1;
+    min-width: 300px;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service-image-placeholder {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Real images substituted */
+.service-image-placeholder.gutter-img {
+    background: url('/cleangutters.jpeg') no-repeat center center / cover;
+}
+
+.service-image-placeholder.roof-img {
+    background: url('/cleanroof.jpg') no-repeat center center / cover;
+}
+
+.service-image-placeholder.tree-img {
+    background: url('/cleantree.jpg') no-repeat center center / cover;
+}
+
+.service-image-placeholder.power-wash-img {
+    background: url('/hidrolavadora.jpg') no-repeat center center / cover;
+}
+
+
+.service-badge-img {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(1, 108, 214, 0.9);
+    /* var(--primary-blue) */
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.service-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.category-label {
+    display: inline-block;
+    background-color: #e6f0fa;
+    /* Light blue background */
+    color: var(--primary-blue);
+    /* Primary brand color */
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.service-content h2 {
+    font-size: 2.2rem;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.service-description {
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.service-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+}
+
+.service-benefits li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #444;
+}
+
+.service-benefits .check-icon {
+    color: var(--primary-blue);
+    /* Skyshape primary blue */
+    min-width: 18px;
+    margin-top: 3px;
+}
+
+.btn-get-estimate {
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-get-estimate:hover {
+    background-color: var(--secondary-blue);
+    transform: translateY(-2px);
+}

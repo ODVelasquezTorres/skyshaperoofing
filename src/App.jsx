@@ -11,6 +11,7 @@ const RoofingPage = React.lazy(() => import('./pages/RoofingPage'));
 const RoofRepairPage = React.lazy(() => import('./pages/RoofRepairPage'));
 const RoofReplacementPage = React.lazy(() => import('./pages/RoofReplacementPage'));
 const StormRestorationPage = React.lazy(() => import('./pages/StormRestorationPage'));
+const MaintenancePage = React.lazy(() => import('./pages/MaintenancePage'));
 const ThankYouPage = React.lazy(() => import('./pages/ThankYouPage'));
 const FinancingPage = React.lazy(() => import('./pages/FinancingPage'));
 const CommercialRoofingPage = React.lazy(() => import('./pages/CommercialRoofingPage'));
@@ -45,6 +46,7 @@ function App() {
             <Route path="/roof-repair" element={<RoofRepairPage />} />
             <Route path="/roof-replacement" element={<RoofReplacementPage />} />
             <Route path="/storm-restoration" element={<StormRestorationPage />} />
+            <Route path="/maintenance" element={<MaintenancePage />} />
             <Route path="/financing" element={<FinancingPage />} />
             <Route path="/commercial-roofing" element={<CommercialRoofingPage />} />
             <Route path="/solar-panel" element={<SolarPanelPage />} />

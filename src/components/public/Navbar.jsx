@@ -70,6 +70,7 @@ const Navbar = () => {
                                 <li><Link to="/insurance-claim" onClick={closeMobile}>Insurance Claim</Link></li>
 
                                 <li><Link to="/roofing" onClick={closeMobile}>Roofing</Link></li>
+                                <li><Link to="/maintenance" onClick={closeMobile}>Maintenance</Link></li>
 
                                 <li><Link to="/commercial-roofing" onClick={closeMobile}>Commercial Roofing</Link></li>
                                 <li><Link to="/solar-panel" onClick={closeMobile}>Solar Panel</Link></li>
