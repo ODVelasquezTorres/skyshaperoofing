@@ -435,13 +435,18 @@
     }
 
     .logo-outer-container {
-        padding-left: 16px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        padding-left: 0;
         padding-top: 0;
+        width: auto;
+        display: flex;
+        justify-content: center;
         align-items: center;
-        /* Center logo vertically */
-        opacity: 1;
-        /* logo always visible */
-        pointer-events: auto;
+        opacity: 0;
+        /* Hide navbar logo on mobile by default (it's in Hero) */
+        pointer-events: none;
         transition: opacity 0.3s ease;
     }
 
@@ -461,8 +466,8 @@
     }
 
     .navbar-wrapper.scrolled .navbar-logo {
-        height: 80px;
-        /* Incremented from 55px */
+        height: 70px;
+        margin-top: 0;
     }
 
     /* Hide nav by default, show when mobileOpen */
@@ -556,7 +561,6 @@
     }
 
     .navbar-wrapper.scrolled .navbar-logo {
-        height: 70px;
-        /* Incremented from 45px */
+        height: 60px;
     }
 }

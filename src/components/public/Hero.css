@@ -156,8 +156,8 @@
         flex-direction: column;
         justify-content: center;
         text-align: center;
-        padding-top: 10px;
-        /* Reducido de 40px */
+        padding-top: 100px;
+        /* Adjusted for centered mobile logo */
     }
 
     .desktop-only-logo {
