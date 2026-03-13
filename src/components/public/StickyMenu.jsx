@@ -80,7 +80,7 @@ const StickyMenu = () => {
                 <div className="sticky-menu-bar">
 
                     {/* Left Group */}
-                    <a href="https://wa.me/17045848280" target="_blank" rel="noopener noreferrer" className="sticky-menu-item" title="Start a Chat">
+                    <a href="sms:17045848280" className="sticky-menu-item" title="Start a Chat">
                         <MessageCircle size={22} />
                         <span>Chat</span>
                     </a>
