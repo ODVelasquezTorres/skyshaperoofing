@@ -58,6 +58,14 @@
     margin: 0 4px;
 }
 
+.sticky-menu-item.whatsapp-btn {
+    color: #25D366; /* WhatsApp Green */
+}
+
+.sticky-menu-item.whatsapp-btn:hover {
+    background-color: rgba(37, 211, 102, 0.15); /* Light Green Hover */
+}
+
 .sticky-menu-item svg {
     stroke-width: 2px;
     transition: transform 0.3s ease;
