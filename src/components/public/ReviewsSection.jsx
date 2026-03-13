@@ -89,8 +89,11 @@ const ReviewsSection = () => {
                 </div>
 
                 <div className="reviews-cta text-center mt-12">
-                    <a href="#" className="btn-google-reviews" target="_blank" rel="noopener noreferrer">
+                    <a href="https://maps.app.goo.gl/Gnfgv3zbwoZzHP4R7" className="btn-google-reviews" target="_blank" rel="noopener noreferrer">
                         See all reviews on Google
+                    </a>
+                    <a href="https://g.page/r/CdZPg2lG0FNDEAE/review" className="btn-leave-review" target="_blank" rel="noopener noreferrer">
+                        Leave a Review
                     </a>
                 </div>
             </div>
