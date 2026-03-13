@@ -80,11 +80,11 @@ const StickyMenu = () => {
                 <div className="sticky-menu-bar">
 
                     {/* Left Group */}
-                    <a href="#chat" className="sticky-menu-item" onClick={(e) => e.preventDefault()} title="Start a Chat">
+                    <a href="https://wa.me/17045848280" target="_blank" rel="noopener noreferrer" className="sticky-menu-item" title="Start a Chat">
                         <MessageCircle size={22} />
                         <span>Chat</span>
                     </a>
-                    <a href="https://wa.me/17045848280" target="_blank" rel="noopener noreferrer" className="sticky-menu-item" title="WhatsApp Emergency">
+                    <a href="tel:17045848280" className="sticky-menu-item" title="Call Us">
                         <Phone size={22} />
                         <span>Call</span>
                     </a>
