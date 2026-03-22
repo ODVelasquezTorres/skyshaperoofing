@@ -14,6 +14,8 @@ const EmailUsModal = ({ isOpen, onClose, isEmbedded = false }) => {
         consent: 'text'
     });
 
+    const [status, setStatus] = useState("idle");
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData(prev => ({
@@ -22,22 +24,46 @@ const EmailUsModal = ({ isOpen, onClose, isEmbedded = false }) => {
         }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
+        setStatus("submitting");
 
-        const subject = encodeURIComponent("New Inquiry from Website - Skyshape Roofing");
-        const bodyContent = `Name: ${formData.firstName} ${formData.lastName}
-Phone: ${formData.phone}
-Email: ${formData.email}
-Prefer contact by: ${formData.consent === 'text' ? 'Text' : 'Other'}
+        try {
+            const formRes = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: JSON.stringify({
+                    access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "YOUR_WEB3FORMS_ACCESS_KEY",
+                    subject: "New Inquiry from Website - Skyshape Roofing",
+                    from_name: "Skyshape Website Form",
+                    name: `${formData.firstName} ${formData.lastName}`,
+                    email: formData.email,
+                    phone: formData.phone,
+                    consent_to_text: formData.consent === 'text' ? 'Yes' : 'No',
+                    message: formData.message,
+                }),
+            });
 
-Message:
-${formData.message}`;
-
-        const body = encodeURIComponent(bodyContent);
-        window.location.href = `mailto:info@skyshaperoofing.com?subject=${subject}&body=${body}`;
-
-        if (onClose) onClose();
+            const res = await formRes.json();
+            if (res.success) {
+                setStatus("success");
+                setTimeout(() => {
+                    if (onClose) onClose();
+                    setStatus("idle");
+                    setFormData({
+                        firstName: '', lastName: '', phone: '', email: '', message: '', consent: 'text'
+                    });
+                }, 2000);
+            } else {
+                setStatus("error");
+            }
+        } catch (error) {
+            console.error(error);
+            setStatus("error");
+        }
     };
 
     const formContent = (
@@ -148,9 +174,14 @@ ${formData.message}`;
                     </button>
                 ) : null}
 
-                <button type="submit" className="email-send-btn premium-gradient" style={{ width: '100%', borderRadius: '12px', padding: '16px' }}>
-                    Send My Message
+                <button type="submit" className="email-send-btn premium-gradient" style={{ width: '100%', borderRadius: '12px', padding: '16px' }} disabled={status === "submitting" || status === "success"}>
+                    {status === "submitting" ? "Sending..." : status === "success" ? "Message Sent!" : "Send My Message"}
                 </button>
+                {status === "error" && (
+                    <p style={{ color: "red", textAlign: "center", marginTop: "10px", fontSize: "0.9rem" }}>
+                        There was an error sending your message. Please try again.
+                    </p>
+                )}
             </div>
         </form>
     );

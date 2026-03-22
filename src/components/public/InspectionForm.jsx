@@ -19,17 +19,62 @@ const InspectionForm = () => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setStatus('loading');
 
-        // Simulate API call
-        setTimeout(() => {
-            navigate('/thank-you');
-        }, 1500);
+        try {
+            const formRes = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: JSON.stringify({
+                    access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "YOUR_WEB3FORMS_ACCESS_KEY",
+                    subject: "New Inspection Request from Website - Skyshape Roofing",
+                    from_name: "Skyshape Website Form",
+                    name: formData.fullName,
+                    address: formData.address,
+                    phone: formData.phone,
+                    service_type: formData.serviceType,
+                    message: formData.message,
+                }),
+            });
+
+            const res = await formRes.json();
+            if (res.success) {
+                setStatus('success');
+                setTimeout(() => {
+                    navigate('/thank-you');
+                }, 1500);
+            } else {
+                setStatus('error');
+            }
+        } catch (error) {
+            console.error(error);
+            setStatus('error');
+        }
     };
 
-    if (status === 'success') {
+    if (status === 'success' || status === 'error') {
+        if (status === 'error') {
+            return (
+                <div className="inspection-card success-view fade-in-up">
+                    <div className="success-icon-wrapper">
+                        <CheckCircle size={64} className="text-red-500" color="red" />
+                    </div>
+                    <h3>Submission Error!</h3>
+                    <p>There was an error submitting your request. Please try again later.</p>
+                    <button
+                        className="btn-reset"
+                        onClick={() => setStatus('idle')}
+                    >
+                        Try again
+                    </button>
+                </div>
+            );
+        }
         return (
             <div className="inspection-card success-view fade-in-up">
                 <div className="success-icon-wrapper">
