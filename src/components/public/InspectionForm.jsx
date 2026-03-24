@@ -31,7 +31,7 @@ const InspectionForm = () => {
                     Accept: "application/json",
                 },
                 body: JSON.stringify({
-                    access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "YOUR_WEB3FORMS_ACCESS_KEY",
+                    access_key: "c3596dcd-0107-40fd-bf0d-a46791f8737b",
                     subject: "New Inspection Request from Website - Skyshape Roofing",
                     from_name: "Skyshape Website Form",
                     name: formData.fullName,
