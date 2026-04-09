@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ArrowRight, Shield, Search, Award } from 'lucide-react';
 import { useContact } from '../../context/ContactContext';
 import './Hero.css';
+import OurWorkModal from './OurWorkModal';
 // import heroBg from '../../assets/hero-bg-final.png';
 
 const Hero = () => {
     const { openEmailModal } = useContact();
+    const [isOurWorkOpen, setIsOurWorkOpen] = useState(false);
     return (
         <section
             className="hero-section"
@@ -32,10 +34,12 @@ const Hero = () => {
                         <button className="btn btn-primary" onClick={openEmailModal}>
                             Get Free Estimate
                         </button>
-                        <button className="btn btn-secondary">
+                        <button className="btn btn-secondary" onClick={() => setIsOurWorkOpen(true)}>
                             View Our Work
                         </button>
                     </div>
+
+                    {isOurWorkOpen && <OurWorkModal onClose={() => setIsOurWorkOpen(false)} />}
 
                     <div className="hero-trust-badges">
                         <span className="badge-item"><Shield size={20} className="badge-icon" /> Licensed & Insured</span>

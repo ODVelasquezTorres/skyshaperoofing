@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import antes1 from '../../assets/slider/antes-despues/antes1.png'
-import antes2 from '../../assets/slider/antes-despues/antes2.png'
-import resultado1 from '../../assets/slider/antes-despues/resultado1.png'
-import resultado2 from '../../assets/slider/antes-despues/resultado2.png'
+const antes1 = "https://placehold.co/800x600/e2e8f0/475569?text=Before+1";
+const antes2 = "https://placehold.co/800x600/e2e8f0/475569?text=Before+2";
+const resultado1 = "https://placehold.co/800x600/f8fafc/0f172a?text=After+1";
+const resultado2 = "https://placehold.co/800x600/f8fafc/0f172a?text=After+2";
 import './BeforeAfterSlider.css';
 
 const projects = [
@@ -102,12 +102,6 @@ const BeforeAfterSlider = () => {
                     <p className="ba-paragraph">
                         See the transformation we deliver on every project.
                     </p>
-                </div>
-                
-                <div className="ba-grid">
-                    {projects.map((project) => (
-                        <FlipCard key={project.id} project={project} />
-                    ))}
                 </div>
             </div>
         </section>
