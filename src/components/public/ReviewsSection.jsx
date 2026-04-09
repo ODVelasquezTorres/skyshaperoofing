@@ -1,7 +1,6 @@
 import React from 'react';
 import { Star } from 'lucide-react';
 import './ReviewsSection.css';
-import qrCode from '../../assets/slider/qr.png';
 
 // Mock Data simulating Google Places API response
 const reviews = [
@@ -101,27 +100,6 @@ const ReviewsSection = () => {
                     <a href="https://g.page/r/CdZPg2lG0FNDEAE/review" className="btn-leave-review" target="_blank" rel="noopener noreferrer">
                         Leave a Review
                     </a>
-                </div>
-
-                <div className="qr-review-block">
-                    <div className="qr-divider" />
-                    <p className="qr-title">
-                        Happy with our work?
-                    </p>
-                    <p className="qr-sub">
-                        Scan the QR code and leave us a review on Google
-                    </p>
-                    <img
-                        src={qrCode}
-                        alt="QR Google Reviews SkyShape Roofing"
-                        className="qr-image"
-                        loading="lazy"
-                        width="180"
-                        height="180"
-                    />
-                    <p className="qr-footer">
-                        📍 SkyShape Roofing — Charlotte, NC
-                    </p>
                 </div>
             </div>
         </section>
