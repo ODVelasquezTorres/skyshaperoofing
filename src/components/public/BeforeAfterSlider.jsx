@@ -3,7 +3,6 @@ import antes1 from '../../assets/slider/antes-despues/antes1.png'
 import antes2 from '../../assets/slider/antes-despues/antes2.png'
 import resultado1 from '../../assets/slider/antes-despues/resultado1.png'
 import resultado2 from '../../assets/slider/antes-despues/resultado2.png'
-import { ArrowLeftRight } from 'lucide-react';
 import './BeforeAfterSlider.css';
 
 const projects = [
@@ -24,42 +23,35 @@ const projects = [
 const FlipCard = ({ project }) => {
     const [isFlipped, setIsFlipped] = useState(false);
 
-    const handleFlip = () => {
-        // Toggle flip exclusively for mobile tap interactions
-        if (window.innerWidth <= 768) {
+    const handleClick = () => {
+        if (window.matchMedia('(hover: none)').matches) {
             setIsFlipped(!isFlipped);
+        }
+    };
+
+    const handleMouseEnter = () => {
+        if (!window.matchMedia('(hover: none)').matches) {
+            setIsFlipped(true);
+        }
+    };
+
+    const handleMouseLeave = () => {
+        if (!window.matchMedia('(hover: none)').matches) {
+            setIsFlipped(false);
         }
     };
 
     return (
         <div 
             className="ba-flip-card-container"
-            onClick={handleFlip}
+            onClick={handleClick}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
         >
             <div className="card-wrapper">
                 <div className={`ba-flip-card ${isFlipped ? 'flipped' : ''}`}>
                     <div className="ba-flip-inner">
-                        {/* Front Face: Before */}
-                        <div className="ba-flip-front">
-                            <img 
-                                src={project.before} 
-                                alt={`Before - ${project.altText}`} 
-                                loading="lazy" 
-                                decoding="async" 
-                                fetchPriority="low" 
-                                draggable="false"
-                                width="800"
-                                height="600"
-                            />
-                            <div className="ba-badge ba-badge-before">BEFORE</div>
-                            <div className="ba-flip-indicator">
-                                <ArrowLeftRight size={16} />
-                                <span className="desktop-text">Hover to see result</span>
-                                <span className="mobile-text">Tap to see result</span>
-                            </div>
-                        </div>
-
-                        {/* Back Face: After */}
+                        {/* After image is UNDER the before image since it reveals */}
                         <div className="ba-flip-back">
                             <img 
                                 src={project.after} 
@@ -72,11 +64,26 @@ const FlipCard = ({ project }) => {
                                 height="600"
                             />
                             <div className="ba-badge ba-badge-after">AFTER</div>
-                            <div className="ba-flip-indicator">
-                                <ArrowLeftRight size={16} />
-                                <span className="desktop-text">Hover to see before</span>
-                                <span className="mobile-text">Tap to see before</span>
-                            </div>
+                        </div>
+
+                        {/* Before image is ON TOP, masking its way out */}
+                        <div className="ba-flip-front">
+                            <img 
+                                src={project.before} 
+                                alt={`Before - ${project.altText}`} 
+                                loading="lazy" 
+                                decoding="async" 
+                                fetchPriority="low" 
+                                draggable="false"
+                                width="800"
+                                height="600"
+                            />
+                            <div className="ba-badge ba-badge-before">BEFORE</div>
+                        </div>
+                        
+                        <div className="ba-flip-indicator">
+                            <span className="text-rest">→ See the result</span>
+                            <span className="text-revealed">← See before</span>
                         </div>
                     </div>
                 </div>

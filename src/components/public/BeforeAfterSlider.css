@@ -4,8 +4,9 @@
     position: relative;
     display: block;
     width: 100%;
-    background-color: #f1f5f9;
-    padding: 5rem 2rem;
+    background-color: #f8fafc;
+    padding: 4rem 2rem 5rem 2rem;
+    margin-top: 0;
 }
 
 .ba-container {
@@ -17,6 +18,9 @@
 .ba-header {
     margin-bottom: 3rem;
     text-align: left;
+    display: block;
+    position: relative;
+    z-index: 20;
 }
 
 .ba-subtitle {
@@ -65,82 +69,26 @@
     cursor: pointer;
 }
 
-@media (hover: hover) and (pointer: fine) {
-    .ba-flip-card-container:hover .ba-flip-inner {
-        transform: rotateY(180deg);
-        will-change: transform;
-    }
-}
-
 .card-wrapper {
   position: relative;
-  border-radius: 20px;
-  padding: 3px;
-  background: linear-gradient(
-    135deg,
-    #0c4a9e,
-    #1a6fd4,
-    #3b8de0,
-    #1a6fd4,
-    #0c4a9e
-  );
-  background-size: 300% 300%;
-  animation: borderGlow 4s ease infinite;
-  box-shadow: 0 8px 32px rgba(26,111,212,0.2);
-  transition: box-shadow 0.3s ease;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .card-wrapper:hover {
-  box-shadow: 0 20px 60px rgba(26,111,212,0.35);
-  animation: borderGlow 1.5s ease infinite;
-  filter: drop-shadow(0 0 14px rgba(26,111,212,0.6));
-}
-
-@keyframes borderGlow {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-.card-wrapper::before {
-  content: '';
-  position: absolute;
-  inset: -1px;
-  border-radius: 21px;
-  background: linear-gradient(
-    135deg,
-    rgba(255,255,255,0.4),
-    transparent 40%,
-    transparent 60%,
-    rgba(255,255,255,0.1)
-  );
-  pointer-events: none;
-  z-index: 1;
-}
-
-.card-wrapper::after {
-  content: '';
-  position: absolute;
-  top: 3px;
-  left: 15%;
-  width: 70%;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255,255,255,0.8),
-    transparent
-  );
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 2;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.14);
+  transform: translateY(-3px);
 }
 
 .ba-flip-card {
   position: relative;
   width: 100%;
-  aspect-ratio: 4/3;
-  border-radius: 18px;
+  aspect-ratio: 16/10;
+  max-height: 340px;
+  /* El wrapper ya tiene border radius y overflow hidden, pero mantenemos este para clip-path clipping interno si hace falta */
+  border-radius: 16px;
   overflow: hidden;
 }
 
@@ -148,30 +96,27 @@
   position: relative;
   width: 100%;
   height: 100%;
-  transform-style: preserve-3d;
-  transition: transform 0.7s ease;
-}
-
-.ba-flip-front,
-.ba-flip-back {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  border-radius: 18px;
-  overflow: hidden;
 }
 
 .ba-flip-front {
-    background-color: #fff;
-    transform: rotateY(0deg);
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  transition: clip-path 0.7s cubic-bezier(0.77,0,0.18,1);
+  clip-path: inset(0 0 0 0);
+  background-color: #fff;
+}
+
+.ba-flip-card:hover .ba-flip-front,
+.ba-flip-card.flipped .ba-flip-front {
+  clip-path: inset(0 100% 0 0);
 }
 
 .ba-flip-back {
-    background-color: #f8fafc;
-    transform: rotateY(180deg);
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-color: #f8fafc;
 }
 
 .ba-flip-front img,
@@ -182,8 +127,22 @@
   display: block;
 }
 
-.ba-flip-card.flipped .ba-flip-inner {
-  transform: rotateY(180deg);
+/* LÍNEA DIVISORIA BLANCA */
+.ba-flip-front::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background: white;
+  box-shadow: 0 0 8px rgba(255,255,255,0.6);
+  transition: opacity 0.3s ease;
+}
+
+.ba-flip-card:hover .ba-flip-front::after,
+.ba-flip-card.flipped .ba-flip-front::after {
+  opacity: 0;
 }
 
 /* Badges */
@@ -216,37 +175,35 @@
 
 /* Interactive Indicator */
 .ba-flip-indicator {
-    position: absolute;
-    bottom: 16px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(4px);
-    padding: 8px 16px;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: #64748b;
-    font-size: 0.8rem;
-    font-weight: 600;
-    z-index: 10;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(4px);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  color: #1a6fd4;
+  font-weight: 500;
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 10;
 }
 
-.desktop-text {
-    display: none;
+.ba-flip-indicator .text-revealed { 
+  display: none; 
 }
 
-.mobile-text {
-    display: block;
+.ba-flip-card:hover .ba-flip-indicator .text-rest,
+.ba-flip-card.flipped .ba-flip-indicator .text-rest { 
+  display: none; 
 }
 
-@media (hover: hover) and (pointer: fine) {
-    .desktop-text {
-        display: block;
-    }
-    .mobile-text {
-        display: none;
-    }
+.ba-flip-card:hover .ba-flip-indicator .text-revealed,
+.ba-flip-card.flipped .ba-flip-indicator .text-revealed { 
+  display: inline; 
 }
