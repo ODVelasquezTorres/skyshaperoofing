@@ -1,87 +1,109 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
-import { ChevronsLeftRight } from 'lucide-react';
+import React, { useState } from 'react';
+import antes1 from '../../assets/slider/antes-despues/antes1.png'
+import antes2 from '../../assets/slider/antes-despues/antes2.png'
+import resultado1 from '../../assets/slider/antes-despues/resultado1.png'
+import resultado2 from '../../assets/slider/antes-despues/resultado2.png'
+import { ArrowLeftRight } from 'lucide-react';
 import './BeforeAfterSlider.css';
 
-const BeforeAfterSlider = ({
-    beforeImage,
-    afterImage,
-    beforeLabel = "BEFORE (Old Roof)",
-    afterLabel = "AFTER (SkyShape System)"
-}) => {
-    const [sliderSearch, setSliderPosition] = useState(50);
-    const [isDragging, setIsDragging] = useState(false);
-    const containerRef = useRef(null);
+const projects = [
+    {
+        id: 1,
+        before: antes1,
+        after: resultado1,
+        altText: "Project 1 Transformation"
+    },
+    {
+        id: 2,
+        before: antes2,
+        after: resultado2,
+        altText: "Project 2 Transformation"
+    }
+];
 
-    const handleMove = useCallback((clientX) => {
-        if (containerRef.current) {
-            const rect = containerRef.current.getBoundingClientRect();
-            const x = Math.max(0, Math.min(clientX - rect.left, rect.width));
-            const percentage = (x / rect.width) * 100;
-            setSliderPosition(percentage);
+const FlipCard = ({ project }) => {
+    const [isFlipped, setIsFlipped] = useState(false);
+
+    const handleFlip = () => {
+        // Toggle flip exclusively for mobile tap interactions
+        if (window.innerWidth <= 768) {
+            setIsFlipped(!isFlipped);
         }
-    }, []);
-
-    const handleMouseDown = () => setIsDragging(true);
-    const handleMouseUp = () => setIsDragging(false);
-
-    const handleMouseMove = useCallback((e) => {
-        if (!isDragging) return;
-        handleMove(e.clientX);
-    }, [isDragging, handleMove]);
-
-    const handleTouchMove = useCallback((e) => {
-        handleMove(e.touches[0].clientX);
-    }, [handleMove]);
-
-    // Global event listeners for dragging interaction outside the component
-    useEffect(() => {
-        if (isDragging) {
-            window.addEventListener('mousemove', handleMouseMove);
-            window.addEventListener('mouseup', handleMouseUp);
-        } else {
-            window.removeEventListener('mousemove', handleMouseMove);
-            window.removeEventListener('mouseup', handleMouseUp);
-        }
-        return () => {
-            window.removeEventListener('mousemove', handleMouseMove);
-            window.removeEventListener('mouseup', handleMouseUp);
-        };
-    }, [isDragging, handleMouseMove]);
+    };
 
     return (
-        <div
-            className="ba-slider-container"
-            ref={containerRef}
-            onTouchMove={handleTouchMove}
+        <div 
+            className="ba-flip-card-container"
+            onClick={handleFlip}
         >
-            {/* After Image (Background) */}
-            <div className="ba-layer ba-after">
-                <img src={afterImage} alt="After Result" />
-                <span className="ba-badge ba-badge-right">{afterLabel}</span>
-            </div>
+            <div className="card-wrapper">
+                <div className={`ba-flip-card ${isFlipped ? 'flipped' : ''}`}>
+                    <div className="ba-flip-inner">
+                        {/* Front Face: Before */}
+                        <div className="ba-flip-front">
+                            <img 
+                                src={project.before} 
+                                alt={`Before - ${project.altText}`} 
+                                loading="lazy" 
+                                decoding="async" 
+                                fetchPriority="low" 
+                                draggable="false"
+                                width="800"
+                                height="600"
+                            />
+                            <div className="ba-badge ba-badge-before">BEFORE</div>
+                            <div className="ba-flip-indicator">
+                                <ArrowLeftRight size={16} />
+                                <span className="desktop-text">Hover to see result</span>
+                                <span className="mobile-text">Tap to see result</span>
+                            </div>
+                        </div>
 
-            {/* Before Image (Foreground, Clipped) */}
-            <div
-                className="ba-layer ba-before"
-                style={{ clipPath: `inset(0 ${100 - sliderSearch}% 0 0)` }}
-            >
-                <img src={beforeImage} alt="Before Condition" />
-                <span className="ba-badge ba-badge-left">{beforeLabel}</span>
-            </div>
-
-            {/* Slider Handle */}
-            <div
-                className="ba-handle"
-                style={{ left: `${sliderSearch}%` }}
-                onMouseDown={handleMouseDown}
-                onTouchStart={handleMouseDown}
-            >
-                <div className="ba-line"></div>
-                <div className="ba-circle">
-                    <ChevronsLeftRight size={24} color="#007BFF" />
+                        {/* Back Face: After */}
+                        <div className="ba-flip-back">
+                            <img 
+                                src={project.after} 
+                                alt={`After - ${project.altText}`} 
+                                loading="lazy" 
+                                decoding="async" 
+                                fetchPriority="low" 
+                                draggable="false"
+                                width="800"
+                                height="600"
+                            />
+                            <div className="ba-badge ba-badge-after">AFTER</div>
+                            <div className="ba-flip-indicator">
+                                <ArrowLeftRight size={16} />
+                                <span className="desktop-text">Hover to see before</span>
+                                <span className="mobile-text">Tap to see before</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    );
+};
+
+const BeforeAfterSlider = () => {
+    return (
+        <section id="before-after" className="ba-section">
+            <div className="container ba-container">
+                <div className="ba-header">
+                    <span className="ba-subtitle">REAL RESULTS</span>
+                    <h2 className="ba-title">Our Work</h2>
+                    <p className="ba-paragraph">
+                        See the transformation we deliver on every project.
+                    </p>
+                </div>
+                
+                <div className="ba-grid">
+                    {projects.map((project) => (
+                        <FlipCard key={project.id} project={project} />
+                    ))}
+                </div>
+            </div>
+        </section>
     );
 };
 

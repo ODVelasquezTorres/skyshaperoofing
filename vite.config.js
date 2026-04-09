@@ -5,4 +5,12 @@ import react from '@vitejs/plugin-react'
 export default defineConfig(() => ({
   base: '/',
   plugins: [react()],
+  build: {
+    assetsInlineLimit: 0,
+    rollupOptions: {
+      output: {
+        assetFileNames: 'assets/[name]-[hash][extname]'
+      }
+    }
+  }
 }))
