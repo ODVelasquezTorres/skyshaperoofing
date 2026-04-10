@@ -25,6 +25,8 @@ const Projects = React.lazy(() => import('./pages/dashboard/Projects'));
 const Estimates = React.lazy(() => import('./pages/dashboard/Estimates'));
 const ComingSoon = React.lazy(() => import('./components/common/ComingSoon'));
 
+const AdminPanel = React.lazy(() => import('./pages/AdminPanel'));
+
 // Fallback loader while downloading chunks
 const PageLoader = () => (
   <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '50vh', background: 'transparent' }}>
@@ -52,7 +54,11 @@ function App() {
             <Route path="/solar-panel" element={<SolarPanelPage />} />
             <Route path="/insurance-claim" element={<InsuranceClaimPage />} />
             <Route path="/thank-you" element={<ThankYouPage />} />
+            
+            {/* Added Admin Panel Route */}
+            <Route path="/admin" element={<AdminPanel />} />
           </Route>
+
 
           {/* Dashboard Routes */}
           <Route path="/dashboard" element={<DashboardLayout />}>

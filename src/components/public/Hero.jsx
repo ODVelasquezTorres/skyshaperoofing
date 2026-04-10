@@ -3,11 +3,23 @@ import { ArrowRight, Shield, Search, Award } from 'lucide-react';
 import { useContact } from '../../context/ContactContext';
 import './Hero.css';
 import OurWorkModal from './OurWorkModal';
-// import heroBg from '../../assets/hero-bg-final.png';
+import GalleryModal from './GalleryModal';
 
 const Hero = () => {
     const { openEmailModal } = useContact();
-    const [isOurWorkOpen, setIsOurWorkOpen] = useState(false);
+    const [isGalleryOpen, setIsGalleryOpen] = useState(false);
+    const [selectedProject, setSelectedProject] = useState(null);
+
+    const handleSelectProject = (project) => {
+        setSelectedProject(project);
+        setIsGalleryOpen(false);
+    };
+
+    const handleBackToGallery = () => {
+        setSelectedProject(null);
+        setIsGalleryOpen(true);
+    };
+
     return (
         <section
             className="hero-section"
@@ -34,12 +46,25 @@ const Hero = () => {
                         <button className="btn btn-primary" onClick={openEmailModal}>
                             Get Free Estimate
                         </button>
-                        <button className="btn btn-secondary" onClick={() => setIsOurWorkOpen(true)}>
+                        <button className="btn btn-secondary" onClick={() => setIsGalleryOpen(true)}>
                             View Our Work
                         </button>
                     </div>
 
-                    {isOurWorkOpen && <OurWorkModal onClose={() => setIsOurWorkOpen(false)} />}
+                    {isGalleryOpen && (
+                        <GalleryModal 
+                            onClose={() => setIsGalleryOpen(false)} 
+                            onSelectProject={handleSelectProject} 
+                        />
+                    )}
+
+                    {selectedProject && (
+                        <OurWorkModal 
+                            onClose={() => setSelectedProject(null)} 
+                            onBack={handleBackToGallery}
+                            project={selectedProject} 
+                        />
+                    )}
 
                     <div className="hero-trust-badges">
                         <span className="badge-item"><Shield size={20} className="badge-icon" /> Licensed & Insured</span>
@@ -55,3 +80,4 @@ const Hero = () => {
 };
 
 export default Hero;
+

@@ -5,7 +5,7 @@
     display: block;
     width: 100%;
     background-color: #f8fafc;
-    padding: 4rem 2rem 5rem 2rem;
+    padding: 3rem 2rem 2rem 2rem;
     margin-top: 0;
 }
 
@@ -16,7 +16,7 @@
 }
 
 .ba-header {
-    margin-bottom: 3rem;
+    margin-bottom: 0.5rem;
     text-align: left;
     display: block;
     position: relative;
@@ -49,161 +49,8 @@
     max-width: 600px;
 }
 
-.ba-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    align-items: stretch;
-}
-
-@media (min-width: 768px) {
-    .ba-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Flip Card Container */
-.ba-flip-card-container {
-    background-color: transparent;
-    width: 100%;
-    cursor: pointer;
-}
-
-.card-wrapper {
-  position: relative;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.card-wrapper:hover {
-  box-shadow: 0 12px 40px rgba(0,0,0,0.14);
-  transform: translateY(-3px);
-}
-
-.ba-flip-card {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16/10;
-  max-height: 340px;
-  /* El wrapper ya tiene border radius y overflow hidden, pero mantenemos este para clip-path clipping interno si hace falta */
-  border-radius: 16px;
-  overflow: hidden;
-}
-
-.ba-flip-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.ba-flip-front {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  transition: clip-path 0.7s cubic-bezier(0.77,0,0.18,1);
-  clip-path: inset(0 0 0 0);
-  background-color: #fff;
-}
-
-.ba-flip-card:hover .ba-flip-front,
-.ba-flip-card.flipped .ba-flip-front {
-  clip-path: inset(0 100% 0 0);
-}
-
-.ba-flip-back {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background-color: #f8fafc;
-}
-
-.ba-flip-front img,
-.ba-flip-back img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* LÍNEA DIVISORIA BLANCA */
-.ba-flip-front::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 3px;
-  height: 100%;
-  background: white;
-  box-shadow: 0 0 8px rgba(255,255,255,0.6);
-  transition: opacity 0.3s ease;
-}
-
-.ba-flip-card:hover .ba-flip-front::after,
-.ba-flip-card.flipped .ba-flip-front::after {
-  opacity: 0;
-}
-
-/* Badges */
-.ba-badge {
-    position: absolute;
-    color: white;
-    text-transform: uppercase;
-    font-weight: 700;
-    border-radius: 6px;
-    padding: 4px 12px;
-    font-size: 0.85rem;
-    z-index: 10;
-}
-
-.ba-badge-before {
-    top: 16px;
-    left: 16px;
-    background: rgba(26,111,212,0.92);
-    backdrop-filter: blur(8px);
-    box-shadow: 0 2px 12px rgba(26,111,212,0.5);
-}
-
-.ba-badge-after {
-    top: 16px;
-    right: 16px;
-    background: rgba(12,74,158,0.92);
-    backdrop-filter: blur(8px);
-    box-shadow: 0 2px 12px rgba(12,74,158,0.5);
-}
-
-/* Interactive Indicator */
-.ba-flip-indicator {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  background: rgba(255,255,255,0.85);
-  backdrop-filter: blur(4px);
-  border-radius: 20px;
-  padding: 6px 14px;
-  font-size: 0.8rem;
-  color: #1a6fd4;
-  font-weight: 500;
-  position: absolute;
-  bottom: 14px;
-  left: 50%;
-  transform: translateX(-50%);
-  white-space: nowrap;
-  z-index: 10;
-}
-
-.ba-flip-indicator .text-revealed { 
-  display: none; 
-}
-
-.ba-flip-card:hover .ba-flip-indicator .text-rest,
-.ba-flip-card.flipped .ba-flip-indicator .text-rest { 
-  display: none; 
-}
-
-.ba-flip-card:hover .ba-flip-indicator .text-revealed,
-.ba-flip-card.flipped .ba-flip-indicator .text-revealed { 
-  display: inline; 
+.ba-paragraph {
+    color: #64748b;
+    font-size: 1.1rem;
+    max-width: 600px;
 }

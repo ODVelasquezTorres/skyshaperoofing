@@ -8,10 +8,6 @@ import FAQSection from '../components/public/FAQSection';
 import ProcessFlow from '../components/public/ProcessFlow';
 import './LandingPage.css';
 
-const BeforeAfterSlider = React.lazy(() => 
-    import('../components/public/BeforeAfterSlider.jsx')
-);
-
 const LandingPage = () => {
     return (
         <>
@@ -57,14 +53,6 @@ const LandingPage = () => {
 
             {/* FAQs */}
             <FAQSection />
-
-
-            {/* Before After Lazy Loaded */}
-            <React.Suspense fallback={
-                <div style={{ height: '400px', background: '#f1f5f9' }} />
-            }>
-                <BeforeAfterSlider />
-            </React.Suspense>
 
             {/* Testimonials */}
             <ReviewsSection />

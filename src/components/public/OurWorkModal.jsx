@@ -2,25 +2,23 @@ import React, { useState } from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import './OurWorkModal.css';
 
-const OurWorkModal = ({ onClose }) => {
-    const [activeTab, setActiveTab] = useState('antes');
+const OurWorkModal = ({ onClose, onBack, project }) => {
+    const [activeTab, setActiveTab] = useState('before');
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const images = {
-        antes: [
-            "/carrusel/antes.jpeg"
-        ],
-        proceso: [
-            "/carrusel/proceso 1.jpeg",
-            "/carrusel/proceso 2.jpeg",
-            "/carrusel/proceso 3.jpeg",
-            "/carrusel/proceso 4.jpeg",
-            "/carrusel/proceso 5.jpeg"
-        ],
-        despues: [
-            "/carrusel/despues 1.jpeg",
-            "/carrusel/despues 2.jpeg",
-            "/carrusel/despues 3.jpeg"
+    const safeProject = project || {
+        id: 1,
+        title: "Mr. Armendariz's House — Full Roof Replacement",
+        tag: "Roof Replacement",
+        cover: "/carrusel/despues 1.jpeg",
+        phases: {
+            before: ["/carrusel/antes.jpeg"],
+            inProgress: ["/carrusel/proceso 1.jpeg", "/carrusel/proceso 2.jpeg", "/carrusel/proceso 3.jpeg", "/carrusel/proceso 4.jpeg", "/carrusel/proceso 5.jpeg"],
+            after: ["/carrusel/despues 1.jpeg", "/carrusel/despues 2.jpeg", "/carrusel/despues 3.jpeg"]
+        },
+        description: [
+            "Mr. Armendáriz's home is located in the Windsor Park area of East Charlotte, in the city of Charlotte.",
+            "This was an insurance-processed project, and we are very pleased to have completed his roof replacement. Due to its previous condition, the property was at high risk of leaks and potential structural damage in the future."
         ]
     };
 
@@ -30,14 +28,14 @@ const OurWorkModal = ({ onClose }) => {
     };
 
     const handlePrevious = () => {
-        const currentImages = images[activeTab];
+        const currentImages = safeProject.phases[activeTab];
         setCurrentIndex((prevIndex) => 
             prevIndex === 0 ? currentImages.length - 1 : prevIndex - 1
         );
     };
 
     const handleNext = () => {
-        const currentImages = images[activeTab];
+        const currentImages = safeProject.phases[activeTab];
         setCurrentIndex((prevIndex) => 
             prevIndex === currentImages.length - 1 ? 0 : prevIndex + 1
         );
@@ -50,7 +48,7 @@ const OurWorkModal = ({ onClose }) => {
         }
     };
 
-    const currentImagesList = images[activeTab];
+    const currentImagesList = safeProject.phases[activeTab] || safeProject.phases.before;
 
     return (
         <div className="our-work-backdrop" onClick={handleBackdropClick}>
@@ -60,25 +58,31 @@ const OurWorkModal = ({ onClose }) => {
                 </button>
                 
                 <div className="our-work-header">
-                    <h2 className="our-work-title">Mr. Armendariz's House — Full Roof Replacement</h2>
+                    <div className="our-work-navigation">
+                        <button className="back-to-gallery" onClick={onBack}>
+                            <ChevronLeft size={18} />
+                            Back to gallery
+                        </button>
+                    </div>
+                    <h2 className="our-work-title">{safeProject.title}</h2>
                 </div>
 
                 <div className="our-work-tabs">
                     <button 
-                        className={`our-work-tab ${activeTab === 'antes' ? 'active' : ''}`}
-                        onClick={() => handleTabChange('antes')}
+                        className={`our-work-tab ${activeTab === 'before' ? 'active' : ''}`}
+                        onClick={() => handleTabChange('before')}
                     >
                         Before
                     </button>
                     <button 
-                        className={`our-work-tab ${activeTab === 'proceso' ? 'active' : ''}`}
-                        onClick={() => handleTabChange('proceso')}
+                        className={`our-work-tab ${activeTab === 'inProgress' ? 'active' : ''}`}
+                        onClick={() => handleTabChange('inProgress')}
                     >
                         In Progress
                     </button>
                     <button 
-                        className={`our-work-tab ${activeTab === 'despues' ? 'active' : ''}`}
-                        onClick={() => handleTabChange('despues')}
+                        className={`our-work-tab ${activeTab === 'after' ? 'active' : ''}`}
+                        onClick={() => handleTabChange('after')}
                     >
                         After
                     </button>
@@ -114,8 +118,16 @@ const OurWorkModal = ({ onClose }) => {
                     )}
 
                     <div className="our-work-description">
-                        <p>Mr. Armendáriz's home is located in the <span className="highlight-text">Windsor Park</span> area of <span className="highlight-text">East Charlotte</span>, in the city of Charlotte.</p>
-                        <p>This was an <span className="highlight-text">insurance-processed</span> project, and we are very pleased to have completed his roof replacement. Due to its previous condition, the property was at high risk of leaks and potential structural damage in the future.</p>
+                        {safeProject.id === 1 ? (
+                            <>
+                                <p>Mr. Armendáriz's home is located in the <span className="highlight-text">Windsor Park</span> area of <span className="highlight-text">East Charlotte</span>, in the city of Charlotte.</p>
+                                <p>This was an <span className="highlight-text">insurance-processed</span> project, and we are very pleased to have completed his roof replacement. Due to its previous condition, the property was at high risk of leaks and potential structural damage in the future.</p>
+                            </>
+                        ) : (
+                            safeProject.description.map((parag, idx) => (
+                                <p key={idx}>{parag}</p>
+                            ))
+                        )}
                     </div>
                 </div>
             </div>
