@@ -78,8 +78,8 @@ const Navbar = () => {
                             </ul>
 
                             <div className="nav-cta">
-                                <a href="tel:14792783764" className="btn-login" onClick={closeMobile}>
-                                    <Phone size={18} /> Call us: (479) 278-3764
+                                <a href="tel:7045848280" className="btn-login" onClick={closeMobile}>
+                                    <Phone size={18} /> Call us: (704) 584-8280
                                 </a>
                             </div>
                         </div>
