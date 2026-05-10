@@ -1,49 +1,43 @@
-/* ===========================
-   FOOTER - 2-ROW LAYOUT
-   =========================== */
-
 .site-footer {
     background-color: #000000;
     color: #94A3B8;
-    padding: 80px 0 40px;
+    padding-top: 100px;
+    padding-bottom: 40px;
     font-family: 'Inter', sans-serif;
+    /* Ensuring consistency if defined globally */
 }
 
-/* ===== ROW 1: Text Columns ===== */
-.footer-row-text {
+.footer-content {
     display: flex;
-    justify-content: center;
-    gap: 5rem;
     flex-wrap: wrap;
-    margin-bottom: 0;
+    gap: 4rem;
+    margin-bottom: 60px;
 }
 
-.footer-column {
-    min-width: 180px;
-}
-
-.branding-column {
-    max-width: 280px;
+/* Left Block: Information */
+.footer-info {
+    flex: 1;
+    min-width: 300px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
 }
 
 .footer-heading {
     font-size: 14px;
     font-weight: 700;
+    /* Bold */
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: #FFFFFF;
     margin-bottom: 1.5rem;
 }
 
-.footer-heading-centered {
-    text-align: center;
-}
-
 .footer-description {
     font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
-    max-width: 280px;
+    max-width: 250px;
 }
 
 .social-icons {
@@ -114,245 +108,59 @@
     margin-top: 2px;
 }
 
-/* Oklahoma Address - NEW badge */
-.contact-address-ok {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex-wrap: wrap;
-}
-
-.badge-new {
-    display: inline-flex;
-    align-items: center;
-    padding: 2px 8px;
-    font-size: 0.65rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #ffffff;
-    background: linear-gradient(135deg, #007BFF, #00C6FF);
-    border-radius: 20px;
-    animation: badge-pulse 2.5s ease-in-out infinite;
-    white-space: nowrap;
-}
-
-@keyframes badge-pulse {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.4); }
-    50% { box-shadow: 0 0 12px 4px rgba(0, 123, 255, 0.15); }
-}
-
-/* ===== Divider ===== */
-.footer-divider {
-    width: 100%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.15) 15%, rgba(59, 130, 246, 0.25) 50%, rgba(59, 130, 246, 0.15) 85%, transparent);
-    margin: 48px 0;
-}
-
-/* ===== ROW 2: Service Areas ===== */
-.footer-row-maps {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.footer-heading-centered::after {
-    content: '';
-    display: block;
-    width: 48px;
-    height: 3px;
-    background: linear-gradient(90deg, #3B82F6, #00C6FF);
-    border-radius: 2px;
-    margin: 10px auto 0;
-}
-
-.service-areas-grid {
-    display: flex;
-    justify-content: center;
-    gap: 28px;
-    flex-wrap: wrap;
-}
-
-.service-area-card {
-    position: relative;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(59, 130, 246, 0.25);
-    border-radius: 16px;
-    overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    display: flex;
-    flex-direction: column;
+/* Right Block: Map */
+.footer-map {
     flex: 1;
-    max-width: 420px;
-    min-width: 240px;
-    box-shadow: 0 0 12px rgba(59, 130, 246, 0.06);
+    min-width: 300px;
+    height: 300px;
+    /* Reduced height visually, or match content */
 }
 
-.service-area-card:hover {
-    background: rgba(255, 255, 255, 0.06);
-    border-color: rgba(59, 130, 246, 0.45);
-    transform: translateY(-3px);
-    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.12), 0 8px 24px rgba(0, 0, 0, 0.25);
-}
-
-/* Embedded Map */
-.service-area-map {
-    width: 100%;
-    height: 150px;
-    overflow: hidden;
-    border-radius: 16px 16px 0 0;
-    filter: grayscale(0.6) brightness(0.75) contrast(1.1);
-    transition: filter 0.4s ease;
-}
-
-.service-area-card:hover .service-area-map {
-    filter: grayscale(0.3) brightness(0.85) contrast(1.1);
-}
-
-.service-area-map iframe {
+.map-container {
     width: 100%;
     height: 100%;
-    display: block;
+    border-radius: 12px;
+    overflow: hidden;
+    /* Map Filter: Dark Mode Effect */
+    filter: grayscale(1) invert(1) contrast(1.2);
+    /* Note: Inverting a map makes light roads dark, but also inverts branding colors. 
+       Usually this is the quick CSS way to get 'Dark Mode' maps without API styling. */
 }
 
-/* Card Info Below Map */
-.service-area-info {
-    padding: 12px 16px;
-    text-align: center;
-}
-
-.service-area-card h4 {
-    color: #FFFFFF;
-    font-size: 1.05rem;
-    font-weight: 800;
-    margin: 0 0 3px 0;
-    letter-spacing: -0.01em;
-}
-
-.service-area-card p {
-    color: #64748b;
-    font-size: 0.78rem;
-    margin: 0;
-    line-height: 1.4;
-}
-
-/* Oklahoma Card - Special Highlight */
-.service-area-new {
-    border-color: rgba(59, 130, 246, 0.4);
-    box-shadow: 0 0 16px rgba(59, 130, 246, 0.1), inset 0 0 0 1px rgba(59, 130, 246, 0.08);
-}
-
-.service-area-new:hover {
-    border-color: rgba(59, 130, 246, 0.6);
-    box-shadow: 0 0 24px rgba(59, 130, 246, 0.2), 0 8px 28px rgba(0, 0, 0, 0.3);
-}
-
-.service-area-badge {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 2;
-    padding: 4px 12px;
-    font-size: 0.58rem;
-    font-weight: 900;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #ffffff;
-    background: #3B82F6;
-    border-radius: 20px;
-    white-space: nowrap;
-    box-shadow: 0 2px 10px rgba(59, 130, 246, 0.45);
-    animation: badge-glow 3s ease-in-out infinite;
-}
-
-@keyframes badge-glow {
-    0%, 100% { box-shadow: 0 2px 10px rgba(59, 130, 246, 0.4); }
-    50% { box-shadow: 0 2px 18px rgba(59, 130, 246, 0.6), 0 0 28px rgba(59, 130, 246, 0.15); }
-}
-
-/* ===== Footer Bottom ===== */
+/* Footer Bottom */
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    margin-top: 48px;
     padding-top: 2rem;
     text-align: center;
     font-size: 0.85rem;
     color: #64748b;
 }
 
-/* ===========================
-   RESPONSIVE
-   =========================== */
 @media (max-width: 768px) {
     .site-footer {
-        padding: 60px 0 30px;
+        padding-top: 60px;
     }
 
-    .footer-row-text {
+    .footer-content {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
         gap: 2.5rem;
     }
 
-    .branding-column {
-        max-width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .footer-info {
+        min-width: 100%;
+        grid-template-columns: 1fr;
     }
 
     .footer-description {
         max-width: 100%;
-        text-align: center;
     }
 
-    .social-icons {
-        justify-content: center;
-    }
-
-    .footer-divider {
-        margin: 36px 0;
-    }
-
-    .service-areas-grid {
-        gap: 16px;
-    }
-
-    .service-area-card {
-        max-width: 360px;
-    }
-
-    .service-area-map {
-        height: 130px;
+    .footer-map {
+        height: 220px;
+        min-width: 100%;
     }
 
     .footer-heading {
         margin-bottom: 1rem;
-    }
-
-    .footer-bottom {
-        margin-top: 36px;
-    }
-}
-
-@media (max-width: 480px) {
-    .footer-row-text {
-        gap: 2rem;
-    }
-
-    .service-areas-grid {
-        flex-direction: column;
-        align-items: center;
-        gap: 18px;
-    }
-
-    .service-area-card {
-        max-width: 100%;
-    }
-
-    .service-area-map {
-        height: 150px;
     }
 }
