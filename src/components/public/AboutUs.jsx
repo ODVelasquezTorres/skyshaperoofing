@@ -7,14 +7,14 @@ const teamMembers = [
         name: 'Oscar',
         role: 'CEO – Project Manager',
         description: 'Leads every project with a hands-on approach, ensuring quality roofing solutions and seamless coordination from start to finish.',
-        photo: '../NEW/Oscar.jpeg'
+        photo: '/Oscar.jpeg'
     },
     {
         id: 2,
         name: 'Daniela',
         role: 'CEO – Sales Manager',
         description: 'Drives client relationships and business growth, delivering tailored roofing solutions with a focus on trust and excellence.',
-        photo: '../NEW/Daniela.jpeg'
+        photo: '/Daniela.jpeg'
     }
 ];
 
