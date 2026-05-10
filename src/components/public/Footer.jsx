@@ -48,24 +48,15 @@ const Footer = () => {
                         <h3 className="footer-heading">Contact</h3>
                         <ul className="contact-list">
                             <li>
-                                <a href="https://maps.google.com/?q=Rogers,+AR+72758" target="_blank" rel="noopener noreferrer" className="contact-link">
+                                <a href="https://maps.google.com/?q=615+S+College+St,+Charlotte,+NC+28202" target="_blank" rel="noopener noreferrer" className="contact-link">
                                     <MapPin size={18} className="contact-icon" />
-                                    <span>Rogers, AR 72758</span>
+                                    <span>615 S College St,<br />Charlotte, NC 28202</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://maps.google.com/?q=Oklahoma+City,+OK+73122" target="_blank" rel="noopener noreferrer" className="contact-link">
-                                    <MapPin size={18} className="contact-icon" />
-                                    <div className="contact-address-ok">
-                                        <span>Oklahoma City, OK 73122</span>
-                                        <span className="badge-new">NEW</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="tel:4792783764" className="contact-link">
+                                <a href="tel:7045848280" className="contact-link">
                                     <Phone size={18} className="contact-icon" />
-                                    <span>(479) 278-3764</span>
+                                    <span>(704) 584-8280</span>
                                 </a>
                             </li>
                             <li>
