@@ -22,9 +22,9 @@ const StormRestorationPage = () => {
                         <button className="btn-storm-primary">
                             Start My Claim Assessment <ArrowRight size={20} />
                         </button>
-                        <a href="tel:+17045848280" className="btn-storm-secondary">
+                        <a href="tel:+14792783764" className="btn-storm-secondary">
                             <Phone size={20} className="phone-icon-vibrate" />
-                            Call Now: (704) 584-8280
+                            Call Now: (479) 278-3764
                         </a>
                     </div>
                 </div>

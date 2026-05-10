@@ -4,24 +4,17 @@ import './AboutUs.css';
 const teamMembers = [
     {
         id: 1,
-        name: 'Director Name',
-        role: 'Managing Director',
-        description: 'Expert in insurance restoration with a focus on structural integrity and client advocacy.',
-        photo: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face&q=80'
+        name: 'Oscar',
+        role: 'CEO – Project Manager',
+        description: 'Leads every project with a hands-on approach, ensuring quality roofing solutions and seamless coordination from start to finish.',
+        photo: '../NEW/Oscar.jpeg'
     },
     {
         id: 2,
-        name: 'Director Name',
-        role: 'Operations Director',
-        description: 'Specialist in project management and quality assurance across residential and commercial roofing.',
-        photo: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face&q=80'
-    },
-    {
-        id: 3,
-        name: 'Director Name',
-        role: 'Field Director',
-        description: 'Hands-on leadership in emergency restoration and storm damage response across North Carolina.',
-        photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face&q=80'
+        name: 'Daniela',
+        role: 'CEO – Sales Manager',
+        description: 'Drives client relationships and business growth, delivering tailored roofing solutions with a focus on trust and excellence.',
+        photo: '../NEW/Daniela.jpeg'
     }
 ];
 
