@@ -17,6 +17,22 @@ export const DEFAULT_PROJECTS = [
             "Mr. Armendáriz's home is located in the Windsor Park area of East Charlotte, in the city of Charlotte.",
             "This was an insurance-processed project, and we are very pleased to have completed his roof replacement. Due to its previous condition, the property was at high risk of leaks and potential structural damage in the future."
         ]
+    },
+    {
+        id: 2,
+        title: "Mrs. Lark’s House — Full Roof Replacement",
+        tag: "Roof Replacement",
+        cover: "/compare (3).jpeg",
+        phases: {
+            before: ["/compare (1).jpeg"],
+            inProgress: ["/compare (2).jpeg"],
+            after: ["/compare (3).jpeg", "/video.mp4"]
+        },
+        description: [
+            "Mrs. Lark’s home is located in the Back Creek Church Road area of East Charlotte, in the city of Charlotte.",
+            "This was a successful insurance-processed roof replacement project, completed in just one day by the SkyShape Roofing & Solutions team. We are very pleased to have helped Mrs. Lark through the insurance process and deliver a smooth, efficient installation from start to finish.",
+            "The new roofing system not only refreshed the appearance of the home, but also added long-term value and protection for the property. Another successful project completed for a homeowner in the Charlotte area."
+        ]
     }
 ];
 
@@ -78,7 +94,7 @@ const GalleryModal = ({ onClose, onSelectProject }) => {
                     ))}
 
                     {/* Placeholders for future projects */}
-                    {Array.from({ length: 5 }).map((_, idx) => (
+                    {Array.from({ length: 4 }).map((_, idx) => (
                         <div key={`placeholder-${idx}`} className="gallery-modal-card placeholder">
                             <div className="placeholder-content">
                                 <Image size={16} className="placeholder-icon-img" />

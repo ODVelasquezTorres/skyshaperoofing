@@ -96,11 +96,22 @@ const OurWorkModal = ({ onClose, onBack, project }) => {
                             </button>
                         )}
                         
-                        <img 
-                            src={currentImagesList[currentIndex]} 
-                            alt={`Slide ${currentIndex + 1} de la etapa ${activeTab}`} 
-                            key={currentImagesList[currentIndex]}
-                        />
+                        {currentImagesList[currentIndex]?.endsWith('.mp4') ? (
+                            <video 
+                                src={currentImagesList[currentIndex]} 
+                                controls 
+                                autoPlay 
+                                muted 
+                                loop 
+                                key={currentImagesList[currentIndex]}
+                            />
+                        ) : (
+                            <img 
+                                src={currentImagesList[currentIndex]} 
+                                alt={`Slide ${currentIndex + 1} de la etapa ${activeTab}`} 
+                                key={currentImagesList[currentIndex]}
+                            />
+                        )}
                         
                         {currentImagesList.length > 1 && (
                             <button className="carousel-nav next" onClick={handleNext} aria-label="Next image">
