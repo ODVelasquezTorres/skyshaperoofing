@@ -33,6 +33,24 @@ export const DEFAULT_PROJECTS = [
             "This was a successful insurance-processed roof replacement project, completed in just one day by the SkyShape Roofing & Solutions team. We are very pleased to have helped Mrs. Lark through the insurance process and deliver a smooth, efficient installation from start to finish.",
             "The new roofing system not only refreshed the appearance of the home, but also added long-term value and protection for the property. Another successful project completed for a homeowner in the Charlotte area."
         ]
+    },
+    {
+        id: 3,
+        title: "Mrs. Armendáriz’s House — Full Roof Replacement",
+        tag: "Roof Replacement",
+        cover: "/6.jpeg",
+        phases: {
+            before: ["/1.jpeg", "/2.jpeg"],
+            inProgress: ["/3.jpeg", "/4.jpeg", "/5.jpeg"],
+            after: ["/6.jpeg", "/7.jpeg", "/8.jpeg"]
+        },
+        description: [
+            "Mrs. Armendáriz’s home is located in the Windsor Park area of East Charlotte.",
+            "This was a successful insurance-approved roof replacement project completed by the SkyShape Roofing & Solutions team. From the day the insurance claim was opened to the completion of the roof replacement, the process took approximately 6 to 8 weeks.",
+            "What makes this project especially meaningful is that Mrs. Armendáriz was referred to us by a family member whose roof we had previously replaced through the insurance process. That recommendation reflects the trust we work hard to earn with every homeowner we serve.",
+            "Through persistence, proper documentation, and close collaboration with the homeowner, the claim was successfully approved, allowing us to complete the roof replacement and provide lasting protection for the home.",
+            "We are grateful for the trust the Armendáriz family placed in our team and proud to have helped another Charlotte homeowner navigate the insurance process from start to finish."
+        ]
     }
 ];
 
