@@ -51,6 +51,25 @@ export const DEFAULT_PROJECTS = [
             "Through persistence, proper documentation, and close collaboration with the homeowner, the claim was successfully approved, allowing us to complete the roof replacement and provide lasting protection for the home.",
             "We are grateful for the trust the Armendáriz family placed in our team and proud to have helped another Charlotte homeowner navigate the insurance process from start to finish."
         ]
+    },
+    {
+        id: 4,
+        title: "Mrs. Pham’s House — Full Roof & Gutters Replacement",
+        tag: "Roof & Gutters Replacement",
+        cover: "/Finalll (1).jpeg",
+        phases: {
+            before: ["/Antess (1).jpeg", "/Antess (2).jpeg", "/Antess (3).jpeg", "/Antess (4).jpeg", "/Antess (5).jpeg", "/Antess (6).jpeg"],
+            inProgress: ["/Procesos (1).jpeg", "/Procesos (2).jpeg"],
+            after: ["/Finalll (1).jpeg", "/Finalll (2).jpeg", "/Finalll (3).jpeg", "/Finalll (4).jpeg", "/Finalll (5).jpeg", "/Finalll (6).jpeg", "/Finalll (7).jpeg", "/Finalll (8).jpeg"]
+        },
+        description: [
+            "Mrs. Pham’s home is located in the Windsor Park area of East Charlotte.",
+            "This was another successful insurance-approved roof replacement completed by the SkyShape Roofing & Solutions team.",
+            "What makes this project especially meaningful is that it marks the third roof we have completed in the same neighborhood. To us, that reflects something very important: the trust we have earned from local homeowners and their referrals to friends and neighbors.",
+            "Mrs. Pham was very happy with the roofing process and the final result. Because of that confidence, she also chose our team to replace her gutters, allowing us to further improve and protect her home.",
+            "At SkyShape Roofing & Solutions, our goal is not only to help homeowners with their roofs, but also with their home’s exterior needs. We are proud to provide complete solutions that help protect, improve, and add value to every property we serve.",
+            "We are grateful for the trust of the Windsor Park community and look forward to helping even more homeowners in the neighborhood."
+        ]
     }
 ];
 
