@@ -5,7 +5,7 @@ import './GalleryModal.css';
 export const DEFAULT_PROJECTS = [
     {
         id: 1,
-        title: "Mr. Armendariz's House — Full Roof Replacement",
+        title: "Mr. Miguel Armendariz's House — Full Roof Replacement",
         tag: "Roof Replacement",
         cover: "/carrusel/despues 1.jpeg",
         phases: {
@@ -14,7 +14,7 @@ export const DEFAULT_PROJECTS = [
             after: ["/carrusel/despues 1.jpeg", "/carrusel/despues 2.jpeg", "/carrusel/despues 3.jpeg"]
         },
         description: [
-            "Mr. Armendáriz's home is located in the Windsor Park area of East Charlotte, in the city of Charlotte.",
+            "Mr. Miguel Armendáriz's home is located in the Windsor Park area of East Charlotte, in the city of Charlotte.",
             "This was an insurance-processed project, and we are very pleased to have completed his roof replacement. Due to its previous condition, the property was at high risk of leaks and potential structural damage in the future."
         ]
     },
@@ -36,7 +36,7 @@ export const DEFAULT_PROJECTS = [
     },
     {
         id: 3,
-        title: "Mrs. Armendáriz’s House — Full Roof Replacement",
+        title: "Mrs. Claudia Armendáriz’s House — Full Roof Replacement",
         tag: "Roof Replacement",
         cover: "/6.jpeg",
         phases: {
@@ -45,9 +45,9 @@ export const DEFAULT_PROJECTS = [
             after: ["/6.jpeg", "/7.jpeg", "/8.jpeg"]
         },
         description: [
-            "Mrs. Armendáriz’s home is located in the Windsor Park area of East Charlotte.",
+            "Mrs. Claudia Armendáriz’s home is located in the Windsor Park area of East Charlotte.",
             "This was a successful insurance-approved roof replacement project completed by the SkyShape Roofing & Solutions team. From the day the insurance claim was opened to the completion of the roof replacement, the process took approximately 6 to 8 weeks.",
-            "What makes this project especially meaningful is that Mrs. Armendáriz was referred to us by a family member whose roof we had previously replaced through the insurance process. That recommendation reflects the trust we work hard to earn with every homeowner we serve.",
+            "What makes this project especially meaningful is that Mrs. Claudia Armendáriz was referred to us by a family member whose roof we had previously replaced through the insurance process. That recommendation reflects the trust we work hard to earn with every homeowner we serve.",
             "Through persistence, proper documentation, and close collaboration with the homeowner, the claim was successfully approved, allowing us to complete the roof replacement and provide lasting protection for the home.",
             "We are grateful for the trust the Armendáriz family placed in our team and proud to have helped another Charlotte homeowner navigate the insurance process from start to finish."
         ]

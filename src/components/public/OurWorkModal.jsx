@@ -131,7 +131,7 @@ const OurWorkModal = ({ onClose, onBack, project }) => {
                     <div className="our-work-description">
                         {safeProject.id === 1 ? (
                             <>
-                                <p>Mr. Armendáriz's home is located in the <span className="highlight-text">Windsor Park</span> area of <span className="highlight-text">East Charlotte</span>, in the city of Charlotte.</p>
+                                <p>Mr. Miguel Armendáriz's home is located in the <span className="highlight-text">Windsor Park</span> area of <span className="highlight-text">East Charlotte</span>, in the city of Charlotte.</p>
                                 <p>This was an <span className="highlight-text">insurance-processed</span> project, and we are very pleased to have completed his roof replacement. Due to its previous condition, the property was at high risk of leaks and potential structural damage in the future.</p>
                             </>
                         ) : (
