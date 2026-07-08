@@ -35,7 +35,7 @@ const TextUsModal = ({ isOpen, onClose, isEmbedded = false }) => {
         const encodedBody = encodeURIComponent(messageBody);
 
         // Open SMS app
-        window.location.href = `sms:+14792783764?body=${encodedBody}`;
+        window.location.href = `sms:+17045848280?body=${encodedBody}`;
 
         if (onClose) onClose();
     };

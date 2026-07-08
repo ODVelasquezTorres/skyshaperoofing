@@ -44,7 +44,7 @@ const ThankYouPage = () => {
                 <div className="urgent-assistance-box">
                     <p className="urgent-text">Need immediate assistance? Speak with us right now.</p>
                     <a
-                        href="https://wa.me/14792783764?text=Hi%20SkyShape,%20I%20just%20requested%20a%20free%20inspection%20and%20have%20some%20urgent%20questions."
+                        href="https://wa.me/17045848280?text=Hi%20SkyShape,%20I%20just%20requested%20a%20free%20inspection%20and%20have%20some%20urgent%20questions."
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn-whatsapp pulse-animation"
