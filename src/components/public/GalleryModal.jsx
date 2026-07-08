@@ -70,6 +70,35 @@ export const DEFAULT_PROJECTS = [
             "At SkyShape Roofing & Solutions, our goal is not only to help homeowners with their roofs, but also with their home’s exterior needs. We are proud to provide complete solutions that help protect, improve, and add value to every property we serve.",
             "We are grateful for the trust of the Windsor Park community and look forward to helping even more homeowners in the neighborhood."
         ]
+    },
+    {
+        id: 5,
+        title: "Muon T. Le's House — Full Roof Replacement",
+        tag: "Roof Replacement",
+        cover: "/Muon3.jpeg",
+        phases: {
+            before: ["/Muon1.jpeg"],
+            inProgress: ["/Muon2.jpeg"],
+            after: ["/Muon3.jpeg"]
+        },
+        description: [
+            "Muon T Le.",
+            "1532 Thriftwood Dr, Charlotte NC 28208"
+        ]
+    },
+    {
+        id: 6,
+        title: "Mr. Gary Hinson — Board & Batten Siding Project",
+        tag: "Siding Installation",
+        cover: "/Gary3.jpeg",
+        phases: {
+            before: ["/Gary1.jpeg"],
+            inProgress: ["/Gary2.jpeg"],
+            after: ["/Gary3.jpeg"]
+        },
+        description: [
+            "Mr. Gary Hinson - Board and Batten project"
+        ]
     }
 ];
 
