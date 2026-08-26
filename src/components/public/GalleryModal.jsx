@@ -99,6 +99,20 @@ export const DEFAULT_PROJECTS = [
         description: [
             "Mr. Gary Hinson - Board and Batten project"
         ]
+    },
+    {
+        id: 7,
+        title: "Mr. Ahn Thach’s Home — Full Roof Replacement",
+        tag: "Roof Replacement",
+        cover: "/ahn-despues.jpeg",
+        phases: {
+            before: ["/ahn-antes.jpeg"],
+            inProgress: ["/ahn-durante.jpeg"],
+            after: ["/ahn-despues.jpeg"]
+        },
+        description: [
+            "Mr. Ahn Thach’s Home — Full Roof Replacement project completed by the SkyShape Roofing & Solutions team."
+        ]
     }
 ];
 
