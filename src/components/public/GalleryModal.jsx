@@ -113,6 +113,24 @@ export const DEFAULT_PROJECTS = [
         description: [
             "Mr. Ahn Thach’s Home — Full Roof Replacement project completed by the SkyShape Roofing & Solutions team."
         ]
+    },
+    {
+        id: 8,
+        title: "Mr. Brown’s Home — Full Roof Replacement",
+        tag: "Roof Replacement",
+        cover: "/brown-after-1.jpeg",
+        phases: {
+            before: ["/brown-before-1.jpeg", "/brown-before-2.jpeg", "/brown-before-3.jpeg"],
+            inProgress: ["/brown-during-1.jpeg", "/brown-during-2.jpeg", "/brown-during-3.jpeg", "/brown-during-4.jpeg"],
+            after: ["/brown-after-1.jpeg", "/brown-after-2.jpeg", "/brown-after-3.jpeg"]
+        },
+        description: [
+            "From a Partial Approval to a Full Roof Replacement",
+            "In East Charlotte, Mr. Brown was told by his insurance company that only half of his roof would be replaced after storm damage.",
+            "After inspecting the property, the team at SkyShape Roofing & Solutions found additional damage and submitted a detailed insurance supplement with the proper documentation.",
+            "The result? The insurance company approved a full roof replacement, giving Mr. Brown the complete protection his home needed.",
+            "At SkyShape Roofing & Solutions, we’re committed to helping homeowners get the coverage they deserve—not just the coverage they’re initially offered."
+        ]
     }
 ];
 
