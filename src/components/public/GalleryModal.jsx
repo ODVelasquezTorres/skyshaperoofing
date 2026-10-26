@@ -131,6 +131,23 @@ export const DEFAULT_PROJECTS = [
             "The result? The insurance company approved a full roof replacement, giving Mr. Brown the complete protection his home needed.",
             "At SkyShape Roofing & Solutions, we’re committed to helping homeowners get the coverage they deserve—not just the coverage they’re initially offered."
         ]
+    },
+    {
+        id: 9,
+        title: "Project Ms Jabr — Roof Replacement",
+        tag: "Roof Replacement",
+        cover: "/jabr-after-1.jpeg",
+        phases: {
+            before: ["/jabr-before-1.jpeg", "/jabr-before-2.jpeg", "/jabr-before-3.jpeg"],
+            inProgress: ["/jabr-during-1.jpeg", "/jabr-during-2.jpeg", "/jabr-during-3.jpeg"],
+            after: ["/jabr-after-1.jpeg", "/jabr-after-2.jpeg", "/jabr-after-3.jpeg", "/jabr-after-4.jpeg"]
+        },
+        description: [
+            "Project Ms Jabr",
+            "Another roof completed in Concord, NC!",
+            "After his insurance claim was denied a few months ago, this homeowner chose to replace his roof with a cash payment rather than wait.",
+            "Remember: A denied claim may still be eligible for reconsideration or reinspection, depending on your policy and deadlines. Don’t give up without exploring your options!"
+        ]
     }
 ];
 
