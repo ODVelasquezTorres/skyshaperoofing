@@ -148,6 +148,21 @@ export const DEFAULT_PROJECTS = [
             "After his insurance claim was denied a few months ago, this homeowner chose to replace his roof with a cash payment rather than wait.",
             "Remember: A denied claim may still be eligible for reconsideration or reinspection, depending on your policy and deadlines. Don’t give up without exploring your options!"
         ]
+    },
+    {
+        id: 10,
+        title: "Project Ms Clarke — Full Roof Replacement",
+        tag: "Roof Replacement",
+        cover: "/clarke-after-1.jpeg",
+        phases: {
+            before: ["/clarke-before-1.jpeg", "/clarke-before-2.jpeg"],
+            inProgress: ["/clarke-during-1.jpeg", "/clarke-during-2.jpeg", "/clarke-during-3.jpeg"],
+            after: ["/clarke-after-1.jpeg", "/clarke-after-2.jpeg", "/clarke-after-3.jpeg"]
+        },
+        description: [
+            "Project Ms Clarke",
+            "This project in Northwest Charlotte was about more than just replacing a roof—it was about rebuilding trust. After a difficult experience with a previous roofing company, the homeowner was understandably hesitant. We earned his confidence through transparency, professionalism, and clear communication, ultimately completing a full roof replacement through his insurance claim."
+        ]
     }
 ];
 
